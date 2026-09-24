@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root,
+[data-theme="dark"] {
+  --bg: #1e2328;
+  --surface: #262c32;
+  --line: #343b42;
+  --text: #f1f4f6;
+  --text-2: #9ba7b0;
+  --accent: #37c0e0;
+  --on-accent: #10181c;
+  --accent-mid: #2a7f94;
+  --warn: #f2a93b;
+  --success: #5fd3a6;
+  --nav: #1a1e22;
+  --input: #1a1e22;
+  --track: #343b42;
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --bg: #f2f5f7;
+  --surface: #ffffff;
+  --line: #d5dde3;
+  --text: #14191e;
+  --text-2: #56626c;
+  --accent: #0a7390;
+  --on-accent: #ffffff;
+  --accent-mid: #7fb5c6;
+  --warn: #a35604;
+  --success: #1b7f4b;
+  --nav: #ffffff;
+  --input: #ffffff;
+  --track: #d5dde3;
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-text: var(--text);
+  --color-text-2: var(--text-2);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --color-accent-mid: var(--accent-mid);
+  --color-warn: var(--warn);
+  --color-success: var(--success);
+  --color-nav: var(--nav);
+  --color-input: var(--input);
+  --color-track: var(--track);
+  --font-sans: var(--font-plex-sans), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+@layer components {
+  .rotulo {
+    @apply font-mono text-[11px] uppercase tracking-[0.08em] text-text-2;
+  }
+}
