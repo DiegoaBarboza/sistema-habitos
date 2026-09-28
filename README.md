@@ -16,6 +16,22 @@ npm run dev
 
 Abra http://localhost:3000.
 
+## Banco de dados
+
+As migrações ficam em `supabase/migrations/`, em ordem. Para aplicar no projeto da nuvem, abra o **SQL Editor** do Supabase e rode cada arquivo novo, na ordem do nome.
+
+Configuração de Auth no painel (Authentication):
+- **Sign In / Providers:** Email ligado e cadastro de novos usuários permitido.
+- **URL Configuration:** Site URL = endereço do app; em Redirect URLs, `http://localhost:3000/**` e o domínio de produção.
+
+### Supabase local (opcional, precisa de Docker)
+
+```bash
+npx supabase start   # sobe o banco e aplica as migrações
+```
+
+Os e-mails de link mágico chegam no Mailpit (http://127.0.0.1:54324). Para usar o local, troque URL e chave no `.env.local` pelos valores que o comando mostra.
+
 ## Scripts
 
 - `npm run dev`: servidor de desenvolvimento
