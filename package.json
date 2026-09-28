@@ -9,7 +9,7 @@
     "lint": "eslint",
     "test": "vitest run",
     "typecheck": "next typegen && tsc --noEmit",
-    "liberar-acesso": "node --env-file=.env.local scripts/liberar-acesso.ts"
+    "liberar-acesso": "node scripts/liberar-acesso.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.7",

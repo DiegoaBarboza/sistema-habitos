@@ -2,7 +2,11 @@
 // Uso: npm run liberar-acesso -- email@exemplo.com [modulo]
 // Precisa de NEXT_PUBLIC_SUPABASE_URL e SUPABASE_SERVICE_ROLE_KEY no .env.local.
 
+import nextEnv from "@next/env";
 import { createClient } from "@supabase/supabase-js";
+
+// Mesmo carregador do Next: lê .env.local e tolera arquivo salvo com BOM (comum no Windows).
+nextEnv.loadEnvConfig(process.cwd());
 
 const [emailBruto, modulo = "habitos"] = process.argv.slice(2);
 const email = emailBruto?.trim().toLowerCase();
@@ -15,7 +19,8 @@ if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const chave = process.env.SUPABASE_SERVICE_ROLE_KEY;
 if (!url || !chave) {
-  console.error("Faltam NEXT_PUBLIC_SUPABASE_URL ou SUPABASE_SERVICE_ROLE_KEY no .env.local.");
+  const faltando = [!url && "NEXT_PUBLIC_SUPABASE_URL", !chave && "SUPABASE_SERVICE_ROLE_KEY"].filter(Boolean);
+  console.error(`Falta no .env.local: ${faltando.join(" e ")}`);
   process.exit(1);
 }
 
