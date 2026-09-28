@@ -33,7 +33,7 @@ export function Onboarding({ nomeInicial }: { nomeInicial: string }) {
           hora,
           fuso: Intl.DateTimeFormat().resolvedOptions().timeZone,
         });
-        router.replace("/trilha");
+        router.replace("/licao/habitos-s1");
       } catch {
         setErro("Não foi possível salvar. Confira a conexão e tente de novo.");
       }
