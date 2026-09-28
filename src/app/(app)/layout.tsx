@@ -1,10 +1,10 @@
 import { redirect } from "next/navigation";
 import { BarraAbas } from "@/components/barra-abas";
 import { SincronizarTema } from "@/components/sincronizar-tema";
-import { obterSessao } from "@/lib/perfil";
+import { exigirModuloHabitos } from "@/lib/perfil";
 
 export default async function LayoutApp({ children }: { children: React.ReactNode }) {
-  const { perfil } = await obterSessao();
+  const { perfil } = await exigirModuloHabitos();
   if (!perfil.onboarding_ok) redirect("/boas-vindas");
 
   return (

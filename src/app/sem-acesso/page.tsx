@@ -1,0 +1,45 @@
+import { redirect } from "next/navigation";
+import { sair } from "@/app/acoes";
+import { Marca } from "@/components/marca";
+import { obterSessao } from "@/lib/perfil";
+
+export default async function SemAcesso() {
+  const { email, modulosLiberados } = await obterSessao();
+  if (modulosLiberados.includes("habitos")) redirect("/hoje");
+
+  const paginaVenda = process.env.URL_PAGINA_VENDA;
+
+  return (
+    <main className="mx-auto flex min-h-dvh w-full max-w-[480px] flex-col justify-between gap-10 px-6 pt-[72px] pb-10">
+      <div className="flex flex-col gap-7">
+        <Marca />
+        <div className="flex flex-col gap-2.5">
+          <span className="font-mono text-xs tracking-[0.08em] text-accent">SISTEMA DE HÁBITOS</span>
+          <h1 className="text-[28px] leading-[1.15] font-bold">Nenhum módulo liberado para este e-mail</h1>
+          <p className="text-base leading-[1.55] text-text-2">
+            Você entrou como <strong className="text-text">{email}</strong>.
+          </p>
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-3.5">
+        {paginaVenda && (
+          <a
+            href={paginaVenda}
+            className="flex h-14 items-center justify-center rounded-xl bg-accent text-base font-bold text-on-accent"
+          >
+            Conhecer o módulo Hábitos
+          </a>
+        )}
+        <form action={sair}>
+          <button
+            type="submit"
+            className="h-12 w-full cursor-pointer rounded-xl border border-line text-[15px] font-semibold"
+          >
+            Comprou com outro e-mail? Entre com ele.
+          </button>
+        </form>
+      </div>
+    </main>
+  );
+}

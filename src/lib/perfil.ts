@@ -21,15 +21,31 @@ export const obterSessao = cache(async () => {
   const claims = data?.claims;
   if (!claims) redirect("/entrar");
 
-  const { data: perfil, error } = await supabase
-    .from("perfis")
-    .select("user_id, nome, tema, fuso, lembrete_ativo, lembrete_hora, onboarding_ok")
-    .eq("user_id", claims.sub)
-    .single<Perfil>();
+  const [{ data: perfil, error }, { data: acessos, error: erroAcessos }] = await Promise.all([
+    supabase
+      .from("perfis")
+      .select("user_id, nome, tema, fuso, lembrete_ativo, lembrete_hora, onboarding_ok")
+      .eq("user_id", claims.sub)
+      .single<Perfil>(),
+    // A RLS já limita aos acessos do próprio usuário (por user_id ou e-mail).
+    supabase.from("acessos").select("modulo_id").eq("status", "ativo"),
+  ]);
   if (error) throw new Error(`Não foi possível carregar o perfil: ${error.message}`);
+  if (erroAcessos) throw new Error(`Não foi possível carregar os acessos: ${erroAcessos.message}`);
 
-  return { email: (claims.email as string | undefined) ?? "", perfil };
+  return {
+    email: (claims.email as string | undefined) ?? "",
+    perfil,
+    modulosLiberados: acessos.map((a) => a.modulo_id as string),
+  };
 });
+
+// Para as telas do módulo Hábitos: sem acesso vai para /sem-acesso, sem onboarding vai para /boas-vindas.
+export async function exigirModuloHabitos() {
+  const sessao = await obterSessao();
+  if (!sessao.modulosLiberados.includes("habitos")) redirect("/sem-acesso");
+  return sessao;
+}
 
 export function iniciais(nome: string | null, email: string) {
   const base = nome?.trim() || email.split("@")[0];

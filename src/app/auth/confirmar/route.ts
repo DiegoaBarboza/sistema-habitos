@@ -19,5 +19,8 @@ export async function GET(request: NextRequest) {
     ok = !(await supabase.auth.verifyOtp({ type, token_hash: tokenHash })).error;
   }
 
+  // Liga as compras e liberações feitas para este e-mail ao usuário que acabou de entrar.
+  if (ok) await supabase.rpc("vincular_acessos");
+
   return NextResponse.redirect(new URL(ok ? "/hoje" : "/entrar?erro=link", origin));
 }
