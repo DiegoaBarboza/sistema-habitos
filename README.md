@@ -24,6 +24,17 @@ Configuração de Auth no painel (Authentication):
 - **Sign In / Providers:** Email ligado e cadastro de novos usuários permitido.
 - **URL Configuration:** Site URL = endereço do app; em Redirect URLs, `http://localhost:3000/**` e o domínio de produção.
 
+### Liberar acesso manualmente (testadores)
+
+Precisa de `SUPABASE_SERVICE_ROLE_KEY` no `.env.local`.
+
+```bash
+npm run liberar-acesso -- email@exemplo.com
+```
+
+Vale na hora, mesmo para quem já está logado. Para revogar, no SQL Editor:
+`update acessos set status = 'revogado' where email = 'email@exemplo.com';`
+
 ### Supabase local (opcional, precisa de Docker)
 
 ```bash
