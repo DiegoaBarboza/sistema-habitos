@@ -2,6 +2,7 @@
   "name": "sistema-habitos",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,7 +10,8 @@
     "lint": "eslint",
     "test": "vitest run",
     "typecheck": "next typegen && tsc --noEmit",
-    "liberar-acesso": "node scripts/liberar-acesso.ts"
+    "liberar-acesso": "node scripts/liberar-acesso.ts",
+    "seed-licoes": "node scripts/seed-licoes.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.7",

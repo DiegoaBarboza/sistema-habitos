@@ -24,6 +24,16 @@ Configuração de Auth no painel (Authentication):
 - **Sign In / Providers:** Email ligado e cadastro de novos usuários permitido.
 - **URL Configuration:** Site URL = endereço do app; em Redirect URLs, `http://localhost:3000/**` e o domínio de produção.
 
+### Carregar as lições
+
+Depois de aplicar as migrações (e sempre que `docs/conteudo-modulo1-habitos.md` mudar):
+
+```bash
+npm run seed-licoes
+```
+
+Lê o arquivo de conteúdo e grava as 8 lições na tabela `licoes`. Pode rodar de novo sem duplicar.
+
 ### Liberar acesso manualmente (testadores)
 
 Precisa de `SUPABASE_SERVICE_ROLE_KEY` no `.env.local`.
