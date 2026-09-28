@@ -104,7 +104,7 @@ const DECISOES: { valor: Exclude<Decisao, "">; rotulo: string }[] = [
   { valor: "remover", rotulo: "Remover" },
 ];
 
-export function ContratoRevisaoFaca({ r, set, ctx }: PropsExercicio<ContratoRevisao>) {
+export function ContratoRevisaoFaca({ r, set, ctx, dados30d }: PropsExercicio<ContratoRevisao>) {
   const T = TEXTOS.contrato_revisao;
   const mudarContrato = (patch: Partial<ContratoRevisao["contrato"]>) => set({ ...r, contrato: { ...r.contrato, ...patch } });
   const hoje = new Intl.DateTimeFormat("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric" }).format(new Date());
@@ -137,6 +137,10 @@ export function ContratoRevisaoFaca({ r, set, ctx }: PropsExercicio<ContratoRevi
         const mudar = (patch: Partial<typeof rev>) => set({ ...r, revisao: { ...r.revisao, [h.id]: { ...rev, ...patch } } });
         return (
           <Cartao key={h.id} titulo={h.nome}>
+            <p className="font-mono text-xs text-text-2">
+              ÚLTIMOS 30 DIAS · adesão {dados30d[h.id]?.adesao == null ? "—" : `${Math.round(dados30d[h.id].adesao! * 100)}%`} · sem
+              falha 2x {dados30d[h.id]?.semFalha2x ?? 0}d
+            </p>
             <div className="grid grid-cols-3 gap-1.5" role="group" aria-label={`Decisão para ${h.nome}`}>
               {DECISOES.map((d) => (
                 <button

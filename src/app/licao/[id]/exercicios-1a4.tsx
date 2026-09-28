@@ -14,7 +14,14 @@ import {
 import { TEXTOS } from "@/lib/exercicios/textos";
 import { Campo, Cartao, Chip, classeCampo, minuscula, Opcao } from "./ui";
 
-export type PropsExercicio<T> = { r: T; set: (r: T) => void; ctx: Contexto; sugestoesAncora: string[] };
+export type Dados30d = Record<string, { adesao: number | null; semFalha2x: number }>;
+export type PropsExercicio<T> = {
+  r: T;
+  set: (r: T) => void;
+  ctx: Contexto;
+  sugestoesAncora: string[];
+  dados30d: Dados30d;
+};
 
 // ---------- Semana 1 · inventario ----------
 

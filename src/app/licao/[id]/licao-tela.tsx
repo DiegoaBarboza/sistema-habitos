@@ -13,6 +13,7 @@ import {
   InventarioCompromisso,
   InventarioFaca,
   PlanoGatilhoFaca,
+  type Dados30d,
   type PropsExercicio,
 } from "./exercicios-1a4";
 import { AmbienteFaca, ContratoRevisaoFaca, RecuperacaoFaca, VersaoMinimaFaca } from "./exercicios-5a8";
@@ -47,9 +48,10 @@ type Props = {
   concluida: boolean;
   ctx: Contexto;
   sugestoesAncora: string[];
+  dados30d: Dados30d;
 };
 
-export function LicaoTela({ licao, respostasIniciais, iniciada, concluida: jaConcluida, ctx, sugestoesAncora }: Props) {
+export function LicaoTela({ licao, respostasIniciais, iniciada, concluida: jaConcluida, ctx, sugestoesAncora, dados30d }: Props) {
   const tipo = licao.tipo_exercicio;
   const [respostas, setRespostas] = useState(respostasIniciais);
   const [concluida, setConcluida] = useState(jaConcluida);
@@ -113,7 +115,7 @@ export function LicaoTela({ licao, respostasIniciais, iniciada, concluida: jaCon
 
   const Faca = FACA[tipo];
   const Compromisso = COMPROMISSO[tipo];
-  const props = { r: respostas, set: mudar, ctx, sugestoesAncora };
+  const props = { r: respostas, set: mudar, ctx, sugestoesAncora, dados30d };
   const { entenda, compromisso, para_ir_alem } = licao.conteudo;
   const barras = [true, etapa !== "entenda" || concluida, etapa === "compromisso" || concluida];
 
