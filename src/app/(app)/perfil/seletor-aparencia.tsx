@@ -1,5 +1,6 @@
 "use client";
 
+import { salvarTema } from "@/app/acoes";
 import { useTema } from "@/components/tema-provider";
 import type { Tema } from "@/lib/tema";
 
@@ -30,7 +31,10 @@ export function SeletorAparencia() {
               key={opcao.valor}
               type="button"
               aria-pressed={ativa}
-              onClick={() => setTema(opcao.valor)}
+              onClick={() => {
+                setTema(opcao.valor);
+                salvarTema(opcao.valor).catch(() => {});
+              }}
               className={`h-11 cursor-pointer rounded-[9px] text-sm font-semibold ${
                 ativa ? "bg-accent text-on-accent" : "bg-transparent text-text-2"
               }`}
