@@ -1,5 +1,6 @@
-import { sair } from "@/app/acoes";
 import { iniciais, obterSessao } from "@/lib/perfil";
+import { BotaoSair } from "./botao-sair";
+import { LembreteDiario } from "./lembrete-diario";
 import { SeletorAparencia } from "./seletor-aparencia";
 
 export default async function Perfil() {
@@ -21,15 +22,19 @@ export default async function Perfil() {
 
       <SeletorAparencia />
 
+      <LembreteDiario
+        ativoNoPerfil={perfil.lembrete_ativo}
+        horaInicial={perfil.lembrete_hora}
+        chavePublica={process.env.VAPID_PUBLIC_KEY ?? null}
+      />
+
       <section aria-labelledby="rotulo-conta" className="flex flex-col gap-2.5">
         <h2 id="rotulo-conta" className="rotulo">
           Conta
         </h2>
-        <form action={sair} className="rounded-xl border border-line bg-surface">
-          <button type="submit" className="w-full cursor-pointer px-4 py-3.5 text-left text-[15px] font-semibold text-warn">
-            Sair
-          </button>
-        </form>
+        <div className="rounded-xl border border-line bg-surface">
+          <BotaoSair />
+        </div>
       </section>
     </>
   );

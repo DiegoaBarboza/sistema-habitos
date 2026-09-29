@@ -45,6 +45,14 @@ npm run liberar-acesso -- email@exemplo.com
 Vale na hora, mesmo para quem já está logado. Para revogar, no SQL Editor:
 `update acessos set status = 'revogado' where email = 'email@exemplo.com';`
 
+### Lembrete diário (Web Push)
+
+1. Gere as chaves uma vez: `npx web-push generate-vapid-keys` e coloque `VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY` e `VAPID_SUBJECT` (`mailto:seu-email`) no `.env.local` e na Vercel. Não troque as chaves depois: as inscrições existentes param de funcionar.
+2. Defina `CRON_SECRET` (qualquer texto longo e aleatório).
+3. Algo precisa chamar `GET /api/cron/lembretes` a cada 15 minutos com o cabeçalho `Authorization: Bearer <CRON_SECRET>`. A rota decide quem recebe (janela de 15 min do horário do usuário, no máximo 1 por dia, só se houver hábito pendente).
+
+O service worker (`public/sw.js`) só é registrado no build de produção (`npm run build && npm start`); em `npm run dev` ele fica desligado para não servir páginas antigas do cache.
+
 ### Supabase local (opcional, precisa de Docker)
 
 ```bash
