@@ -13,7 +13,13 @@ const CICLO = [
   { n: "04", titulo: "Meça", texto: "adesão, sequência e tendência" },
 ];
 
-export function Onboarding({ nomeInicial }: { nomeInicial: string }) {
+export function Onboarding({
+  nomeInicial,
+  primeiraLicao,
+}: {
+  nomeInicial: string;
+  primeiraLicao: { id: string; titulo: string; duracao: number };
+}) {
   const router = useRouter();
   const [passo, setPasso] = useState(1);
   const [nome, setNome] = useState(nomeInicial);
@@ -33,7 +39,7 @@ export function Onboarding({ nomeInicial }: { nomeInicial: string }) {
           hora,
           fuso: Intl.DateTimeFormat().resolvedOptions().timeZone,
         });
-        router.replace("/licao/habitos-s1");
+        router.replace(`/licao/${primeiraLicao.id}`);
       } catch {
         setErro("Não foi possível salvar. Confira a conexão e tente de novo.");
       }
@@ -122,8 +128,8 @@ export function Onboarding({ nomeInicial }: { nomeInicial: string }) {
               Sua primeira tarefa é mapear o que você já faz no automático. É a linha de base do seu painel.
             </p>
             <div className="flex flex-col gap-2 rounded-2xl border border-line bg-surface p-[18px]">
-              <span className="font-mono text-[11px] tracking-[0.06em] text-accent">SEMANA 1 · 6 MIN</span>
-              <span className="text-xl font-bold">Inventário de hábitos</span>
+              <span className="font-mono text-[11px] tracking-[0.06em] text-accent">SEMANA 1 · {primeiraLicao.duracao} MIN</span>
+              <span className="text-xl font-bold">{primeiraLicao.titulo}</span>
               <span className="text-sm leading-normal text-text-2">
                 Liste 5 hábitos da sua rotina e classifique cada um: ajuda, neutro ou atrapalha.
               </span>

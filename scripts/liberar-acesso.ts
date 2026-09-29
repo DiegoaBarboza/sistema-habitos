@@ -4,11 +4,12 @@
 
 import nextEnv from "@next/env";
 import { createClient } from "@supabase/supabase-js";
+import { MODULO_ATUAL } from "../src/lib/modulo.ts";
 
 // Mesmo carregador do Next: lê .env.local e tolera arquivo salvo com BOM (comum no Windows).
 nextEnv.loadEnvConfig(process.cwd());
 
-const [emailBruto, modulo = "habitos"] = process.argv.slice(2);
+const [emailBruto, modulo = MODULO_ATUAL] = process.argv.slice(2);
 const email = emailBruto?.trim().toLowerCase();
 
 if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {

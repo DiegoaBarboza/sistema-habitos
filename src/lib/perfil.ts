@@ -2,6 +2,7 @@ import "server-only";
 import { cache } from "react";
 import { redirect } from "next/navigation";
 import { criarClienteServidor } from "@/lib/supabase/server";
+import { MODULO_ATUAL } from "@/lib/modulo";
 import type { Tema } from "@/lib/tema";
 
 export type Perfil = {
@@ -40,10 +41,10 @@ export const obterSessao = cache(async () => {
   };
 });
 
-// Para as telas do módulo Hábitos: sem acesso vai para /sem-acesso, sem onboarding vai para /boas-vindas.
-export async function exigirModuloHabitos() {
+// Para as telas do módulo atual: sem acesso vai para /sem-acesso.
+export async function exigirModulo() {
   const sessao = await obterSessao();
-  if (!sessao.modulosLiberados.includes("habitos")) redirect("/sem-acesso");
+  if (!sessao.modulosLiberados.includes(MODULO_ATUAL)) redirect("/sem-acesso");
   return sessao;
 }
 

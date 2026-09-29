@@ -34,7 +34,7 @@ const RE_META = /^- `id`: `([^`]+)` · duração: (\d+) min · `exercicio\.tipo`
 const RE_TITULO = /^\*\*Título:\*\* (.+)$/;
 const RE_PERGUNTA = /^\*\*Pergunta-teste[^*]*:\*\* (.+)$/;
 
-export function lerLicoes(markdown: string, moduloId = "habitos"): Licao[] {
+export function lerLicoes(markdown: string, moduloId: string): Licao[] {
   const blocos = markdown.replace(/\r\n/g, "\n").split(/\n(?=## Semana )/).slice(1);
   return blocos.map((bloco) => lerSemana(bloco.replace(/\n---\s*$/, "").trim(), moduloId));
 }

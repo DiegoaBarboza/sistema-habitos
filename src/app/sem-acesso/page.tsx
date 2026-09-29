@@ -1,11 +1,13 @@
 import { redirect } from "next/navigation";
 import { sair } from "@/app/acoes";
 import { Marca } from "@/components/marca";
+import { MODULO_ATUAL } from "@/lib/modulo";
+import { obterModuloAtual } from "@/lib/modulo-servidor";
 import { obterSessao } from "@/lib/perfil";
 
 export default async function SemAcesso() {
-  const { email, modulosLiberados } = await obterSessao();
-  if (modulosLiberados.includes("habitos")) redirect("/hoje");
+  const [{ email, modulosLiberados }, modulo] = await Promise.all([obterSessao(), obterModuloAtual()]);
+  if (modulosLiberados.includes(MODULO_ATUAL)) redirect("/hoje");
 
   const paginaVenda = process.env.URL_PAGINA_VENDA;
 
@@ -14,7 +16,7 @@ export default async function SemAcesso() {
       <div className="flex flex-col gap-7">
         <Marca />
         <div className="flex flex-col gap-2.5">
-          <span className="font-mono text-xs tracking-[0.08em] text-accent">SISTEMA DE HÁBITOS</span>
+          <span className="font-mono text-xs tracking-[0.08em] text-accent">TRILHO</span>
           <h1 className="text-[28px] leading-[1.15] font-bold">Nenhum módulo liberado para este e-mail</h1>
           <p className="text-base leading-[1.55] text-text-2">
             Você entrou como <strong className="text-text">{email}</strong>.
@@ -28,7 +30,7 @@ export default async function SemAcesso() {
             href={paginaVenda}
             className="flex h-14 items-center justify-center rounded-xl bg-accent text-base font-bold text-on-accent"
           >
-            Conhecer o módulo Hábitos
+            Conhecer o módulo {modulo.titulo}
           </a>
         )}
         <form action={sair}>

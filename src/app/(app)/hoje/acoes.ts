@@ -3,14 +3,14 @@
 import { revalidatePath } from "next/cache";
 import { diaNoFuso } from "@/lib/datas";
 import { previstoNoDia, somarDias, type EstadoCheckin } from "@/lib/indicadores";
-import { exigirModuloHabitos } from "@/lib/perfil";
+import { exigirModulo } from "@/lib/perfil";
 import { criarClienteServidor } from "@/lib/supabase/server";
 
 const ESTADOS: EstadoCheckin[] = ["feito", "minimo", "nao_feito"];
 
 // estado null = volta para pendente (apaga o registro).
 export async function registrarCheckin(habitoId: string, dia: string, estado: EstadoCheckin | null) {
-  const { perfil } = await exigirModuloHabitos();
+  const { perfil } = await exigirModulo();
   if (estado !== null && !ESTADOS.includes(estado)) throw new Error("Estado inválido");
 
   // Só hoje e ontem, no fuso do usuário; dias mais antigos ficam travados.
@@ -45,7 +45,7 @@ export async function registrarCheckin(habitoId: string, dia: string, estado: Es
 }
 
 export async function marcarAjuste(id: string, aplicado: boolean) {
-  await exigirModuloHabitos();
+  await exigirModulo();
   const supabase = await criarClienteServidor();
   const { error } = await supabase.from("ajustes_ambiente").update({ aplicado }).eq("id", id);
   if (error) throw new Error(error.message);

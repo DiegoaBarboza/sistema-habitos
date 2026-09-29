@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 import { lerLicoes } from "./ler-licoes";
 
 const arquivo = readFileSync(join(__dirname, "../../../docs/conteudo-modulo1-habitos.md"), "utf8");
-const licoes = lerLicoes(arquivo);
+const licoes = lerLicoes(arquivo, "habitos");
 
 describe("lerLicoes", () => {
   it("lê as 8 semanas em ordem, com id, duração e tipo", () => {
@@ -55,6 +55,6 @@ describe("lerLicoes", () => {
   });
 
   it("aceita quebras de linha do Windows", () => {
-    expect(lerLicoes(arquivo.replace(/\n/g, "\r\n"))).toEqual(licoes);
+    expect(lerLicoes(arquivo.replace(/\n/g, "\r\n"), "habitos")).toEqual(licoes);
   });
 });

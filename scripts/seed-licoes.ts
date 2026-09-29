@@ -6,6 +6,7 @@ import { readFileSync } from "node:fs";
 import nextEnv from "@next/env";
 import { createClient } from "@supabase/supabase-js";
 import { lerLicoes } from "../src/lib/conteudo/ler-licoes.ts";
+import { MODULO_ATUAL } from "../src/lib/modulo.ts";
 
 nextEnv.loadEnvConfig(process.cwd());
 
@@ -18,7 +19,7 @@ if (!url || !chave) {
 }
 
 const markdown = readFileSync(new URL("../docs/conteudo-modulo1-habitos.md", import.meta.url), "utf8");
-const licoes = lerLicoes(markdown);
+const licoes = lerLicoes(markdown, MODULO_ATUAL);
 
 const supabase = createClient(url, chave, { auth: { persistSession: false } });
 const { error } = await supabase.from("licoes").upsert(licoes, { onConflict: "id" });

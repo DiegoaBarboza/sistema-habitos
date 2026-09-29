@@ -16,15 +16,16 @@ import {
   type Respostas,
 } from "@/lib/exercicios/regras";
 import { carregarContexto } from "@/lib/licao-contexto";
+import { MODULO_ATUAL } from "@/lib/modulo";
 import { obterSessao } from "@/lib/perfil";
 import { criarClienteServidor } from "@/lib/supabase/server";
-import { obterTrilha } from "@/lib/trilha";
+import { obterSemanas } from "@/lib/semanas";
 
 type Interno = Record<string, unknown>;
 
 async function prepararLicao(licaoId: string) {
   const { perfil } = await obterSessao();
-  const semana = (await obterTrilha()).find((s) => s.licao.id === licaoId);
+  const semana = (await obterSemanas()).find((s) => s.licao.id === licaoId);
   if (!semana || semana.estado === "bloqueada") throw new Error("Lição indisponível");
   const supabase = await criarClienteServidor();
   return { perfil, semana, supabase };
@@ -36,7 +37,7 @@ export async function iniciarLicao(licaoId: string) {
     .from("progresso_licao")
     .upsert({ user_id: perfil.user_id, licao_id: licaoId }, { onConflict: "user_id,licao_id", ignoreDuplicates: true });
   if (error) throw new Error(error.message);
-  revalidatePath("/trilha");
+  revalidatePath("/semanas");
 }
 
 // Salvamento automático. Chaves "_" (ids gravados na conclusão) nunca vêm do navegador.
@@ -121,7 +122,7 @@ async function aplicarEfeito(
         } else {
           const novo = await supabase
             .from("habitos")
-            .insert({ ...dados, user_id: userId, modulo_id: "habitos" })
+            .insert({ ...dados, user_id: userId, modulo_id: MODULO_ATUAL })
             .select("id")
             .single();
           falhou(novo);
@@ -160,7 +161,7 @@ async function aplicarEfeito(
           } else {
             const novo = await supabase
               .from("habitos")
-              .insert({ user_id: userId, modulo_id: "habitos", nome: c.novo_nome.trim(), ancora: c.ancora })
+              .insert({ user_id: userId, modulo_id: MODULO_ATUAL, nome: c.novo_nome.trim(), ancora: c.ancora })
               .select("id")
               .single();
             falhou(novo);
