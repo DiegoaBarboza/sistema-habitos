@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { CheckinInd } from "./indicadores";
-import { montarLembrete, type HabitoLembrete } from "./lembrete";
+import { decidirLembrete, montarLembrete, type HabitoLembrete } from "./lembrete";
 
 const FUSO = "America/Sao_Paulo";
 const h = (id: string, nome: string, aviso_falha = true): HabitoLembrete => ({
@@ -64,5 +64,15 @@ describe("montarLembrete", () => {
     // 07:05 em Manaus (UTC−4) = 08:05 em Brasília.
     expect(montarLembrete({ ...base, fuso: "America/Manaus", agora: new Date("2026-09-10T11:05:00Z") })).not.toBeNull();
     expect(montarLembrete({ ...base, agora: new Date("2026-09-10T11:05:00Z") })).toBeNull();
+  });
+});
+
+describe("decidirLembrete (diagnóstico)", () => {
+  it("explica o motivo de não enviar", () => {
+    expect(decidirLembrete({ ...base, agora: as("06:59") }).motivo).toBe(
+      "fora da janela: agora 06:59 (America/Sao_Paulo), janela 07:00–07:14",
+    );
+    expect(decidirLembrete({ ...base, agora: as("07:05"), enviadoEm: "2026-09-10" }).motivo).toBe("já recebeu o lembrete hoje");
+    expect(decidirLembrete({ ...base, agora: as("07:05"), habitos: [] }).motivo).toBe("nenhum hábito ativo hoje");
   });
 });
