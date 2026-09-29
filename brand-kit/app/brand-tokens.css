@@ -1,0 +1,36 @@
+/* Trilho · tokens de marca
+   Substitui a tabela da seção 5 do HANDOFF-sistema-habitos.md.
+   Aplicar data-theme="dark|light" no <html> (regra da seção 5 continua valendo).
+   Todos os pares de texto passam WCAG AA (tabela em ATUALIZACAO-HANDOFF-marca-trilho.md). */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #1B2120;
+  --surface: #232A29;
+  --line: #333C3A;
+  --text: #F0F4F2;
+  --text-2: #9DABA6;
+  --accent: #3AD48C;
+  --on-accent: #0B1A13;
+  --accent-mid: #2A8A61;
+  --warn: #F2A93B;
+  --success: var(--accent);
+  --nav: #171C1B;
+  --input: #171C1B;
+  --track: #333C3A;
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #F1F4F2;
+  --surface: #FFFFFF;
+  --line: #D3DCD8;
+  --text: #131A17;
+  --text-2: #52605A;
+  --accent: #0E7444;
+  --on-accent: #FFFFFF;
+  --accent-mid: #52A47C;
+  --warn: #9A5000;
+  --success: var(--accent);
+  --nav: #FFFFFF;
+  --input: #FFFFFF;
+  --track: #D3DCD8;
+}

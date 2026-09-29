@@ -1,7 +1,8 @@
 # HANDOFF · Sistema de Hábitos (MVP) · para o Claude Code
 
 > Leia este arquivo inteiro antes de escrever código. Ele é a especificação fechada do MVP: produto, telas, visual, dados, regras e critérios de aceite.
-> O conteúdo das lições está em `conteudo-modulo1-habitos.md` (mesma pasta). Coloque os dois arquivos na raiz do repositório, em `docs/`.
+> **Atenção: onde este arquivo conflitar com `HANDOFF-marca-trilho.md`, vale o HANDOFF-marca-trilho.md** (nome do produto, cores, ícones e alguns textos mudaram depois).
+> O conteúdo das lições está em `conteudo-modulo1-habitos.md` (mesma pasta). Coloque os arquivos na raiz do repositório, em `docs/`.
 > Dono do produto: Diego Barboza. Idioma do app: português do Brasil. Não invente regra que não esteja aqui; se faltar algo, pergunte.
 
 ---
@@ -17,7 +18,7 @@ App web instalável (PWA) para profissionais técnicos: os métodos de mudança 
 2. Liberação do módulo pela compra na Kiwify (webhook) e pela lista de testadores (liberação manual).
 3. Onboarding de 3 passos.
 4. Tela Hoje com check-in diário (feito / mínimo / não feito).
-5. Trilha das 8 semanas com regra de liberação.
+5. Trilha das 8 semanas com regra de liberação (no marca handoff a aba passa a se chamar "Semanas").
 6. Lição com as etapas Entenda / Faça / Compromisso e 8 tipos de exercício.
 7. Progresso com indicadores.
 8. Perfil: aparência (Automático/Escuro/Claro), lembrete, módulos, exportar dados, sair.
@@ -40,7 +41,7 @@ App web instalável (PWA) para profissionais técnicos: os métodos de mudança 
 
 Design aprovado no quadro "App – Sistema de Hábitos" (claude.ai/artifact/6QHrXCGFxjKwqkz6VswAXP). São 7 telas em 390 px de largura, cada uma nos dois temas. Siga a estrutura, a hierarquia e os textos. O código pode (e deve) ser responsivo: no desktop, a coluna fica centralizada com no máximo 480 px, e a barra de abas continua embaixo.
 
-Barra de abas fixa embaixo, com 4 itens: **Hoje · Trilha · Progresso · Perfil** (ícones em traço, 22 px; item ativo na cor de acento).
+Barra de abas fixa embaixo, com 4 itens: **Hoje · Trilha · Progresso · Perfil** (ícones em traço, 22 px; item ativo na cor de acento). *(O marca handoff renomeia "Trilha" para "Semanas".)*
 
 ### 4.1 Entrar
 - Marca (quadrado de 56 px com o ícone em cor de acento), rótulo "SISTEMA DE HÁBITOS" em mono, título "Hábito é processo. Processo se mede.", subtítulo.
@@ -70,7 +71,7 @@ Barra de abas fixa embaixo, com 4 itens: **Hoje · Trilha · Progresso · Perfil
 - "MÓDULO 1" / "Hábitos"; barra "X de 8 semanas concluídas" com a %.
 - 8 linhas: concluída (ícone check na cor de acento + resumo, ex.: "Concluída · 5 hábitos mapeados"), atual (borda de acento + botão "Continuar"), bloqueada (cadeado, opacidade 70% + motivo, ex.: "Libera ao concluir a semana 3 + 5 check-ins (3/5)").
 - Lições concluídas podem ser reabertas para consulta e edição.
-- "Outros módulos": cartões tracejados "EM BREVE" (Negociação, Persuasão com ética), vindos da tabela `modulos` com `status = 'em_breve'`.
+- "Outros módulos": cartões tracejados "EM BREVE" (Negociação, Persuasão com ética), vindos da tabela `modulos` com `status = 'em_breve'`. *(Substituído no marca handoff: Procrastinação e Sono.)*
 
 ### 4.5 Lição
 - Cabeçalho: voltar, "SEMANA N · X MIN", título; barra de 3 etapas (Entenda / Faça / Compromisso) que acende conforme o avanço.
@@ -85,7 +86,7 @@ Barra de abas fixa embaixo, com 4 itens: **Hoje · Trilha · Progresso · Perfil
 - Seletor 7d / 30d / Tudo.
 - 4 indicadores: ADESÃO (% + subtítulo comparando com a meta), SEM FALHA 2X (atual + recorde), CHECK-INS (quantidade + dias ativos), VERSÃO MÍNIMA (dias salvos pelo mínimo).
 - "Adesão por semana": 8 barras (S1…S8) com o valor em cima, meta de 80% tracejada, semana atual na cor de acento e as passadas numa cor intermediária.
-- "Por hábito · 14 dias": um cartão por hábito com a % e 14 quadradinhos (feito = acento, mínimo = cor intermediária, não feito/sem registro = vazio) + legenda.
+- "Por hábito · 14 dias": um cartão por hábito com a % e 14 quadradinhos (feito = acento, mínimo = cor intermediária, não feito/sem registro = vazio) + legenda. *(No marca handoff, "mínimo" passa a ser célula com metade da altura preenchida.)*
 - Cartão "Revisão mensal guiada libera em X dias" (depois da semana 8: abre a revisão).
 
 ### 4.7 Perfil
@@ -97,27 +98,13 @@ Barra de abas fixa embaixo, com 4 itens: **Hoje · Trilha · Progresso · Perfil
 
 ## 5. Visual (tokens)
 
-Fontes (Google Fonts): **IBM Plex Sans** 400/500/600/700 para o texto; **IBM Plex Mono** 400/500/600 para números, rótulos em caixa-alta e datas.
+> **Esta seção foi substituída.** Os tokens, as cores e o contraste válidos estão em `HANDOFF-marca-trilho.md` e em `brand-kit/app/brand-tokens.css`. A tabela antiga (ciano da Zênite) não deve ser usada.
 
-| Token | Escuro | Claro | Uso |
-|---|---|---|---|
-| `--bg` | #1E2328 | #F2F5F7 | fundo da página |
-| `--surface` | #262C32 | #FFFFFF | cartões |
-| `--line` | #343B42 | #D5DDE3 | bordas, divisórias |
-| `--text` | #F1F4F6 | #14191E | texto principal |
-| `--text-2` | #9BA7B0 | #56626C | texto secundário |
-| `--accent` | #37C0E0 | #0A7390 | acento, ativo, feito |
-| `--on-accent` | #10181C | #FFFFFF | texto sobre acento |
-| `--accent-mid` | #2A7F94 | #7FB5C6 | "mínimo", barras passadas |
-| `--warn` | #F2A93B | #A35604 | pendente, alerta, sair |
-| `--success` | #5FD3A6 | #1B7F4B | lição concluída |
-| `--nav` | #1A1E22 | #FFFFFF | barra de abas e cabeçalhos |
-| `--input` | #1A1E22 | #FFFFFF | fundo de campos |
-| `--track` | #343B42 | #D5DDE3 | trilho de barras vazias |
+Fontes (Google Fonts): **IBM Plex Sans** 400/500/600/700 para o texto; **IBM Plex Mono** 400/500/600 para números, rótulos em caixa-alta e datas.
 
 - Raio: 12 px (cartões, botões), 10 px (campos pequenos), 16 px (cartões de destaque). Espaçamento em múltiplos de 4; padding lateral de 20 px no celular.
 - Rótulos em mono: 10–12 px, `letter-spacing: .06–.08em`, caixa-alta.
-- Alvos de toque ≥ 44 px. Contraste AA nos dois temas (os tokens já passam).
+- Alvos de toque ≥ 44 px. Contraste AA nos dois temas.
 - Tema: aplicar `data-theme="dark|light"` no `<html>`. "Automático" usa `prefers-color-scheme` e reage à mudança do sistema. Guardar a escolha no perfil do usuário (e em `localStorage` para evitar flash na carga).
 - Ícones: traço de 1,9–2 px, cantos arredondados (Lucide serve).
 
@@ -242,7 +229,7 @@ create table push_inscricoes (
 
 Vínculo de acesso: no primeiro login (e a cada login), um trigger ou rota de servidor preenche `acessos.user_id` onde `lower(email) = lower(auth.email())`. O app só mostra o módulo se existir um `acessos` com `status = 'ativo'` para o usuário.
 
-Seeds: `modulos` = `habitos` (ativo), `negociacao` e `persuasao` (em_breve). `licoes` = as 8 do arquivo de conteúdo, convertidas em JSON (escreva um script `scripts/seed-licoes.ts` que lê o markdown ou um JSON derivado dele; o texto tem que ficar idêntico ao arquivo).
+Seeds: `modulos` = `habitos` (ativo), e como "em breve" **`procrastinacao` e `sono`** (o arquivo original previa `negociacao` e `persuasao`, que saíram do roadmap). `licoes` = as 8 do arquivo de conteúdo, convertidas em JSON (escreva um script `scripts/seed-licoes.ts` que lê o markdown ou um JSON derivado dele; o texto tem que ficar idêntico ao arquivo).
 
 ## 7. Regras de negócio
 
@@ -305,7 +292,7 @@ Textos, rótulos, placeholders e dicas: exatamente os do arquivo de conteúdo.
 
 ## 10. PWA
 
-- `manifest.webmanifest`: nome "Sistema de Hábitos", nome curto "Hábitos", `display: standalone`, `theme_color` #1E2328, `background_color` #1E2328, ícones 192/512 e maskable.
+- `manifest.webmanifest`: **usar o do kit de marca** (`brand-kit/app/manifest.webmanifest`: nome "Trilho", cores #1B2120, ícones 192/512/maskable). Os valores antigos ("Sistema de Hábitos", #1E2328) foram substituídos.
 - Service worker: cache do shell do app, estratégia network-first para dados, e o handler de push. Offline: a tela Hoje abre com o último estado em cache e mostra "Sem conexão: o check-in será enviado quando voltar" (fila local de check-ins).
 
 ## 11. Privacidade e LGPD (mínimo)
