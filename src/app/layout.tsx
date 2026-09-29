@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
+import { RegistrarSW } from "@/components/registrar-sw";
 import { TemaProvider } from "@/components/tema-provider";
 import { scriptTemaInicial } from "@/lib/tema";
 import "./globals.css";
@@ -54,6 +55,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </head>
       <body className="min-h-dvh bg-bg font-sans text-text">
         <TemaProvider>{children}</TemaProvider>
+        <RegistrarSW />
       </body>
     </html>
   );

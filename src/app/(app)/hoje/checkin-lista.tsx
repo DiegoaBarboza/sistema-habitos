@@ -1,8 +1,10 @@
 "use client";
 
-import { useOptimistic, useRef, useState, useTransition } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect, useMemo, useOptimistic, useRef, useState, useSyncExternalStore, useTransition } from "react";
 import type { EstadoCheckin } from "@/lib/indicadores";
 import { registrarCheckin } from "./acoes";
+import { assinarConexao, assinarFila, enfileirar, lerFilaBruta, parseFila, remover } from "./fila-offline";
 
 export type Cartao = {
   id: string;
@@ -44,19 +46,55 @@ export function CheckinLista({
   const [, iniciar] = useTransition();
   const [menu, setMenu] = useState<string | null>(null);
   const [erro, setErro] = useState<string | null>(null);
+  const router = useRouter();
+
+  const online = useSyncExternalStore(assinarConexao, () => navigator.onLine, () => true);
+  const filaBruta = useSyncExternalStore(assinarFila, lerFilaBruta, () => "[]");
+  const fila = useMemo(() => parseFila(filaBruta), [filaBruta]);
+
+  // Voltou a conexão: envia a fila em ordem e atualiza os indicadores.
+  const enviando = useRef(false);
+  useEffect(() => {
+    if (!online || !fila.length || enviando.current) return;
+    enviando.current = true;
+    (async () => {
+      for (const item of fila) {
+        try {
+          await registrarCheckin(item.habitoId, item.dia, item.estado);
+          remover(item);
+        } catch {
+          if (!navigator.onLine) break;
+          remover(item); // o servidor recusou (ex.: o dia já travou): não adianta tentar de novo
+          setErro("Um check-in feito sem conexão não pôde ser enviado.");
+        }
+      }
+      enviando.current = false;
+      router.refresh();
+    })();
+  }, [online, fila, router]);
 
   function registrar(id: string, estado: EstadoCheckin | null) {
     setMenu(null);
     setErro(null);
+    if (!navigator.onLine) {
+      enfileirar({ habitoId: id, dia, estado });
+      return;
+    }
     iniciar(async () => {
       aplicar([id, estado]);
       try {
         await registrarCheckin(id, dia, estado);
       } catch {
-        setErro("Não foi possível registrar. Confira a conexão e tente de novo.");
+        if (!navigator.onLine) enfileirar({ habitoId: id, dia, estado });
+        else setErro("Não foi possível registrar. Confira a conexão e tente de novo.");
       }
     });
   }
+
+  const estadoDe = (id: string) => {
+    const naFila = fila.find((i) => i.habitoId === id && i.dia === dia);
+    return naFila ? naFila.estado : (estados[id] ?? null);
+  };
 
   return (
     <section aria-labelledby="titulo-checkin" className="flex flex-col gap-2">
@@ -81,12 +119,17 @@ export function CheckinLista({
         <CartaoCheckin
           key={`${dia}-${c.id}`}
           cartao={c}
-          estado={estados[c.id] ?? null}
+          estado={estadoDe(c.id)}
           menuAberto={menu === c.id}
           abrirMenu={() => setMenu(menu === c.id ? null : c.id)}
           registrar={(e) => registrar(c.id, e)}
         />
       ))}
+      {(!online || fila.length > 0) && (
+        <p role="status" className="rounded-[10px] bg-warn/15 px-3 py-2 text-[13px] text-warn">
+          Sem conexão: o check-in será enviado quando voltar
+        </p>
+      )}
       {erro && (
         <p role="alert" className="text-sm text-warn">
           {erro}
