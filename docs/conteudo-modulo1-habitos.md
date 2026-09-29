@@ -32,7 +32,7 @@ Faça como numa auditoria de chão de fábrica: anote o que acontece, não o que
 
 ### Compromisso
 - "Escolha 1 hábito para trabalhar nas próximas semanas." Opções: os itens marcados com −. Se não houver nenhum −, os itens marcados com +, com o texto "Nenhum atrapalha? Escolha um + para fortalecer."
-- Efeito no sistema: o hábito escolhido vira o **hábito-foco** (fica com destaque na Trilha e entra nos exercícios das semanas 3 a 6).
+- Efeito no sistema: o hábito escolhido vira o **hábito-foco** (fica com destaque em Semanas e entra nos exercícios das semanas 3 a 6).
 - Check-in desta semana: nenhum hábito novo ainda. O check-in começa na semana 2.
 
 ### Para ir além

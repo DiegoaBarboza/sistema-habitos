@@ -21,7 +21,7 @@ type Entrada = {
 
 // Seção 7 do handoff: S1 livre; S2 após concluir S1; SN (3–8) após concluir S(N−1)
 // e ter 5 dias distintos com check-in desde que S(N−1) foi iniciada.
-export function calcularTrilha({ progresso, diasComCheckin, fuso }: Entrada): EstadoSemana[] {
+export function calcularSemanas({ progresso, diasComCheckin, fuso }: Entrada): EstadoSemana[] {
   const concluida = (n: number) => Boolean(progresso.get(n)?.concluidaEm);
 
   const checkinsDesdeInicio = (n: number) => {

@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { resumoConclusao } from "@/lib/conteudo/resumo";
+import { obterModuloAtual } from "@/lib/modulo-servidor";
 import { TOTAL_SEMANAS } from "@/lib/regras/liberacao";
 import { criarClienteServidor } from "@/lib/supabase/server";
-import { obterTrilha, type SemanaTrilha } from "@/lib/trilha";
+import { obterSemanas, type SemanaDoModulo } from "@/lib/semanas";
 
-export default async function Trilha() {
+export default async function Semanas() {
   const supabase = await criarClienteServidor();
-  const [semanas, { data: emBreve }] = await Promise.all([
-    obterTrilha(),
+  const [semanas, modulo, { data: emBreve }] = await Promise.all([
+    obterSemanas(),
+    obterModuloAtual(),
     supabase.from("modulos").select("id, titulo").eq("status", "em_breve").order("ordem"),
   ]);
 
@@ -17,8 +19,8 @@ export default async function Trilha() {
   return (
     <>
       <div className="flex flex-col gap-1.5">
-        <span className="rotulo text-xs">Módulo 1</span>
-        <h1 className="text-[28px] font-bold">Hábitos</h1>
+        <span className="rotulo text-xs">Módulo {modulo.ordem}</span>
+        <h1 className="text-[28px] font-bold">{modulo.titulo}</h1>
       </div>
 
       <div className="flex flex-col gap-2.5 rounded-xl border border-line bg-surface px-4 py-3.5">
@@ -68,7 +70,7 @@ export default async function Trilha() {
   );
 }
 
-function LinhaSemana({ semana: s }: { semana: SemanaTrilha }) {
+function LinhaSemana({ semana: s }: { semana: SemanaDoModulo }) {
   const href = `/licao/${s.licao.id}`;
   const subtitulo =
     s.estado === "concluida"

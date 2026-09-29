@@ -15,13 +15,14 @@ const ABAS = [
     ),
   },
   {
-    href: "/trilha",
-    rotulo: "Trilha",
+    href: "/semanas",
+    rotulo: "Semanas",
+    // Lucide calendar-days
     icone: (
       <>
-        <circle cx="6" cy="18" r="2.5" />
-        <circle cx="18" cy="6" r="2.5" />
-        <path d="M8.5 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.5" />
+        <path d="M8 2v4M16 2v4" />
+        <rect width="18" height="18" x="3" y="4" rx="2" />
+        <path d="M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01" />
       </>
     ),
   },

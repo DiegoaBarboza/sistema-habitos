@@ -124,8 +124,8 @@ export function LicaoTela({ licao, respostasIniciais, iniciada, concluida: jaCon
       <header className="sticky top-0 z-10 flex flex-col gap-3 border-b border-line bg-nav px-5 pt-4 pb-3.5">
         <div className="flex items-center gap-3">
           <Link
-            href="/trilha"
-            aria-label="Voltar para a trilha"
+            href="/semanas"
+            aria-label="Voltar para Semanas"
             className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-line"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

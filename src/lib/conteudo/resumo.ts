@@ -1,6 +1,6 @@
 import type { TipoExercicio } from "./ler-licoes";
 
-// Linha "Concluída · …" da Trilha. Lê o formato de respostas gravado pelos exercícios (marco 5).
+// Linha "Concluída · …" da tela Semanas. Lê o formato de respostas gravado pelos exercícios (marco 5).
 export function resumoConclusao(tipo: TipoExercicio, respostas: Record<string, unknown>): string {
   const preenchidos = (lista: unknown, campo: string) =>
     Array.isArray(lista)

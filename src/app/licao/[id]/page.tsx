@@ -4,27 +4,27 @@ import { normalizar } from "@/lib/exercicios/regras";
 import { carregarDados } from "@/lib/hoje";
 import { adesao, semFalha2x, somarDias } from "@/lib/indicadores";
 import { carregarContexto } from "@/lib/licao-contexto";
-import { exigirModuloHabitos } from "@/lib/perfil";
+import { exigirModulo } from "@/lib/perfil";
 import { criarClienteServidor } from "@/lib/supabase/server";
-import { obterTrilha } from "@/lib/trilha";
+import { obterSemanas } from "@/lib/semanas";
 import { LicaoTela } from "./licao-tela";
 
 export default async function Licao({ params }: PageProps<"/licao/[id]">) {
   const { id } = await params;
-  const { perfil } = await exigirModuloHabitos();
+  const { perfil } = await exigirModulo();
   if (!perfil.onboarding_ok) redirect("/boas-vindas");
 
-  const trilha = await obterTrilha();
-  const semana = trilha.find((s) => s.licao.id === id);
+  const semanas = await obterSemanas();
+  const semana = semanas.find((s) => s.licao.id === id);
   if (!semana) notFound();
-  if (semana.estado === "bloqueada") redirect("/trilha");
+  if (semana.estado === "bloqueada") redirect("/semanas");
 
   const supabase = await criarClienteServidor();
   const ctx = await carregarContexto(supabase);
   const { licao, progresso } = semana;
 
   // Semana 4: âncoras sugeridas a partir do inventário (itens + e =).
-  const inventario = trilha.find((s) => s.licao.tipo_exercicio === "inventario")?.progresso?.respostas;
+  const inventario = semanas.find((s) => s.licao.tipo_exercicio === "inventario")?.progresso?.respostas;
   const sugestoesAncora =
     licao.tipo_exercicio === "encadeamento"
       ? normalizar("inventario", inventario, ctx)

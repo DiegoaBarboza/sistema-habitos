@@ -1,8 +1,9 @@
 import "server-only";
 import { cache } from "react";
 import type { ConteudoLicao, TipoExercicio } from "@/lib/conteudo/ler-licoes";
+import { MODULO_ATUAL } from "@/lib/modulo";
 import { obterSessao } from "@/lib/perfil";
-import { calcularTrilha, type EstadoSemana } from "@/lib/regras/liberacao";
+import { calcularSemanas, type EstadoSemana } from "@/lib/regras/liberacao";
 import { criarClienteServidor } from "@/lib/supabase/server";
 
 export type LicaoResumo = {
@@ -22,9 +23,9 @@ export type ProgressoLicao = {
   concluida_em: string | null;
 };
 
-export type SemanaTrilha = EstadoSemana & { licao: LicaoResumo; progresso?: ProgressoLicao };
+export type SemanaDoModulo = EstadoSemana & { licao: LicaoResumo; progresso?: ProgressoLicao };
 
-export const obterTrilha = cache(async () => {
+export const obterSemanas = cache(async () => {
   const { perfil } = await obterSessao();
   const supabase = await criarClienteServidor();
 
@@ -32,7 +33,7 @@ export const obterTrilha = cache(async () => {
     supabase
       .from("licoes")
       .select("id, semana, titulo, duracao_min, tipo_exercicio, conteudo")
-      .eq("modulo_id", "habitos")
+      .eq("modulo_id", MODULO_ATUAL)
       .order("semana")
       .returns<LicaoResumo[]>(),
     supabase
@@ -42,7 +43,7 @@ export const obterTrilha = cache(async () => {
     supabase.from("checkins").select("dia").in("estado", ["feito", "minimo"]),
   ]);
   for (const r of [licoes, progresso, checkins]) {
-    if (r.error) throw new Error(`Não foi possível carregar a trilha: ${r.error.message}`);
+    if (r.error) throw new Error(`Não foi possível carregar as semanas: ${r.error.message}`);
   }
   if (!licoes.data?.length) throw new Error("Nenhuma lição cadastrada. Rode npm run seed-licoes.");
 
@@ -54,13 +55,13 @@ export const obterTrilha = cache(async () => {
     }),
   );
 
-  const estados = calcularTrilha({
+  const estados = calcularSemanas({
     progresso: porSemana,
     diasComCheckin: checkins.data!.map((c) => c.dia as string),
     fuso: perfil.fuso,
   });
 
-  return estados.map<SemanaTrilha>((e) => {
+  return estados.map<SemanaDoModulo>((e) => {
     const licao = licoes.data.find((l) => l.semana === e.semana)!;
     return { ...e, licao, progresso: porLicao.get(licao.id) };
   });

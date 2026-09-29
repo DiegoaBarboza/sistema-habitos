@@ -14,7 +14,7 @@ import {
 } from "@/lib/indicadores";
 import { obterSessao } from "@/lib/perfil";
 import { criarClienteServidor } from "@/lib/supabase/server";
-import { obterTrilha } from "@/lib/trilha";
+import { obterSemanas } from "@/lib/semanas";
 
 export type HabitoHoje = {
   id: string;
@@ -48,20 +48,21 @@ export async function carregarDados() {
 }
 
 export async function obterHoje() {
-  const [{ perfil, habitos, checkins, ajustes }, trilha] = await Promise.all([carregarDados(), obterTrilha()]);
+  const [{ perfil, habitos, checkins, ajustes }, semanas] = await Promise.all([carregarDados(), obterSemanas()]);
   const fuso = perfil.fuso;
   const agora = new Date();
   const dia = diaNoFuso(agora, fuso);
   const ontem = somarDias(dia, -1);
   const base = { habitos, checkins, fuso };
 
-  const concluida = (n: number) => trilha.find((s) => s.semana === n)?.estado === "concluida";
-  const atual = trilha.find((s) => s.estado === "atual");
+  const concluida = (n: number) => semanas.find((s) => s.semana === n)?.estado === "concluida";
+  const atual = semanas.find((s) => s.estado === "atual");
 
   const segunda = inicioDaSemana(dia);
   const semana = diasEntre(segunda, somarDias(segunda, 6)).map((d) => ({
     dia: d,
-    taxa: d > dia ? null : (adesao(base, d, d).taxa ?? 0),
+    // null = dia futuro ou sem hábito previsto (vira traço cinza no gráfico).
+    taxa: d > dia ? null : adesao(base, d, d).taxa,
     hoje: d === dia,
   }));
 
@@ -91,7 +92,7 @@ export async function obterHoje() {
     dia,
     ontem,
     // Esperando check-ins para liberar a próxima, a semana em curso é a primeira bloqueada.
-    semanaAtual: atual?.semana ?? trilha.find((s) => s.estado === "bloqueada")?.semana ?? 8,
+    semanaAtual: atual?.semana ?? semanas.find((s) => s.estado === "bloqueada")?.semana ?? 8,
     indicadores: {
       hoje: indHoje,
       adesaoSemana: adesao(base, segunda, dia).taxa,
