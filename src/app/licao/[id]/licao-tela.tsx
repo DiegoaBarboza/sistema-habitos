@@ -203,10 +203,10 @@ export function LicaoTela({ licao, respostasIniciais, iniciada, concluida: jaCon
 
         {sucesso ? (
           <Link
-            href="/hoje"
+            href={tipo === "contrato_revisao" ? "/concluido" : "/hoje"}
             className="flex h-14 items-center justify-center rounded-xl bg-success text-base font-bold text-on-accent"
           >
-            Lição concluída · voltar para Hoje
+            {tipo === "contrato_revisao" ? "Lição concluída · ver resumo do módulo" : "Lição concluída · voltar para Hoje"}
           </Link>
         ) : (
           <button

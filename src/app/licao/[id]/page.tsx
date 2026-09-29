@@ -1,10 +1,8 @@
 import { notFound, redirect } from "next/navigation";
-import { diaNoFuso } from "@/lib/datas";
 import { normalizar } from "@/lib/exercicios/regras";
-import { carregarDados } from "@/lib/hoje";
-import { adesao, semFalha2x, somarDias } from "@/lib/indicadores";
 import { carregarContexto } from "@/lib/licao-contexto";
 import { exigirModulo } from "@/lib/perfil";
+import { dadosUltimos30Dias } from "@/lib/progresso";
 import { criarClienteServidor } from "@/lib/supabase/server";
 import { obterSemanas } from "@/lib/semanas";
 import { LicaoTela } from "./licao-tela";
@@ -33,19 +31,8 @@ export default async function Licao({ params }: PageProps<"/licao/[id]">) {
       : [];
 
   // Semana 8: adesão e sem falha 2x de cada hábito nos últimos 30 dias.
-  let dados30d = {};
-  if (licao.tipo_exercicio === "contrato_revisao") {
-    const { habitos, checkins } = await carregarDados();
-    const hoje = diaNoFuso(new Date(), perfil.fuso);
-    const inicio = somarDias(hoje, -29);
-    dados30d = Object.fromEntries(
-      ctx.habitos.map((c) => {
-        const h = habitos.filter((x) => x.id === c.id);
-        const base = { habitos: h, checkins: checkins.filter((k) => k.habito_id === c.id), fuso: perfil.fuso };
-        return [c.id, { adesao: adesao(base, inicio, hoje).taxa, semFalha2x: semFalha2x(base, hoje).atual }];
-      }),
-    );
-  }
+  const dados30d =
+    licao.tipo_exercicio === "contrato_revisao" ? await dadosUltimos30Dias(ctx.habitos.map((h) => h.id)) : {};
 
   return (
     <LicaoTela
