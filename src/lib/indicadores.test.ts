@@ -11,6 +11,8 @@ import {
   falhouOntem,
   hoje,
   inicioDaSemana,
+  mapaDoHabito,
+  adesaoPorSemana,
   noHorario,
   semFalha2x,
   type CheckinInd,
@@ -137,5 +139,24 @@ describe("outros indicadores", () => {
     expect(inicioDaSemana("2026-09-24")).toBe("2026-09-21"); // quinta → segunda
     expect(inicioDaSemana("2026-09-27")).toBe("2026-09-21"); // domingo
     expect(inicioDaSemana("2026-09-21")).toBe("2026-09-21");
+  });
+});
+
+describe("Progresso", () => {
+  it("mapa de 14 dias: feito, mínimo, falhou e fora", () => {
+    const h = habito("a", "2026-09-05T15:00:00Z");
+    const base = { habitos: [h], checkins: [ck("a", "2026-09-01"), ck("a", "2026-09-02", "minimo"), ck("a", "2026-09-03", "nao_feito")], fuso: FUSO };
+    expect(mapaDoHabito(base, h, diasEntre("2026-08-31", "2026-09-05"))).toEqual(["fora", "feito", "minimo", "falhou", "falhou", "fora"]);
+  });
+
+  it("adesão por semana usa o início de cada lição como fronteira", () => {
+    const base = {
+      habitos: [habito("a")],
+      checkins: [...diasEntre("2026-09-01", "2026-09-04").map((d) => ck("a", d)), ck("a", "2026-09-06")],
+      fuso: FUSO,
+    };
+    // S1 sem hábitos antes de 01/09; S2 de 01 a 04 (4/4); S3 de 05 a 07, hoje = 07 (1/3); S4 não começou.
+    const r = adesaoPorSemana(base, ["2026-08-25", "2026-09-01", "2026-09-05", null, null, null, null, null], "2026-09-07");
+    expect(r.slice(0, 4)).toEqual([null, 1, 1 / 3, null]);
   });
 });

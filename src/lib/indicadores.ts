@@ -139,3 +139,29 @@ export function adesaoDoElo(base: Base, habito: HabitoInd, diaCorrente: string) 
   if (antes === null || depois === null) return null;
   return Math.round((depois - antes) * 100);
 }
+
+// ---------- Progresso ----------
+
+export type EstadoDia = "feito" | "minimo" | "falhou" | "fora";
+
+// Mapa de 14 dias: estado de um hábito em cada dia ("fora" = ainda não existia ou já removido).
+export function mapaDoHabito({ checkins, fuso }: Base, habito: HabitoInd, dias: string[]): EstadoDia[] {
+  const ver = indexar(checkins);
+  return dias.map((dia) => {
+    if (!previstoNoDia(habito, dia, fuso)) return "fora";
+    const c = ver(habito.id, dia);
+    return c?.estado === "feito" ? "feito" : c?.estado === "minimo" ? "minimo" : "falhou";
+  });
+}
+
+// Adesão por semana do módulo: cada semana vai do início da lição N até a véspera do início da N+1
+// (a semana em curso vai até hoje). Semana sem início ou sem hábito previsto fica null.
+export function adesaoPorSemana(base: Base, iniciosDasSemanas: (string | null)[], hojeDia: string) {
+  return iniciosDasSemanas.map((inicio, i) => {
+    if (!inicio || inicio > hojeDia) return null;
+    const proximo = iniciosDasSemanas.slice(i + 1).find((d): d is string => Boolean(d));
+    const fim = proximo ? somarDias(proximo, -1) : hojeDia;
+    if (fim < inicio) return null;
+    return adesao(base, inicio, fim).taxa;
+  });
+}
