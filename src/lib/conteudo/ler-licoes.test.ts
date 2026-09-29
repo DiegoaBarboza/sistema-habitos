@@ -1,0 +1,60 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
+import { describe, expect, it } from "vitest";
+import { lerLicoes } from "./ler-licoes";
+
+const arquivo = readFileSync(join(__dirname, "../../../docs/conteudo-modulo1-habitos.md"), "utf8");
+const licoes = lerLicoes(arquivo, "habitos");
+
+describe("lerLicoes", () => {
+  it("lê as 8 semanas em ordem, com id, duração e tipo", () => {
+    expect(licoes.map((l) => [l.semana, l.id, l.duracao_min, l.tipo_exercicio])).toEqual([
+      [1, "habitos-s1", 6, "inventario"],
+      [2, "habitos-s2", 6, "identidade"],
+      [3, "habitos-s3", 6, "plano_gatilho"],
+      [4, "habitos-s4", 5, "encadeamento"],
+      [5, "habitos-s5", 6, "ambiente"],
+      [6, "habitos-s6", 5, "versao_minima"],
+      [7, "habitos-s7", 5, "recuperacao"],
+      [8, "habitos-s8", 7, "contrato_revisao"],
+    ]);
+  });
+
+  it("separa título, parágrafos e pergunta-teste do Entenda", () => {
+    const s1 = licoes[0].conteudo.entenda;
+    expect(s1.titulo).toBe("Você não melhora o que não enxerga");
+    expect(s1.paragrafos).toHaveLength(3);
+    expect(s1.pergunta).toBe("isso me aproxima ou me afasta do resultado que eu quero daqui a um ano?");
+    expect(licoes[1].conteudo.entenda.pergunta).toBe(
+      "o que uma pessoa com essa identidade faria hoje, em 2 minutos?",
+    );
+  });
+
+  it("mantém o texto idêntico ao arquivo", () => {
+    for (const l of licoes) {
+      const c = l.conteudo;
+      const trechos = [
+        l.titulo,
+        c.entenda.titulo,
+        c.entenda.pergunta,
+        ...c.entenda.paragrafos,
+        ...c.faca,
+        ...c.compromisso,
+        c.para_ir_alem,
+      ];
+      for (const t of trechos) expect(arquivo).toContain(t);
+      expect(c.faca.length).toBeGreaterThan(0);
+      expect(c.compromisso.length).toBeGreaterThan(0);
+    }
+  });
+
+  it("mantém sub-itens dentro do item pai", () => {
+    const acoes = licoes[4].conteudo.faca.find((i) => i.startsWith("Para cada hábito ativo"));
+    expect(acoes).toContain("Hábito a construir");
+    expect(acoes).toContain("Hábito a largar");
+  });
+
+  it("aceita quebras de linha do Windows", () => {
+    expect(lerLicoes(arquivo.replace(/\n/g, "\r\n"), "habitos")).toEqual(licoes);
+  });
+});

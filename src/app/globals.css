@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* Tokens da marca Trilho: mesmos valores de brand-kit/app/brand-tokens.css.
+   :root sem data-theme cai no escuro, que é o padrão do servidor. */
+:root,
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #1b2120;
+  --surface: #232a29;
+  --line: #333c3a;
+  --text: #f0f4f2;
+  --text-2: #9daba6;
+  --accent: #3ad48c;
+  --on-accent: #0b1a13;
+  --accent-mid: #2a8a61;
+  --warn: #f2a93b;
+  --success: var(--accent);
+  --nav: #171c1b;
+  --input: #171c1b;
+  --track: #333c3a;
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f1f4f2;
+  --surface: #ffffff;
+  --line: #d3dcd8;
+  --text: #131a17;
+  --text-2: #52605a;
+  --accent: #0e7444;
+  --on-accent: #ffffff;
+  --accent-mid: #52a47c;
+  --warn: #9a5000;
+  --success: var(--accent);
+  --nav: #ffffff;
+  --input: #ffffff;
+  --track: #d3dcd8;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-text: var(--text);
+  --color-text-2: var(--text-2);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --color-accent-mid: var(--accent-mid);
+  --color-warn: var(--warn);
+  --color-success: var(--success);
+  --color-nav: var(--nav);
+  --color-input: var(--input);
+  --color-track: var(--track);
+  --font-sans: var(--font-plex-sans), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+@layer components {
+  .rotulo {
+    @apply font-mono text-[11px] uppercase tracking-[0.08em] text-text-2;
+  }
+}

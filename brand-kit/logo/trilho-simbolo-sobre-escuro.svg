@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="6 6 97.5 88" role="img" aria-label="Trilho, símbolo"><title>Trilho, símbolo</title>
+
+<path d="M16 90 V52 A36 36 0 0 1 52 16 H78" fill="none" stroke="#F0F4F2" stroke-width="8" stroke-linecap="butt" stroke-linejoin="miter"/>
+<path d="M32 90 V52 A20 20 0 0 1 52 32 H78" fill="none" stroke="#F0F4F2" stroke-width="8" stroke-linecap="butt" stroke-linejoin="miter"/>
+<line x1="10" y1="81" x2="38" y2="81" stroke="#F0F4F2" stroke-width="6.5"/>
+<line x1="10" y1="60" x2="38" y2="60" stroke="#F0F4F2" stroke-width="6.5"/>
+<line x1="39.48" y1="45.73" x2="14.45" y2="33.19" stroke="#F0F4F2" stroke-width="6.5"/>
+<line x1="47.11" y1="38.88" x2="37.34" y2="12.64" stroke="#F0F4F2" stroke-width="6.5"/>
+<line x1="63.02" y1="10" x2="63.02" y2="38" stroke="#F0F4F2" stroke-width="6.5"/>
+<circle cx="91" cy="24" r="8.5" fill="#3AD48C"/>
+</svg>
