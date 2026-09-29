@@ -1,8 +1,8 @@
-# Sistema de Hábitos
+# Trilho
 
-App web instalável (PWA) para profissionais técnicos: métodos de mudança de hábito viram exercícios na tela e indicadores de adesão, com check-in diário.
+Plataforma de desenvolvimento pessoal (PWA) que mede, mostra padrões e lembra. O módulo 1, **Hábitos**, transforma métodos de mudança de hábito em exercícios na tela e indicadores de adesão, com check-in diário.
 
-A especificação do MVP está em [`docs/HANDOFF-sistema-habitos.md`](docs/HANDOFF-sistema-habitos.md) e o conteúdo das lições em [`docs/conteudo-modulo1-habitos.md`](docs/conteudo-modulo1-habitos.md).
+A especificação do MVP está em [`docs/HANDOFF-sistema-habitos.md`](docs/HANDOFF-sistema-habitos.md); nome, cores e ícones em [`docs/HANDOFF-marca-trilho.md`](docs/HANDOFF-marca-trilho.md) (vale este onde houver conflito); a direção da plataforma em [`docs/ROADMAP-trilho.md`](docs/ROADMAP-trilho.md). O conteúdo das lições está em [`docs/conteudo-modulo1-habitos.md`](docs/conteudo-modulo1-habitos.md) e os arquivos de marca em `brand-kit/` (os do app ficam copiados em `public/brand/`).
 
 Stack: Next.js (App Router) + TypeScript + Tailwind CSS + Supabase, deploy na Vercel.
 

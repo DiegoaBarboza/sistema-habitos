@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Trilho"><title>Trilho</title><rect width="64" height="64" rx="14" fill="#1B2120"/><g transform="translate(4.70 6.90) scale(0.5176)"><path d="M14.5 90 V52 A37.5 37.5 0 0 1 52 14.5 H78" fill="none" stroke="#F0F4F2" stroke-width="11" stroke-linecap="butt" stroke-linejoin="miter"/>
+<path d="M33.5 90 V52 A18.5 18.5 0 0 1 52 33.5 H78" fill="none" stroke="#F0F4F2" stroke-width="11" stroke-linecap="butt" stroke-linejoin="miter"/>
+<line x1="7" y1="76" x2="41" y2="76" stroke="#F0F4F2" stroke-width="10"/>
+<line x1="44.22" y1="44.22" x2="20.19" y2="20.17" stroke="#F0F4F2" stroke-width="10"/>
+<circle cx="88" cy="24" r="10.5" fill="#3AD48C"/></g></svg>

@@ -17,14 +17,28 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sistema de Hábitos",
+  title: "Trilho",
   description: "Hábito é processo. Processo se mede.",
+  applicationName: "Trilho",
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [
+      { url: "/brand/favicon.svg", type: "image/svg+xml" },
+      { url: "/brand/favicon.ico", sizes: "any" },
+    ],
+    apple: "/brand/apple-touch-icon.png",
+  },
+  openGraph: { siteName: "Trilho", title: "Trilho", description: "Hábito é processo. Processo se mede." },
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#1B2120" },
+    { media: "(prefers-color-scheme: light)", color: "#F1F4F2" },
+  ],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
