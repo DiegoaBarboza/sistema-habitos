@@ -36,6 +36,7 @@ export const obterSessao = cache(async () => {
 
   return {
     email: (claims.email as string | undefined) ?? "",
+    temSenha: claims.user_metadata?.tem_senha === true,
     perfil,
     modulosLiberados: acessos.map((a) => a.modulo_id as string),
   };

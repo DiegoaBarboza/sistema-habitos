@@ -1,10 +1,11 @@
 import { iniciais, obterSessao } from "@/lib/perfil";
 import { BotaoSair } from "./botao-sair";
+import { DefinirSenha } from "./definir-senha";
 import { LembreteDiario } from "./lembrete-diario";
 import { SeletorAparencia } from "./seletor-aparencia";
 
 export default async function Perfil() {
-  const { email, perfil } = await obterSessao();
+  const { email, perfil, temSenha } = await obterSessao();
 
   return (
     <>
@@ -33,6 +34,7 @@ export default async function Perfil() {
           Conta
         </h2>
         <div className="rounded-xl border border-line bg-surface">
+          <DefinirSenha temSenha={temSenha} />
           <BotaoSair />
         </div>
       </section>
