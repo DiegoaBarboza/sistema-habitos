@@ -1,17 +1,39 @@
 "use client";
 
-import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useState, useSyncExternalStore } from "react";
+import { entrarComSenha } from "@/app/acoes";
+import { lembrarPreferenciaSenha, lerPreferenciaSenha } from "@/lib/senha";
 import { criarClienteNavegador } from "@/lib/supabase/client";
 
+type Modo = "link" | "senha";
+const semAssinatura = () => () => {};
+
 export function FormEntrar({ linkInvalido }: { linkInvalido: boolean }) {
+  // Quem já entrou com senha neste aparelho vê direto o campo de senha.
+  const preferida = useSyncExternalStore<Modo>(
+    semAssinatura,
+    () => (lerPreferenciaSenha() ? "senha" : "link"),
+    () => "link",
+  );
+  const router = useRouter();
+  const [escolhido, setEscolhido] = useState<Modo | null>(null);
+  const modo = linkInvalido && !escolhido ? "link" : (escolhido ?? preferida);
+
   const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
   const [enviadoPara, setEnviadoPara] = useState<string | null>(null);
   const [enviando, setEnviando] = useState(false);
   const [erro, setErro] = useState<string | null>(
     linkInvalido ? "Esse link expirou ou já foi usado. Peça um novo." : null,
   );
 
-  async function enviar(e: React.FormEvent) {
+  function trocarModo(novo: Modo) {
+    setEscolhido(novo);
+    setErro(null);
+  }
+
+  async function enviarLink(e: React.FormEvent) {
     e.preventDefault();
     const destino = email.trim().toLowerCase();
     setEnviando(true);
@@ -30,6 +52,24 @@ export function FormEntrar({ linkInvalido }: { linkInvalido: boolean }) {
       return;
     }
     setEnviadoPara(destino);
+  }
+
+  async function entrar(e: React.FormEvent) {
+    e.preventDefault();
+    setEnviando(true);
+    setErro(null);
+    try {
+      const { erro: falha } = await entrarComSenha(email, senha);
+      if (!falha) {
+        lembrarPreferenciaSenha();
+        router.replace("/hoje");
+        return;
+      }
+      setErro(falha);
+    } catch {
+      setErro("Não foi possível entrar. Confira a conexão e tente de novo.");
+    }
+    setEnviando(false);
   }
 
   if (enviadoPara) {
@@ -56,8 +96,10 @@ export function FormEntrar({ linkInvalido }: { linkInvalido: boolean }) {
     );
   }
 
+  const campo = "h-[54px] w-full rounded-xl border border-line bg-input px-4 text-base outline-none focus:border-accent";
+
   return (
-    <form onSubmit={enviar} className="flex flex-col gap-3.5">
+    <form onSubmit={modo === "senha" ? entrar : enviarLink} className="flex flex-col gap-3.5">
       <label htmlFor="email" className="text-sm font-semibold">
         E-mail
       </label>
@@ -70,8 +112,24 @@ export function FormEntrar({ linkInvalido }: { linkInvalido: boolean }) {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="voce@empresa.com.br"
-        className="h-[54px] w-full rounded-xl border border-line bg-input px-4 text-base outline-none focus:border-accent"
+        className={campo}
       />
+      {modo === "senha" && (
+        <>
+          <label htmlFor="senha" className="text-sm font-semibold">
+            Senha
+          </label>
+          <input
+            id="senha"
+            type="password"
+            required
+            autoComplete="current-password"
+            value={senha}
+            onChange={(e) => setSenha(e.target.value)}
+            className={campo}
+          />
+        </>
+      )}
       {erro && (
         <p role="alert" className="text-sm text-warn">
           {erro}
@@ -82,11 +140,21 @@ export function FormEntrar({ linkInvalido }: { linkInvalido: boolean }) {
         disabled={enviando}
         className="h-14 cursor-pointer rounded-xl bg-accent text-base font-bold text-on-accent disabled:opacity-60"
       >
-        {enviando ? "Enviando…" : "Receber link de acesso"}
+        {modo === "senha" ? (enviando ? "Entrando…" : "Entrar") : enviando ? "Enviando…" : "Receber link de acesso"}
+      </button>
+      <button
+        type="button"
+        onClick={() => trocarModo(modo === "senha" ? "link" : "senha")}
+        className="min-h-11 cursor-pointer text-[15px] font-semibold text-accent"
+      >
+        {modo === "senha" ? "Esqueci a senha / receber link de acesso" : "Já tenho senha"}
       </button>
       <p className="text-center text-[13px] leading-normal text-text-2">
-        Sem senha. Comprou pela Kiwify? Use o mesmo e-mail da compra para liberar seu módulo.
+        {modo === "senha"
+          ? "Sem senha ainda? Entre pelo link e crie uma no Perfil."
+          : "Primeiro acesso é pelo link no e-mail. Comprou pela Kiwify? Use o mesmo e-mail da compra para liberar seu módulo."}
       </p>
     </form>
   );
 }
+
