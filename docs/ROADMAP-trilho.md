@@ -56,5 +56,10 @@ O Trilho não prescreve. Ele oferece ferramentas para a pessoa se observar.
 - Quando: desenhar quando os primeiros usuários estiverem perto da semana 8 (cerca de 2 meses depois do início dos testes), usando o que eles pedirem.
 
 ## Pendências
+- **Site institucional + landing de venda em `www.trilhoapp.com.br`** (pedido em 02/10/2026).
+  - Quem abre o endereço sem estar logado vê uma página sobre o app: o que é, o que faz, módulos futuros. O app continua em `/entrar`, `/hoje` etc.
+  - Referência de estrutura (não de conteúdo nem de cores): https://trilho.app.br/#recursos — seções Início, Sobre, Recursos, Comunidade, chamada final, rodapé.
+  - Depois: landing de venda no mesmo site; o botão "Comprar" leva ao checkout da Kiwify, e o acesso é liberado pelo webhook (Marco 8).
+  - Atenção: trilho.app.br é de outro app, o **Trilhô** (trilhas ao ar livre), com app nas lojas. Conferir no INPI se o nome Trilho pode ser registrado para apps antes de investir em divulgação.
 - Rodar INPI, registro.br e Instagram para o nome Trilho (Diego).
 - Landing e preço (R$ 97 → R$ 35 no doc de produto) precisam ser reavaliados com o nome e a marca novos.

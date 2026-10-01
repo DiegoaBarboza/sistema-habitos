@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { META_ADESAO } from "@/lib/indicadores";
 import { iniciais, obterSessao } from "@/lib/perfil";
+import { FraseCartao } from "@/components/frase-cartao";
+import { obterFraseDoDia } from "@/lib/frase-do-dia-servidor";
 import { obterHoje } from "@/lib/hoje";
 import { AjustesPendentes } from "./ajustes-pendentes";
 import { CheckinLista } from "./checkin-lista";
@@ -20,7 +22,7 @@ function cabecalho(agora: string, fuso: string) {
 const pct = (t: number | null) => (t === null ? "—" : `${Math.round(t * 100)}%`);
 
 export default async function Hoje() {
-  const [{ email }, h] = await Promise.all([obterSessao(), obterHoje()]);
+  const [{ email }, h, frase] = await Promise.all([obterSessao(), obterHoje(), obterFraseDoDia()]);
   const { data, saudacao } = cabecalho(h.agora, h.fuso);
 
   return (
@@ -42,6 +44,8 @@ export default async function Hoje() {
           {iniciais(h.nome, email)}
         </Link>
       </div>
+
+      {frase && <FraseCartao {...frase} />}
 
       {!h.temHabitos ? (
         <div className="flex flex-col gap-3 rounded-xl border border-dashed border-line p-5">

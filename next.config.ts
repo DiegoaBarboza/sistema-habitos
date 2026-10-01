@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Fontes e logos lidos do disco pela rota que desenha a arte da frase do dia.
+  outputFileTracingIncludes: { "/api/frase/imagem": ["./assets/**/*"] },
   // A tela "Trilha" passou a se chamar "Semanas" (marca Trilho); links antigos continuam funcionando.
   async redirects() {
     return [{ source: "/trilha", destination: "/semanas", permanent: true }];

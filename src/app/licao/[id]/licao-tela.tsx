@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState, useTransition } from "react";
 import { TextoMd } from "@/components/texto-md";
-import type { ConteudoLicao, TipoExercicio } from "@/lib/conteudo/ler-licoes";
+import { lerCitacao, type ConteudoLicao, type TipoExercicio } from "@/lib/conteudo/ler-licoes";
 import { etapaAtual, podeConcluir, ROTULO_PENDENTE, type Contexto } from "@/lib/exercicios/regras";
 import { concluirLicao, iniciarLicao, salvarRespostas } from "../acoes";
 import {
@@ -156,9 +156,7 @@ export function LicaoTela({ licao, respostasIniciais, iniciada, concluida: jaCon
             {entenda.titulo}
           </h2>
           {entenda.paragrafos.map((p, i) => (
-            <p key={i} className="text-base leading-relaxed">
-              <TextoMd texto={p} />
-            </p>
+            <ParagrafoEntenda key={i} texto={p} />
           ))}
           <div className="flex gap-3 rounded-xl border border-line bg-surface px-4 py-3.5">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mt-px shrink-0" aria-hidden="true">
@@ -229,5 +227,32 @@ export function LicaoTela({ licao, respostasIniciais, iniciada, concluida: jaCon
         </div>
       </main>
     </div>
+  );
+}
+
+// "#### " vira subtítulo e "> " vira a caixa de citação; o resto é parágrafo comum.
+function ParagrafoEntenda({ texto }: { texto: string }) {
+  if (texto.startsWith("#### ")) {
+    return <h3 className="mt-2 text-lg leading-snug font-bold">{texto.slice(5)}</h3>;
+  }
+  if (texto.startsWith(">")) {
+    const { texto: citacao, credito } = lerCitacao(texto);
+    return (
+      <figure className="flex flex-col gap-2 border-l-4 border-accent py-1 pl-4">
+        <blockquote className="text-xl leading-snug font-semibold">
+          <TextoMd texto={citacao} />
+        </blockquote>
+        {credito && (
+          <figcaption className="font-mono text-xs text-text-2">
+            <TextoMd texto={credito} />
+          </figcaption>
+        )}
+      </figure>
+    );
+  }
+  return (
+    <p className="text-base leading-relaxed">
+      <TextoMd texto={texto} />
+    </p>
   );
 }
