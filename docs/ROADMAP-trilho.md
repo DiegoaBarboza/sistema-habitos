@@ -45,6 +45,16 @@ O Trilho não prescreve. Ele oferece ferramentas para a pessoa se observar.
 - Os blocos (check-in, contador, escala, diário com etiquetas, lembrete, relatório) devem ser componentes reutilizáveis desde o módulo 1, mesmo que só o check-in seja usado agora.
 - A aba "Semanas" pertence ao módulo 1. Cartões "EM BREVE" em "Outros módulos": trocar Negociação e Persuasão por Procrastinação e Sono.
 
+## Depois do MVP: "Novo ciclo" do módulo Hábitos (registrado em 02/10/2026)
+- Problema: depois da semana 8 a pessoa não tem como trabalhar hábitos novos, que não estavam no inventário ou que só percebeu depois. A revisão mensal só mantém, ajusta ou remove.
+- Decisão: **não** fazer um "reset" que apaga dados. O histórico (adesão, recorde de "sem falha 2x", mapa) é a prova de progresso; apagar é motivo de cancelamento.
+- Proposta: botão "Novo ciclo" depois da semana 8, que **soma** ao que existe:
+  - refaz o inventário e as lições de montagem (gatilho, ambiente, versão mínima) para hábitos novos;
+  - os hábitos atuais continuam ativos ou são encerrados (encerrar = `removido_em`, sem apagar check-ins);
+  - indicadores e Progresso continuam somando todo o histórico.
+- Impacto técnico previsto: `progresso_licao` hoje tem uma linha por lição; o ciclo precisa de um número de ciclo (ou tabela `ciclos`) para guardar as respostas de cada rodada.
+- Quando: desenhar quando os primeiros usuários estiverem perto da semana 8 (cerca de 2 meses depois do início dos testes), usando o que eles pedirem.
+
 ## Pendências
 - Rodar INPI, registro.br e Instagram para o nome Trilho (Diego).
 - Landing e preço (R$ 97 → R$ 35 no doc de produto) precisam ser reavaliados com o nome e a marca novos.
