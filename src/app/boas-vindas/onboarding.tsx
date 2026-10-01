@@ -3,15 +3,11 @@
 import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 import { concluirOnboarding } from "@/app/acoes";
+import { ComoFuncionaSistema, ComoUsarApp } from "@/components/tutorial";
 
 const HORARIOS = ["07:00", "12:30", "18:30", "21:00"];
-
-const CICLO = [
-  { n: "01", titulo: "Entenda", texto: "o conceito em até 3 minutos" },
-  { n: "02", titulo: "Faça", texto: "o exercício na tela, sem papel" },
-  { n: "03", titulo: "Execute", texto: "check-in diário de 10 segundos" },
-  { n: "04", titulo: "Meça", texto: "adesão, sequência e tendência" },
-];
+const TOTAL = 4;
+const PASSO_AJUSTES = 3;
 
 export function Onboarding({
   nomeInicial,
@@ -27,8 +23,14 @@ export function Onboarding({
   const [erro, setErro] = useState<string | null>(null);
   const [salvando, iniciarSalvamento] = useTransition();
 
+  // O passo 2 tem prints e fica longo: cada passo novo começa do topo.
+  function irPara(n: number) {
+    setPasso(n);
+    window.scrollTo(0, 0);
+  }
+
   const nomeLimpo = nome.trim();
-  const podeContinuar = passo !== 2 || nomeLimpo.length > 0;
+  const podeContinuar = passo !== PASSO_AJUSTES || nomeLimpo.length > 0;
 
   function comecar() {
     setErro(null);
@@ -50,38 +52,35 @@ export function Onboarding({
     <main className="mx-auto flex min-h-dvh w-full max-w-[480px] flex-col gap-7 px-6 pt-8 pb-9">
       <div className="flex items-center justify-between">
         <div className="flex gap-1.5" aria-hidden="true">
-          {[1, 2, 3].map((i) => (
+          {Array.from({ length: TOTAL }, (_, i) => i + 1).map((i) => (
             <span
               key={i}
               className={`h-1.5 rounded-full ${i === passo ? "w-7" : "w-2.5"} ${i <= passo ? "bg-accent" : "bg-line"}`}
             />
           ))}
         </div>
-        <span className="font-mono text-xs text-text-2">{passo} de 3</span>
+        <span className="flex items-center gap-3">
+          <span className="font-mono text-xs text-text-2">
+            {passo} de {TOTAL}
+          </span>
+          {passo < PASSO_AJUSTES && (
+            <button
+              type="button"
+              onClick={() => irPara(PASSO_AJUSTES)}
+              className="min-h-11 cursor-pointer text-sm font-semibold text-accent"
+            >
+              Pular
+            </button>
+          )}
+        </span>
       </div>
 
       <div className="flex grow flex-col gap-[22px]">
-        {passo === 1 && (
-          <>
-            <h1 className="text-[30px] leading-[1.15] font-bold">Como o sistema funciona</h1>
-            <p className="text-base leading-[1.55] text-text-2">
-              8 semanas, uma ferramenta por semana. Toda lição segue o mesmo ciclo:
-            </p>
-            <ol className="flex flex-col gap-2.5">
-              {CICLO.map((c) => (
-                <li key={c.n} className="flex items-center gap-3.5 rounded-xl border border-line bg-surface px-4 py-3.5">
-                  <span className="w-[30px] font-mono text-xl font-semibold text-accent">{c.n}</span>
-                  <span className="flex flex-col">
-                    <span className="font-semibold">{c.titulo}</span>
-                    <span className="text-sm text-text-2">{c.texto}</span>
-                  </span>
-                </li>
-              ))}
-            </ol>
-          </>
-        )}
+        {passo === 1 && <ComoFuncionaSistema />}
 
-        {passo === 2 && (
+        {passo === 2 && <ComoUsarApp />}
+
+        {passo === PASSO_AJUSTES && (
           <>
             <h1 className="text-[30px] leading-[1.15] font-bold">Dois ajustes rápidos</h1>
             <div className="flex flex-col gap-2.5">
@@ -121,7 +120,7 @@ export function Onboarding({
           </>
         )}
 
-        {passo === 3 && (
+        {passo === TOTAL && (
           <>
             <h1 className="text-[30px] leading-[1.15] font-bold">Tudo pronto, {nomeLimpo}.</h1>
             <p className="text-base leading-[1.55] text-text-2">
@@ -148,17 +147,17 @@ export function Onboarding({
         {passo > 1 && (
           <button
             type="button"
-            onClick={() => setPasso(passo - 1)}
+            onClick={() => irPara(passo - 1)}
             disabled={salvando}
             className="h-14 cursor-pointer rounded-xl border border-line px-5 text-base font-semibold"
           >
             Voltar
           </button>
         )}
-        {passo < 3 ? (
+        {passo < TOTAL ? (
           <button
             type="button"
-            onClick={() => setPasso(passo + 1)}
+            onClick={() => irPara(passo + 1)}
             disabled={!podeContinuar}
             className="h-14 grow cursor-pointer rounded-xl bg-accent text-base font-bold text-on-accent disabled:cursor-not-allowed disabled:opacity-50"
           >
