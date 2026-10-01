@@ -9,7 +9,7 @@ import { criarClienteServidor } from "@/lib/supabase/server";
 // Arte da frase do dia: /api/frase/imagem?licao=habitos-s1&indice=0&formato=status&tema=grafite&dia=3
 const CORES: Record<TemaArte, { fundo: string; texto: string; destaque: string; apoio: string; logo: string }> = {
   grafite: { fundo: "#151a19", texto: "#f0f4f2", destaque: "#3ad48c", apoio: "#9daba6", logo: "trilho-horizontal-sobre-escuro.svg" },
-  branco: { fundo: "#ffffff", texto: "#131a17", destaque: "#3ad48c", apoio: "#52605a", logo: "trilho-horizontal-sobre-claro.svg" },
+  claro: { fundo: "#EEF2EC", texto: "#131a17", destaque: "#0e7444", apoio: "#52605a", logo: "trilho-horizontal-sobre-claro.svg" },
 };
 
 const ASSETS = join(process.cwd(), "assets");
@@ -18,7 +18,7 @@ const arquivo = (nome: string) => readFile(join(ASSETS, nome));
 export async function GET(request: NextRequest) {
   const p = request.nextUrl.searchParams;
   const formato: FormatoArte = p.get("formato") === "feed" ? "feed" : "status";
-  const tema: TemaArte = p.get("tema") === "branco" ? "branco" : "grafite";
+  const tema: TemaArte = p.get("tema") === "claro" ? "claro" : "grafite";
   const indice = Number(p.get("indice"));
   const dia = Number(p.get("dia"));
 

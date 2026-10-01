@@ -1,6 +1,6 @@
 // Regras da arte da frase do dia (imagem para status do WhatsApp, stories e feed).
 
-export type TemaArte = "grafite" | "branco";
+export type TemaArte = "grafite" | "claro";
 export type FormatoArte = "status" | "feed";
 
 export const FORMATOS: Record<FormatoArte, { largura: number; altura: number }> = {
@@ -8,9 +8,9 @@ export const FORMATOS: Record<FormatoArte, { largura: number; altura: number }> 
   feed: { largura: 1080, altura: 1350 },
 };
 
-// Os temas alternam a cada dia da jornada: dia ímpar grafite, dia par branco.
+// Os temas alternam a cada dia da jornada: dia ímpar grafite, dia par claro.
 export function temaDoDia(diaDaJornada: number): TemaArte {
-  return diaDaJornada % 2 === 1 ? "grafite" : "branco";
+  return diaDaJornada % 2 === 1 ? "grafite" : "claro";
 }
 
 // Separa "texto com **destaque**" em palavras, marcando as que ficam em verde.

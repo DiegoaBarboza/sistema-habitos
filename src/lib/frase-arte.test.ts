@@ -14,8 +14,8 @@ describe("arte da frase", () => {
     ]);
   });
 
-  it("alterna grafite e branco a cada dia", () => {
-    expect([1, 2, 3, 4].map(temaDoDia)).toEqual(["grafite", "branco", "grafite", "branco"]);
+  it("alterna grafite e claro a cada dia", () => {
+    expect([1, 2, 3, 4].map(temaDoDia)).toEqual(["grafite", "claro", "grafite", "claro"]);
   });
 
   it("tira os marcadores do texto", () => {
