@@ -4,8 +4,9 @@ import { obterSemanas } from "@/lib/semanas";
 import { Onboarding } from "./onboarding";
 
 export default async function BoasVindas() {
-  const { perfil } = await exigirModulo();
+  const { perfil, temSenha } = await exigirModulo();
   if (perfil.onboarding_ok) redirect("/hoje");
+  if (!temSenha) redirect("/criar-senha");
 
   const primeira = (await obterSemanas())[0].licao;
   return (

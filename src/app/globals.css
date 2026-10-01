@@ -65,3 +65,14 @@ body {
     @apply font-mono text-[11px] uppercase tracking-[0.08em] text-text-2;
   }
 }
+
+/* Prints do tutorial: uma versão por tema; sem data-theme vale o escuro. */
+.so-claro {
+  display: none;
+}
+[data-theme="light"] .so-claro {
+  display: block;
+}
+[data-theme="light"] .so-escuro {
+  display: none;
+}

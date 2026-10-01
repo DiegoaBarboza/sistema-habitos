@@ -22,5 +22,6 @@ export async function GET(request: NextRequest) {
   // Liga as compras e liberações feitas para este e-mail ao usuário que acabou de entrar.
   if (ok) await supabase.rpc("vincular_acessos");
 
-  return NextResponse.redirect(new URL(ok ? "/hoje" : "/entrar?erro=link", origin));
+  // Todo link de acesso passa pela tela de senha: no primeiro acesso ela é obrigatória.
+  return NextResponse.redirect(new URL(ok ? "/criar-senha" : "/entrar?erro=link", origin));
 }
