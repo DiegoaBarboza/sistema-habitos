@@ -28,7 +28,7 @@ A ideia central que une os três é separar o que depende de você do que não d
 
 ### O que Sêneca diria do seu inventário
 
-Na primeira carta ao amigo Lucílio, Sêneca escreveu que grande parte da vida nos escapa enquanto fazemos outra coisa. Ele estava falando do tempo que vai embora sem que a gente perceba, que é exatamente o que o seu inventário vai mostrar. Os vinte minutos de rede social na cama, o almoço comido na frente do computador e o e-mail respondido às dez da noite não parecem grande coisa quando você olha um dia só, mas somados viram meses de vida por ano.
+Essa frase abre a primeira carta que Sêneca escreveu ao amigo Lucílio, e nela ele estava falando do tempo que vai embora sem que a gente perceba, que é exatamente o que o seu inventário vai mostrar. Os vinte minutos de rede social na cama, o almoço comido na frente do computador e o e-mail respondido às dez da noite não parecem grande coisa quando você olha um dia só, mas somados viram meses de vida por ano.
 
 ### Na prática
 
