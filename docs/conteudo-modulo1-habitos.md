@@ -29,7 +29,7 @@ Outro grupo de pesquisadores reuniu mais de cem estudos sobre metas e chegou a u
 
 #### Um pouco de estoicismo
 
-Ao longo das próximas semanas você vai encontrar ideias de uma escola de filosofia que tem tudo a ver com hábitos: o estoicismo. Ela nasceu na Grécia, por volta do ano 300 antes de Cristo, mas ficou conhecida de verdade com três romanos que viveram bem diferente um do outro.
+Ao longo das próximas semanas você vai encontrar ideias de uma escola de filosofia que tem tudo a ver com hábitos: o estoicismo. Ela nasceu na Grécia, por volta do ano 300 antes de Cristo, mas ficou conhecida de verdade com três romanos que tiveram vidas muito diferentes.
 
 Sêneca foi escritor, homem muito rico e conselheiro do imperador Nero, e escreveu dezenas de cartas a um amigo ensinando a viver com mais propósito. Epicteto nasceu escravo, conquistou a liberdade e virou um dos professores mais respeitados de Roma. Marco Aurélio foi imperador e, no meio de guerras e epidemias, escrevia à noite anotações só para si mesmo, que hoje conhecemos como *Meditações*.
 
