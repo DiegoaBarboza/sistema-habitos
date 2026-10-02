@@ -104,43 +104,43 @@ Leitura recomendada: *Hábitos Atômicos*, de James Clear.
 
 #### O que é identidade-alvo
 
-Identidade é a resposta pra pergunta "quem eu sou?". Alvo é pra onde você mira. Juntando as duas, identidade-alvo é a pessoa que você quer virar, escrita numa frase curta: "sou alguém que cumpre o que planeja", "sou alguém que cuida da própria saúde".
+Identidade é a resposta pra pergunta "quem eu sou?", e alvo é pra onde você mira. Juntando as duas, identidade-alvo é a pessoa que você quer virar, escrita numa frase curta como "sou alguém que cumpre o que planeja" ou "sou alguém que cuida da própria saúde".
 
-Parece frase de efeito, mas tem uma razão prática por trás. E é essa razão que vai segurar os seus hábitos quando a motivação for embora.
+Parece frase de efeito, né? Só que tem uma razão bem prática por trás, e é ela que vai segurar os seus hábitos naqueles dias em que a motivação resolve tirar folga.
 
 #### Por que meta sozinha não segura
 
-Meta tem prazo e acaba. Bateu a meta, o comportamento volta a ser o que era. Quem trabalha com projeto conhece bem: o indicador melhora enquanto alguém cobra e piora no mês em que a auditoria vai embora.
+Meta tem prazo e acaba, e quando você bate a meta o comportamento costuma voltar ao que era antes. Quem trabalha com projeto conhece bem esse filme: o indicador melhora enquanto alguém está cobrando e piora no mês em que a auditoria vai embora.
 
-Hábito que dura nasce de outra pergunta. Não é "o que eu quero alcançar?", é "que tipo de pessoa eu quero ser?". A meta é a linha de chegada. A identidade é o jeito que você corre, e ela não acaba quando a corrida termina.
+Hábito que dura nasce de outra pergunta. Em vez de "o que eu quero alcançar?", a pergunta passa a ser "que tipo de pessoa eu quero ser?". A meta é a linha de chegada, enquanto a identidade é o seu jeito de correr, e esse jeito continua com você depois que a corrida termina.
 
 #### A gente descobre quem é olhando o que faz
 
-Nos anos 70, um psicólogo chamado Daryl Bem propôs uma ideia que parece invertida: a gente não age de acordo com quem acha que é. A gente descobre quem é observando como age. Igual a gente faz com os outros, só que olhando pra si mesmo.
+Nos anos 70, o psicólogo Daryl Bem propôs uma ideia que parece de trás pra frente: a gente não age de acordo com quem acha que é, a gente descobre quem é observando como age. É o mesmo julgamento que fazemos dos outros pelo que eles fazem, só que virado pra nós mesmos.
 
-Na prática, isso significa que cada vez que você faz a ação pequena, você junta uma prova de que é aquela pessoa. Uma prova não convence ninguém. Trinta provas mudam a forma como você se enxerga.
+Isso quer dizer que cada vez que você faz a ação pequena, você junta mais uma prova de que é aquela pessoa. Uma prova sozinha não convence ninguém, mas trinta provas começam a mudar a forma como você se enxerga.
 
-E trinta é pouco. Uma pesquisa da University College London acompanhou pessoas criando um hábito novo e viu que, em média, foram 66 dias até a ação ficar automática. Teve gente que levou 18 dias, teve gente que levou mais de 200. O detalhe que mais importa: falhar um dia aqui e outro ali não atrapalhou o resultado final. Guarda isso, porque vai voltar nas próximas semanas.
+E trinta ainda é pouco. Uma pesquisa da University College London acompanhou pessoas criando um hábito novo e viu que levou, em média, 66 dias até a ação ficar automática, com gente chegando lá em 18 dias e gente passando dos 200. O detalhe que mais importa é que falhar um dia aqui e outro ali não atrapalhou o resultado final, então guarde isso, porque essa ideia vai voltar nas próximas semanas.
 
 #### O que Epicteto diria
 
 > Primeiro diga a si mesmo quem você quer ser; depois, faça o que isso exige. — Epicteto, *Discursos*, III.23
 
-Epicteto dava aula pra jovens que queriam parecer filósofos: barba comprida, discurso bonito, nenhuma prática. A bronca dele era essa ordem aí. Primeiro decida quem você quer ser. Depois, faça o que essa pessoa faria. Não o contrário, e nunca só a primeira parte.
+Epicteto dava aula pra muitos jovens que queriam parecer filósofos, com barba comprida e discurso bonito, mas sem prática nenhuma. A bronca dele era justamente essa ordem: primeiro você decide quem quer ser e depois faz o que essa pessoa faria, nunca o contrário e nunca só a primeira parte.
 
 #### Na prática
 
-Você não "quer ler mais". Você é alguém que se mantém atualizado. E alguém que se mantém atualizado lê duas páginas técnicas por dia, inclusive nos dias corridos.
+Você não "quer ler mais", você é alguém que se mantém atualizado, e alguém que se mantém atualizado lê duas páginas técnicas por dia, inclusive nos dias mais corridos.
 
-Repara na diferença. "Quero ler mais" não diz quando, nem quanto, nem como saber se deu certo. "Sou alguém que se mantém atualizado" puxa uma ação pequena que dá pra conferir com sim ou não no fim do dia. É isso que você vai montar no exercício: uma frase de identidade e três ações pequenas que provam essa frase todo dia.
+Percebe a diferença? "Quero ler mais" não diz quando, nem quanto, nem como saber se deu certo, enquanto "sou alguém que se mantém atualizado" puxa uma ação pequena que dá pra conferir com um sim ou um não no fim do dia. É isso que você vai montar no exercício: uma frase de identidade e três ações pequenas que provam essa frase todo dia.
 
-A partir de hoje, essas três ações viram o seu check-in. Leva dez segundos por dia.
+A partir de hoje essas três ações viram o seu check-in, que leva uns dez segundos por dia.
 
 #### O erro mais comum
 
-O erro mais comum é escolher evidências grandes demais. "Treinar uma hora" é ótimo no primeiro dia e impossível na semana do fechamento. Evidência boa cabe em dois minutos e continua possível no seu pior dia.
+O erro mais comum é escolher evidências grandes demais. "Treinar uma hora" funciona muito bem no primeiro dia e fica impossível na semana do fechamento do mês, por isso a evidência boa é aquela que cabe em dois minutos e continua possível até no seu pior dia.
 
-O segundo erro é escolher uma identidade que não é sua. Se a frase não te dá vontade nenhuma, ela não vai segurar nada. Escolha uma pessoa que você teria orgulho de ser, não uma que alguém espera que você seja.
+O segundo erro é escolher uma identidade que não é sua. Se a frase não te dá vontade nenhuma, ela não vai segurar nada, então escolha uma pessoa que você teria orgulho de ser, e não aquela que alguém espera que você seja.
 
 **Pergunta-teste:** o que uma pessoa com essa identidade faria hoje, em 2 minutos?
 
@@ -183,43 +183,43 @@ Leitura recomendada: *Hábitos Atômicos*, de James Clear.
 
 #### O que é um plano de gatilho
 
-Gatilho é o que dispara alguma coisa. No seu dia, gatilho é aquilo que já acontece sozinho e pode puxar o hábito novo: o primeiro café, sentar no carro, fechar o notebook. Plano de gatilho é decidir antes, por escrito, em que momento o hábito vai acontecer.
+Gatilho é o que dispara alguma coisa. No seu dia, gatilho é aquilo que já acontece sozinho e pode puxar o hábito novo junto, como o primeiro café, a hora em que você entra no carro ou o momento de fechar o notebook. Plano de gatilho é decidir antes, por escrito, em que momento o hábito vai acontecer.
 
-Parece burocracia. É o contrário: é o que tira a burocracia da sua cabeça na hora H.
+Parece burocracia? Na verdade é o contrário, porque é justamente o plano que tira a burocracia da sua cabeça na hora H.
 
 #### Por que "vou tentar" não funciona
 
-Na obra ninguém escreve "vamos concretar quando der". Tem data, hora, equipe e sequência. Com hábito, a maioria das pessoas fica no "vou tentar ler mais" e depois culpa a falta de força de vontade.
+Na obra ninguém escreve "vamos concretar quando der", porque tem data, hora, equipe e sequência definidas. Com hábito, a maioria das pessoas fica no "vou tentar ler mais" e depois culpa a falta de força de vontade.
 
-O que falta não é vontade, é especificação. Sem um momento definido, cada dia vira uma nova negociação com você mesmo. E essa negociação costuma terminar em "amanhã eu faço".
+O que falta não é vontade, é especificação. Sem um momento definido, cada dia vira uma nova negociação com você mesmo, e essa negociação costuma terminar com um "amanhã eu faço".
 
 #### O que a pesquisa diz
 
-O psicólogo alemão Peter Gollwitzer passou anos estudando um tipo de plano bem simples, no formato "quando acontecer X, eu faço Y". Uma revisão de 94 estudos mostrou que quem escreve o plano desse jeito cumpre o que se propôs bem mais do que quem só tem a intenção.
+O psicólogo alemão Peter Gollwitzer passou anos estudando um tipo de plano bem simples, no formato "quando acontecer tal coisa, eu faço tal outra". Uma revisão de 94 estudos mostrou que quem escreve o plano desse jeito cumpre bem mais o que se propôs do que quem fica só na intenção.
 
-Um exemplo de fora do laboratório: uma empresa americana mandou o convite da vacina da gripe pros funcionários. Parte deles recebeu só o aviso. A outra parte recebeu um espaço pra anotar o dia e o horário em que iria se vacinar. Só anotar já fez mais gente ir.
+Tem um exemplo ótimo fora do laboratório. Uma empresa americana mandou o convite da vacina da gripe pros funcionários, e parte deles recebeu só o aviso enquanto a outra parte recebeu também um espaço pra anotar o dia e o horário em que iria se vacinar. Só o fato de anotar já fez mais gente aparecer.
 
-O motivo é que o plano transfere a decisão pro ambiente. Quando o gatilho aparece, o cérebro já sabe o que vem depois. Você não precisa lembrar nem se convencer, só executar.
+Isso acontece porque o plano passa a decisão pro ambiente. Quando o gatilho aparece, o cérebro já sabe o que vem depois, e você não precisa lembrar nem se convencer de nada, só executar.
 
 #### O que Marco Aurélio diria
 
 > Ao começar o dia, diga a si mesmo o que vai encontrar pela frente. — Marco Aurélio, *Meditações*, II.1
 
-Marco Aurélio abria o dia avisando a si mesmo que ia encontrar gente difícil, ingrata e apressada. Não era pessimismo, era preparo. Quem decide antes como vai reagir não é pego de surpresa. Com hábito é igual: quem decide antes quando vai fazer não precisa decidir na hora, que é justamente quando o cansaço e a preguiça estão mais fortes.
+Marco Aurélio abria o dia avisando a si mesmo que ia encontrar gente difícil, ingrata e apressada. Não era pessimismo, era preparo, porque quem decide antes como vai reagir não é pego de surpresa. Com hábito funciona igual: quem decide antes quando vai fazer não precisa decidir na hora, que é exatamente quando o cansaço e a preguiça estão mais fortes.
 
 #### Na prática
 
 Uma frase resolve: "Às [hora], em [lugar], depois de [ação que já acontece], eu vou [hábito]."
 
-Fica assim: "Às 7h30, na mesa do escritório, depois de servir o primeiro café, eu vou revisar a agenda do dia." Repara que o café já acontece todo dia, sem esforço nenhum. Ele vira a ponte pro hábito novo.
+Fica assim: "Às 7h30, na mesa do escritório, depois de servir o primeiro café, eu vou revisar a agenda do dia." Percebe que o café já acontece todo dia sem esforço nenhum? Ele vira a ponte pro hábito novo.
 
-No exercício, você vai montar essa frase pra cada um dos seus três hábitos. O horário vai aparecer no seu check-in, e o app vai começar a medir quantas vezes você fez no horário planejado.
+No exercício você vai montar essa frase pra cada um dos seus três hábitos. O horário passa a aparecer no seu check-in, e o app começa a medir quantas vezes você fez no horário que planejou.
 
 #### O erro mais comum
 
-O erro mais comum é escolher um gatilho que não acontece todo dia. "Depois da academia" não serve se você vai à academia três vezes por semana. O gatilho bom é aquele que acontece até no domingo.
+O erro mais comum é escolher um gatilho que não acontece todo dia. "Depois da academia" não serve se você vai à academia três vezes por semana, porque o gatilho bom é aquele que acontece até no domingo.
 
-O segundo erro é escolher um gatilho vago, como "de manhã" ou "quando tiver um tempo". Manhã tem quatro horas, e tempo livre não aparece sozinho. Quanto mais concreto o gatilho, menos espaço pra negociação.
+O segundo erro é escolher um gatilho vago, como "de manhã" ou "quando tiver um tempo". A manhã tem umas quatro horas e o tempo livre nunca aparece sozinho, então quanto mais concreto for o gatilho, menos espaço sobra pra negociação.
 
 **Pergunta-teste:** se alguém lesse o seu plano, saberia exatamente quando e onde conferir se você fez?
 
