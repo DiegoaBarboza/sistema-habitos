@@ -64,21 +64,21 @@ export function SiteTrilho({ oferta }: { oferta: OfertaAtual }) {
 
   return (
     <div className="min-h-dvh">
-      <header className="sticky top-0 z-20 border-b border-line bg-bg/90 backdrop-blur">
+      {/* Topo bege de fora a fora, igual nos banners: o print do app é escuro e precisa de fundo claro.
+          Cores fixas (não seguem o tema) pra o topo ficar igual em qualquer aparelho. */}
+      <header className="sticky top-0 z-20 border-b border-[#1b2120]/10 bg-[#F4EEE2]/95 text-[#1b2120] backdrop-blur">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5">
           <Link href="/" aria-label="Trilho, início" className="flex items-center">
             {/* eslint-disable-next-line @next/next/no-img-element -- logo em SVG */}
-            <img src="/brand/trilho-horizontal-sobre-escuro.svg" alt="" width={104} height={32} className="so-escuro h-8 w-auto" />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/brand/trilho-horizontal-sobre-claro.svg" alt="" width={104} height={32} className="so-claro h-8 w-auto" />
+            <img src="/brand/trilho-horizontal-sobre-claro.svg" alt="" width={104} height={32} className="h-8 w-auto" />
           </Link>
-          <nav aria-label="Seções" className="hidden gap-6 text-sm text-text-2 md:flex">
-            <a href="#como-funciona" className="hover:text-text">Como funciona</a>
-            <a href="#recursos" className="hover:text-text">Recursos</a>
-            <a href="#semanas" className="hover:text-text">As 8 semanas</a>
-            <a href="#perguntas" className="hover:text-text">Perguntas</a>
+          <nav aria-label="Seções" className="hidden gap-6 text-sm text-[#52605a] md:flex">
+            <a href="#como-funciona" className="hover:text-[#1b2120]">Como funciona</a>
+            <a href="#recursos" className="hover:text-[#1b2120]">Recursos</a>
+            <a href="#semanas" className="hover:text-[#1b2120]">As 8 semanas</a>
+            <a href="#perguntas" className="hover:text-[#1b2120]">Perguntas</a>
           </nav>
-          <Link href="/entrar" className="flex h-10 items-center rounded-[10px] border border-line px-4 text-sm font-semibold">
+          <Link href="/entrar" className="flex h-10 items-center rounded-[10px] border border-[#1b2120]/25 px-4 text-sm font-semibold">
             Entrar
           </Link>
         </div>
@@ -86,34 +86,37 @@ export function SiteTrilho({ oferta }: { oferta: OfertaAtual }) {
 
       <main>
         {/* Início */}
-        <section className="mx-auto grid max-w-6xl items-center gap-12 px-5 pt-14 pb-20 md:grid-cols-[1.1fr_0.9fr] md:pt-20">
-          <div className="flex flex-col gap-6">
-            <span className="font-mono text-xs tracking-[0.12em] text-accent">MÓDULO 1 · HÁBITOS</span>
-            <h1 className="text-[40px] leading-[1.05] font-bold md:text-[60px]">
-              Hábito é processo. <span className="text-accent">Processo se mede.</span>
-            </h1>
-            <p className="max-w-xl text-lg leading-relaxed text-text-2">
-              O Trilho é um app pra você construir hábitos de verdade em 8 semanas, com uma ferramenta nova por semana,
-              check-in diário e indicadores que mostram o seu progresso.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <a href={cta.href} className="flex h-14 items-center rounded-xl bg-accent px-7 text-base font-bold text-on-accent">
-                {cta.rotulo}
-              </a>
-              <a href="#como-funciona" className="flex h-14 items-center rounded-xl border border-line px-7 text-base font-semibold">
-                Ver como funciona
-              </a>
+        <div className="overflow-hidden bg-[#F4EEE2] text-[#1b2120]">
+          <section className="mx-auto grid max-w-6xl items-center gap-12 px-5 pt-14 pb-20 md:grid-cols-[1.1fr_0.9fr] md:pt-20">
+            <div className="flex flex-col gap-6">
+              <span className="font-mono text-xs tracking-[0.12em] text-[#0e7444]">MÓDULO 1 · HÁBITOS</span>
+              <h1 className="text-[40px] leading-[1.05] font-bold md:text-[60px]">
+                Hábito é processo. <span className="text-[#0e7444]">Processo se mede.</span>
+              </h1>
+              <p className="max-w-xl text-lg leading-relaxed text-[#52605a]">
+                O Trilho é um app pra você construir hábitos de verdade em 8 semanas, com uma ferramenta nova por semana,
+                check-in diário e indicadores que mostram o seu progresso.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <a href={cta.href} className="flex h-14 items-center rounded-xl bg-[#0e7444] px-7 text-base font-bold text-white">
+                  {cta.rotulo}
+                </a>
+                <a href="#como-funciona" className="flex h-14 items-center rounded-xl border border-[#1b2120]/25 px-7 text-base font-semibold">
+                  Ver como funciona
+                </a>
+              </div>
+              <p className="text-sm text-[#52605a]">
+                {oferta.checkoutUrl ? <span className="font-semibold text-[#1b2120]">{selo}</span> : "Funciona no celular, sem baixar nada da loja."}
+              </p>
             </div>
-            <p className="text-sm text-text-2">
-              {oferta.checkoutUrl ? <span className="font-semibold text-text">{selo}</span> : "Funciona no celular, sem baixar nada da loja."}
-            </p>
-          </div>
-          {/* Fundo bege fixo atrás dos celulares: o print do app é escuro e precisa de contraste nos dois temas. */}
-          <div className="flex justify-center gap-4 rounded-3xl bg-[#F4EEE2] px-6 py-10 md:px-8">
-            <Celular src="/site/app-hoje.jpg" alt="Tela Hoje do Trilho, com a frase do dia, indicadores e check-in" />
-            <Celular src="/site/app-progresso.jpg" alt="Tela Progresso do Trilho, com adesão e sequência" className="mt-16 hidden sm:block" />
-          </div>
-        </section>
+            <div className="flex justify-center gap-6 py-6">
+              <Celular src="/site/app-hoje.jpg" alt="Tela Hoje do Trilho, com a frase do dia, indicadores e check-in" />
+              <Celular src="/site/app-progresso.jpg" alt="Tela Progresso do Trilho, com adesão e sequência" className="mt-16 hidden sm:block" />
+            </div>
+          </section>
+        </div>
+
+        <div className="h-20" aria-hidden="true" />
 
         {/* Pra quem é */}
         <Secao id="pra-quem" rotulo="PRA QUEM É" titulo="Pra quem cansou de recomeçar toda segunda-feira">
@@ -306,7 +309,7 @@ function Cartao({ titulo, texto }: { titulo: string; texto: string }) {
 
 function Celular({ src, alt, className = "" }: { src: string; alt: string; className?: string }) {
   return (
-    <div className={`w-[230px] shrink-0 overflow-hidden rounded-[36px] border-[7px] border-[#0b0f0e] bg-[#0b0f0e] shadow-[0_24px_60px_rgba(27,33,32,0.35)] md:w-[250px] ${className}`}>
+    <div className={`w-[230px] shrink-0 rotate-[4deg] overflow-hidden rounded-[36px] border-[7px] border-[#0b0f0e] bg-[#0b0f0e] shadow-[0_24px_60px_rgba(27,33,32,0.35)] md:w-[250px] ${className}`}>
       {/* eslint-disable-next-line @next/next/no-img-element -- print estático do app */}
       <img src={src} alt={alt} width={780} height={1688} className="block h-auto w-full rounded-[29px]" />
     </div>
