@@ -10,7 +10,7 @@ const PALETAS = {
   bege: { "--bg": "#F4EEE2", "--surface": "#FBF8F1", "--line": "#E2D9C8", "--text": "#1b2120", "--text-2": "#5f5b52", "--accent": "#0e7444", "--on-accent": "#ffffff" },
   gelo: { "--bg": "#EEF2EC", "--surface": "#FFFFFF", "--line": "#D3DCD8", "--text": "#131a17", "--text-2": "#52605a", "--accent": "#0e7444", "--on-accent": "#ffffff" },
 } as const;
-export const TOM_DO_SITE: keyof typeof PALETAS = "bege";
+export const TOM_DO_SITE: keyof typeof PALETAS = "gelo";
 
 const DORES = [
   { titulo: "Começa animado e para na segunda semana", texto: "Não é falta de força de vontade, é falta de método. O Trilho troca o \"vou tentar\" por um plano." },
