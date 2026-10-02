@@ -2,7 +2,7 @@
 // Prints em public/tutorial (780 px de largura, um por tema), gerados com dados de demonstração.
 
 const CICLO = [
-  { n: "01", titulo: "Entenda", texto: "o conceito em até 3 minutos" },
+  { n: "01", titulo: "Entenda", texto: "a ideia, com exemplos do dia a dia" },
   { n: "02", titulo: "Faça", texto: "o exercício na tela, sem papel" },
   { n: "03", titulo: "Execute", texto: "check-in diário de 10 segundos" },
   { n: "04", titulo: "Meça", texto: "adesão, sequência e tendência" },
