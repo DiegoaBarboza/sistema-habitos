@@ -3,7 +3,7 @@
   "short_name": "Trilho",
   "description": "Hábito é processo. Processo se mede.",
   "lang": "pt-BR",
-  "start_url": "/",
+  "start_url": "/hoje",
   "scope": "/",
   "display": "standalone",
   "theme_color": "#1B2120",

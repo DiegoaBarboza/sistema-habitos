@@ -28,7 +28,9 @@ export default function Termos() {
 
       <h2>Compra e acesso</h2>
       <p>
-        Os módulos são vendidos pela Kiwify, e o acesso é liberado pro mesmo e-mail usado na compra. Pelo Código de Defesa
+        Os módulos são vendidos pela Kiwify, e o acesso é liberado pro mesmo e-mail usado na compra. A compra é um
+        pagamento único e o acesso ao módulo comprado é vitalício: você mantém as lições, o check-in, os indicadores e
+        as revisões pelo tempo que quiser, sem mensalidade. Módulos novos podem ser vendidos à parte. Pelo Código de Defesa
         do Consumidor, você pode desistir da compra em até 7 dias e receber o valor de volta, pedindo o reembolso pela
         própria Kiwify. Se a compra for reembolsada ou contestada, o acesso ao módulo é encerrado.
       </p>

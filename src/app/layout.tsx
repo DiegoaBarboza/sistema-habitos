@@ -18,6 +18,7 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.trilhoapp.com.br"),
   title: "Trilho",
   description: "Hábito é processo. Processo se mede.",
   applicationName: "Trilho",
@@ -29,7 +30,16 @@ export const metadata: Metadata = {
     ],
     apple: "/brand/apple-touch-icon.png",
   },
-  openGraph: { siteName: "Trilho", title: "Trilho", description: "Hábito é processo. Processo se mede." },
+  // Prévia do link no WhatsApp, Instagram e afins.
+  openGraph: {
+    siteName: "Trilho",
+    title: "Trilho · Hábito é processo. Processo se mede.",
+    description: "Hábitos em 8 semanas, com check-in diário e indicadores de progresso.",
+    locale: "pt_BR",
+    type: "website",
+    images: [{ url: "/site/og-trilho.png", width: 1200, height: 630, alt: "Trilho, app de hábitos" }],
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export const viewport: Viewport = {
