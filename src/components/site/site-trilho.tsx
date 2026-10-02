@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SUPORTE_EMAIL } from "@/lib/responsavel";
+import type { OfertaAtual } from "@/lib/vendas/servidor";
 
 // Site público do Trilho (trilhoapp.com.br). Usa os mesmos tokens de cor do app, nos dois temas.
 
@@ -12,17 +13,17 @@ const DORES = [
 const CICLO = [
   { n: "01", titulo: "Entenda", texto: "Uma lição curta com a ideia da semana, explicada com pesquisa e exemplos do dia a dia." },
   { n: "02", titulo: "Faça", texto: "Um exercício na tela, sem papel, que transforma a ideia em plano." },
-  { n: "03", titulo: "Execute", texto: "Check-in diário de 10 segundos: feito, mínimo ou não feito." },
+  { n: "03", titulo: "Execute", texto: "Check-in diário rápido: feito, mínimo ou não feito." },
   { n: "04", titulo: "Meça", texto: "Seus números mostram a tendência e dizem o que ajustar." },
 ];
 
 const RECURSOS = [
-  { titulo: "Check-in de 10 segundos", texto: "Um toque marca o hábito como feito. Segurou o dedo, aparecem as opções de mínimo ou não feito." },
+  { titulo: "Check-in diário", texto: "Um toque marca o hábito como feito. Segurou o dedo, aparecem as opções de mínimo ou não feito." },
   { titulo: "Regra do \"sem falha 2x\"", texto: "Falhar um dia é normal. O app te avisa quando é dia de não falhar a segunda vez." },
   { titulo: "Versão mínima", texto: "Cada hábito tem uma versão de 2 minutos pros dias ruins, pra sequência não quebrar." },
   { titulo: "Lembrete na hora certa", texto: "Uma notificação por dia, no horário que você escolher, só quando ainda falta algo." },
   { titulo: "Frase do dia", texto: "Uma frase por dia ligada à ferramenta da semana, pronta pra postar no status ou no feed." },
-  { titulo: "Seus números", texto: "Adesão por semana, recorde de sequência e dias salvos pelo mínimo, tudo calculado sozinho." },
+  { titulo: "Indicadores de progresso", texto: "Adesão por semana, recorde de sequência e dias salvos pelo mínimo, tudo calculado sozinho." },
 ];
 
 const SEMANAS = [
@@ -36,6 +37,12 @@ const SEMANAS = [
   { n: 8, nome: "Compromisso e revisão", frase: "Todo processo tem ciclo de revisão" },
 ];
 
+const CITACOES = [
+  { antes: "Grande parte da vida nos escapa", destaque: "enquanto fazemos outra coisa.", autor: "Sêneca, Cartas a Lucílio" },
+  { antes: "Primeiro diga a si mesmo quem você quer ser;", destaque: "depois, faça o que isso exige.", autor: "Epicteto, Discursos" },
+  { antes: "Quando escorregar, não desanime:", destaque: "volte de novo.", autor: "Marco Aurélio, Meditações" },
+];
+
 const PERGUNTAS = [
   { p: "Preciso baixar na loja de aplicativos?", r: "Não. O Trilho abre no navegador do celular e você instala na tela inicial com dois toques, no Android e no iPhone." },
   { p: "Quanto tempo por dia eu vou gastar?", r: "O check-in leva uns 10 segundos. A lição da semana leva cerca de 10 minutos, uma vez por semana, no dia que for melhor pra você." },
@@ -45,10 +52,15 @@ const PERGUNTAS = [
   { p: "E se eu não gostar?", r: "Você tem 7 dias depois da compra pra pedir o reembolso, como garante o Código de Defesa do Consumidor." },
 ];
 
-export function SiteTrilho({ urlCompra }: { urlCompra: string | null }) {
-  const cta = urlCompra
-    ? { href: urlCompra, rotulo: "Quero começar" }
+export function SiteTrilho({ oferta }: { oferta: OfertaAtual }) {
+  const fundador = oferta.vagasRestantes !== null;
+  const preco = `R$\u00a0${oferta.preco}`; // espaço que não quebra: "R$" e o valor ficam juntos
+  const cta = oferta.checkoutUrl
+    ? { href: oferta.checkoutUrl, rotulo: fundador ? `Garantir minha vaga · ${preco}` : `Começar agora · ${preco}` }
     : { href: `mailto:${SUPORTE_EMAIL}?subject=${encodeURIComponent("Quero ser avisado quando o Trilho abrir")}`, rotulo: "Quero ser avisado" };
+  const selo = fundador
+    ? `Lote fundador · ${preco} pagamento único · restam ${oferta.vagasRestantes} de 100 vagas`
+    : `${preco} pagamento único · acesso vitalício às 8 semanas`;
 
   return (
     <div className="min-h-dvh">
@@ -82,7 +94,7 @@ export function SiteTrilho({ urlCompra }: { urlCompra: string | null }) {
             </h1>
             <p className="max-w-xl text-lg leading-relaxed text-text-2">
               O Trilho é um app pra você construir hábitos de verdade em 8 semanas, com uma ferramenta nova por semana,
-              check-in de 10 segundos por dia e números que mostram se está funcionando.
+              check-in diário e indicadores que mostram o seu progresso.
             </p>
             <div className="flex flex-wrap gap-3">
               <a href={cta.href} className="flex h-14 items-center rounded-xl bg-accent px-7 text-base font-bold text-on-accent">
@@ -92,7 +104,9 @@ export function SiteTrilho({ urlCompra }: { urlCompra: string | null }) {
                 Ver como funciona
               </a>
             </div>
-            <p className="text-sm text-text-2">Funciona no celular, sem baixar nada da loja.</p>
+            <p className="text-sm text-text-2">
+              {oferta.checkoutUrl ? <span className="font-semibold text-text">{selo}</span> : "Funciona no celular, sem baixar nada da loja."}
+            </p>
           </div>
           <div className="flex justify-center gap-4">
             <Celular src="/site/app-hoje.jpg" alt="Tela Hoje do Trilho, com a frase do dia, indicadores e check-in" />
@@ -164,12 +178,16 @@ export function SiteTrilho({ urlCompra }: { urlCompra: string | null }) {
                 filósofos que tratavam a vida como treino diário. Tudo explicado sem jargão e com exemplos do dia a dia.
               </p>
             </div>
-            <figure className="flex flex-col gap-4 border-l-4 border-accent pl-6">
-              <blockquote className="text-2xl leading-snug font-bold md:text-3xl">
-                Primeiro diga a si mesmo quem você quer ser; <span className="text-accent">depois, faça o que isso exige.</span>
-              </blockquote>
-              <figcaption className="font-mono text-sm text-text-2">Epicteto, Discursos, III.23</figcaption>
-            </figure>
+            <div className="flex flex-col gap-6">
+              {CITACOES.map((c) => (
+                <figure key={c.autor} className="flex flex-col gap-2 border-l-4 border-accent pl-5">
+                  <blockquote className="text-xl leading-snug font-bold">
+                    {c.antes} <span className="text-accent">{c.destaque}</span>
+                  </blockquote>
+                  <figcaption className="font-mono text-xs text-text-2">{c.autor}</figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -213,14 +231,25 @@ export function SiteTrilho({ urlCompra }: { urlCompra: string | null }) {
 
         {/* Chamada final */}
         <section className="mx-auto max-w-6xl px-5 pb-20">
-          <div className="flex flex-col items-start gap-5 rounded-3xl bg-accent px-8 py-12 text-on-accent md:flex-row md:items-center md:justify-between md:px-12">
-            <div className="flex flex-col gap-2">
-              <h2 className="text-3xl leading-tight font-bold md:text-4xl">Sua próxima semana pode ser diferente.</h2>
-              <p className="text-lg opacity-80">Comece pelo inventário e veja, em números, o que muda.</p>
+          <div className="flex flex-col gap-8 rounded-3xl bg-accent px-7 py-12 text-on-accent md:px-14 md:py-16">
+            <div className="flex max-w-3xl flex-col gap-4">
+              <span className="font-mono text-xs font-semibold tracking-[0.12em] opacity-70">
+                {fundador ? "LOTE FUNDADOR · VAGAS LIMITADAS" : "COMECE HOJE"}
+              </span>
+              <h2 className="text-[34px] leading-[1.05] font-bold md:text-[52px]">Os próximos 66 dias vão passar de qualquer jeito.</h2>
+              <p className="text-lg leading-relaxed opacity-85 md:text-xl">
+                A pesquisa mostra que esse é, em média, o tempo pra um hábito ficar automático. A pergunta é se esses dias vão
+                passar no piloto automático ou construindo a pessoa que você decidiu ser.
+              </p>
             </div>
-            <a href={cta.href} className="flex h-14 shrink-0 items-center rounded-xl bg-on-accent px-7 text-base font-bold text-accent">
-              {cta.rotulo}
-            </a>
+            <div className="flex flex-col gap-3 md:flex-row md:items-center md:gap-6">
+              <a href={cta.href} className="flex min-h-16 items-center justify-center rounded-xl bg-on-accent px-6 py-3 text-center text-lg font-bold text-accent">
+                {cta.rotulo}
+              </a>
+              <span className="text-sm font-semibold opacity-80">
+                {oferta.checkoutUrl ? selo : "Pagamento único · 7 dias de garantia"}
+              </span>
+            </div>
           </div>
         </section>
       </main>

@@ -1,8 +1,8 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
-// /api/cron se protege com o CRON_SECRET, não com sessão. "/" é o site (a página decide se manda pro app).
-const ROTAS_PUBLICAS = ["/entrar", "/auth", "/api/cron", "/privacidade", "/termos"];
+// /api/cron e /api/webhooks se protegem com segredo próprio, não com sessão. "/" é o site (a página decide se manda pro app).
+const ROTAS_PUBLICAS = ["/entrar", "/auth", "/api/cron", "/api/webhooks", "/privacidade", "/termos", "/obrigado"];
 
 export async function atualizarSessao(request: NextRequest) {
   let resposta = NextResponse.next({ request });

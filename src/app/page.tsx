@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { SiteTrilho } from "@/components/site/site-trilho";
 import { criarClienteServidor } from "@/lib/supabase/server";
+import { obterOfertaAtual } from "@/lib/vendas/servidor";
 
 export const metadata: Metadata = {
   title: "Trilho · Hábito é processo. Processo se mede.",
@@ -14,5 +15,5 @@ export default async function Inicio() {
   const supabase = await criarClienteServidor();
   const { data } = await supabase.auth.getClaims();
   if (data?.claims) redirect("/hoje");
-  return <SiteTrilho urlCompra={process.env.URL_PAGINA_VENDA ?? null} />;
+  return <SiteTrilho oferta={await obterOfertaAtual()} />;
 }

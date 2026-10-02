@@ -4,12 +4,13 @@ import { Marca } from "@/components/marca";
 import { MODULO_ATUAL } from "@/lib/modulo";
 import { obterModuloAtual } from "@/lib/modulo-servidor";
 import { obterSessao } from "@/lib/perfil";
+import { obterOfertaAtual } from "@/lib/vendas/servidor";
 
 export default async function SemAcesso() {
   const [{ email, modulosLiberados }, modulo] = await Promise.all([obterSessao(), obterModuloAtual()]);
   if (modulosLiberados.includes(MODULO_ATUAL)) redirect("/hoje");
 
-  const paginaVenda = process.env.URL_PAGINA_VENDA;
+  const paginaVenda = (await obterOfertaAtual()).checkoutUrl;
 
   return (
     <main className="mx-auto flex min-h-dvh w-full max-w-[480px] flex-col justify-between gap-10 px-6 pt-[72px] pb-10">
