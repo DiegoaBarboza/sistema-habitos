@@ -1,7 +1,7 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
-// /api/cron se protege com o CRON_SECRET, não com sessão.
+// /api/cron se protege com o CRON_SECRET, não com sessão. "/" é o site (a página decide se manda pro app).
 const ROTAS_PUBLICAS = ["/entrar", "/auth", "/api/cron", "/privacidade", "/termos"];
 
 export async function atualizarSessao(request: NextRequest) {
@@ -31,7 +31,7 @@ export async function atualizarSessao(request: NextRequest) {
   const logado = Boolean(data?.claims);
 
   const caminho = request.nextUrl.pathname;
-  const publica = ROTAS_PUBLICAS.some((r) => caminho === r || caminho.startsWith(r + "/"));
+  const publica = caminho === "/" || ROTAS_PUBLICAS.some((r) => caminho === r || caminho.startsWith(r + "/"));
 
   if (!logado && !publica) {
     return redirecionar(request, resposta, "/entrar");
