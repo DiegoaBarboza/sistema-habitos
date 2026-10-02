@@ -8,7 +8,7 @@ import { LembreteDiario } from "./lembrete-diario";
 import { SeletorAparencia } from "./seletor-aparencia";
 
 export default async function Perfil() {
-  const [{ email, perfil, temSenha, modulosLiberados }, supabase] = await Promise.all([obterSessao(), criarClienteServidor()]);
+  const [{ email, admin, perfil, temSenha, modulosLiberados }, supabase] = await Promise.all([obterSessao(), criarClienteServidor()]);
   const { data: modulos } = await supabase.from("modulos").select("id, titulo, status").order("ordem");
   const meusModulos = (modulos ?? []).filter((m) => modulosLiberados.includes(m.id) || m.status === "em_breve");
   const assuntoSuporte = encodeURIComponent("Trilho: suporte e sugestões");
@@ -59,6 +59,12 @@ export default async function Perfil() {
           Conta
         </h2>
         <div className="rounded-xl border border-line bg-surface">
+          {admin && (
+            <Link href="/admin" className="flex flex-col gap-0.5 border-b border-line px-4 py-3.5">
+              <span className="text-[15px] font-semibold">Painel de vendas</span>
+              <span className="text-[13px] text-text-2">Vendas, vagas do lote e avisos da Kiwify. Só você vê.</span>
+            </Link>
+          )}
           <Link href="/frases" className="flex flex-col gap-0.5 border-b border-line px-4 py-3.5">
             <span className="text-[15px] font-semibold">Minhas frases</span>
             <span className="text-[13px] text-text-2">As frases do dia que você já viu, para rever e compartilhar.</span>

@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { ehAdmin } from "@/lib/admin";
 import { obterSessao } from "@/lib/perfil";
 import { criarClienteServico } from "@/lib/supabase/servico";
 import { reais, taxaKiwify } from "@/lib/vendas/taxas";
 
 export const metadata: Metadata = { title: "Painel · Trilho", robots: { index: false } };
 
-// Só os e-mails de ADMIN_EMAILS (separados por vírgula) enxergam o painel; pros outros a página não existe.
-const ADMINS = (process.env.ADMIN_EMAILS ?? "diegono@gmail.com").split(",").map((e) => e.trim().toLowerCase());
 
 type Venda = {
   kiwify_order_id: string;
@@ -21,7 +20,8 @@ type Venda = {
 
 export default async function Admin() {
   const { email } = await obterSessao();
-  if (!ADMINS.includes(email.toLowerCase())) notFound();
+  // Pra quem não é admin, a página não existe.
+  if (!ehAdmin(email)) notFound();
 
   const db = criarClienteServico();
   const [{ data: ofertas }, { data: vendas }, { data: logs }] = await Promise.all([
