@@ -4,6 +4,14 @@ import type { OfertaAtual } from "@/lib/vendas/servidor";
 
 // Site público do Trilho (trilhoapp.com.br). Usa os mesmos tokens de cor do app, nos dois temas.
 
+// O site é sempre claro (o print do app é escuro e precisa de fundo claro). As cores entram como
+// tokens do tema só dentro do site, então todas as classes (bg-bg, bg-surface, text-text...) seguem a paleta.
+const PALETAS = {
+  bege: { "--bg": "#F4EEE2", "--surface": "#FBF8F1", "--line": "#E2D9C8", "--text": "#1b2120", "--text-2": "#5f5b52", "--accent": "#0e7444", "--on-accent": "#ffffff" },
+  gelo: { "--bg": "#EEF2EC", "--surface": "#FFFFFF", "--line": "#D3DCD8", "--text": "#131a17", "--text-2": "#52605a", "--accent": "#0e7444", "--on-accent": "#ffffff" },
+} as const;
+export const TOM_DO_SITE: keyof typeof PALETAS = "bege";
+
 const DORES = [
   { titulo: "Começa animado e para na segunda semana", texto: "Não é falta de força de vontade, é falta de método. O Trilho troca o \"vou tentar\" por um plano." },
   { titulo: "Não sabe pra onde o tempo vai", texto: "Quase metade do dia roda no automático. A primeira semana é justamente pra enxergar isso." },
@@ -63,22 +71,20 @@ export function SiteTrilho({ oferta }: { oferta: OfertaAtual }) {
     : `${preco} pagamento único · acesso vitalício às 8 semanas`;
 
   return (
-    <div className="min-h-dvh">
-      {/* Topo bege de fora a fora, igual nos banners: o print do app é escuro e precisa de fundo claro.
-          Cores fixas (não seguem o tema) pra o topo ficar igual em qualquer aparelho. */}
-      <header className="sticky top-0 z-20 border-b border-[#1b2120]/10 bg-[#F4EEE2]/95 text-[#1b2120] backdrop-blur">
+    <div className="min-h-dvh bg-bg text-text" style={{ ...PALETAS[TOM_DO_SITE], colorScheme: "light" } as React.CSSProperties}>
+      <header className="sticky top-0 z-20 border-b border-line bg-bg/95 backdrop-blur">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5">
           <Link href="/" aria-label="Trilho, início" className="flex items-center">
             {/* eslint-disable-next-line @next/next/no-img-element -- logo em SVG */}
             <img src="/brand/trilho-horizontal-sobre-claro.svg" alt="" width={104} height={32} className="h-8 w-auto" />
           </Link>
-          <nav aria-label="Seções" className="hidden gap-6 text-sm text-[#52605a] md:flex">
-            <a href="#como-funciona" className="hover:text-[#1b2120]">Como funciona</a>
-            <a href="#recursos" className="hover:text-[#1b2120]">Recursos</a>
-            <a href="#semanas" className="hover:text-[#1b2120]">As 8 semanas</a>
-            <a href="#perguntas" className="hover:text-[#1b2120]">Perguntas</a>
+          <nav aria-label="Seções" className="hidden gap-6 text-sm text-text-2 md:flex">
+            <a href="#como-funciona" className="hover:text-text">Como funciona</a>
+            <a href="#recursos" className="hover:text-text">Recursos</a>
+            <a href="#semanas" className="hover:text-text">As 8 semanas</a>
+            <a href="#perguntas" className="hover:text-text">Perguntas</a>
           </nav>
-          <Link href="/entrar" className="flex h-10 items-center rounded-[10px] border border-[#1b2120]/25 px-4 text-sm font-semibold">
+          <Link href="/entrar" className="flex h-10 items-center rounded-[10px] border border-line px-4 text-sm font-semibold">
             Entrar
           </Link>
         </div>
@@ -86,27 +92,27 @@ export function SiteTrilho({ oferta }: { oferta: OfertaAtual }) {
 
       <main>
         {/* Início */}
-        <div className="overflow-hidden bg-[#F4EEE2] text-[#1b2120]">
+        <div className="overflow-hidden">
           <section className="mx-auto grid max-w-6xl items-center gap-12 px-5 pt-14 pb-20 md:grid-cols-[1.1fr_0.9fr] md:pt-20">
             <div className="flex flex-col gap-6">
-              <span className="font-mono text-xs tracking-[0.12em] text-[#0e7444]">MÓDULO 1 · HÁBITOS</span>
+              <span className="font-mono text-xs tracking-[0.12em] text-accent">MÓDULO 1 · HÁBITOS</span>
               <h1 className="text-[40px] leading-[1.05] font-bold md:text-[60px]">
-                Hábito é processo. <span className="text-[#0e7444]">Processo se mede.</span>
+                Hábito é processo. <span className="text-accent">Processo se mede.</span>
               </h1>
-              <p className="max-w-xl text-lg leading-relaxed text-[#52605a]">
+              <p className="max-w-xl text-lg leading-relaxed text-text-2">
                 O Trilho é um app pra você construir hábitos de verdade em 8 semanas, com uma ferramenta nova por semana,
                 check-in diário e indicadores que mostram o seu progresso.
               </p>
               <div className="flex flex-wrap gap-3">
-                <a href={cta.href} className="flex h-14 items-center rounded-xl bg-[#0e7444] px-7 text-base font-bold text-white">
+                <a href={cta.href} className="flex h-14 items-center rounded-xl bg-accent px-7 text-base font-bold text-on-accent">
                   {cta.rotulo}
                 </a>
-                <a href="#como-funciona" className="flex h-14 items-center rounded-xl border border-[#1b2120]/25 px-7 text-base font-semibold">
+                <a href="#como-funciona" className="flex h-14 items-center rounded-xl border border-line px-7 text-base font-semibold">
                   Ver como funciona
                 </a>
               </div>
-              <p className="text-sm text-[#52605a]">
-                {oferta.checkoutUrl ? <span className="font-semibold text-[#1b2120]">{selo}</span> : "Funciona no celular, sem baixar nada da loja."}
+              <p className="text-sm text-text-2">
+                {oferta.checkoutUrl ? <span className="font-semibold text-text">{selo}</span> : "Funciona no celular, sem baixar nada da loja."}
               </p>
             </div>
             <div className="flex justify-center gap-6 py-6">
@@ -116,7 +122,7 @@ export function SiteTrilho({ oferta }: { oferta: OfertaAtual }) {
           </section>
         </div>
 
-        <div className="h-20" aria-hidden="true" />
+        <div className="h-8" aria-hidden="true" />
 
         {/* Pra quem é */}
         <Secao id="pra-quem" rotulo="PRA QUEM É" titulo="Pra quem cansou de recomeçar toda segunda-feira">
