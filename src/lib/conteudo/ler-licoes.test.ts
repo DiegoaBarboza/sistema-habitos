@@ -20,7 +20,7 @@ describe("lerLicoes", () => {
     ]);
   });
 
-  it("separa título, parágrafos e pergunta-teste do Entenda", () => {
+  it("separa título, parágrafos e pergunta-chave do Entenda", () => {
     const s1 = licoes[0].conteudo.entenda;
     expect(s1.titulo).toBe("Você não melhora o que não enxerga");
     expect(s1.paragrafos[0]).toBe("#### O que é um inventário");

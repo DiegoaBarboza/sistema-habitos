@@ -164,7 +164,7 @@ export function LicaoTela({ licao, respostasIniciais, iniciada, concluida: jaCon
               <path d="M12 8v5M12 16h.01" />
             </svg>
             <p className="text-[15px] leading-normal">
-              <strong>Pergunta-teste:</strong> <TextoMd texto={entenda.pergunta} />
+              <strong>Pergunta-chave:</strong> <TextoMd texto={entenda.pergunta} />
             </p>
           </div>
         </section>

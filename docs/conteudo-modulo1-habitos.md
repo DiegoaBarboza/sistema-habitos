@@ -61,7 +61,7 @@ O erro mais comum é ser vago. "Comer mal" não diz nada, enquanto "beliscar bis
 
 O segundo erro é anotar só o que você quer mudar. Os hábitos que ajudam também entram na lista, porque eles são a base que você vai usar pra construir os próximos.
 
-**Pergunta-teste (caixa de destaque):** isso me aproxima ou me afasta do resultado que eu quero daqui a um ano?
+**Pergunta-chave:** isso me aproxima ou me afasta do resultado que eu quero daqui a um ano?
 
 ### Faça
 - Instrução: "Liste pelo menos 5 hábitos da sua rotina e marque cada um: + ajuda · = neutro · − atrapalha."
@@ -142,7 +142,7 @@ O erro mais comum é escolher evidências grandes demais. "Treinar uma hora" fun
 
 O segundo erro é escolher uma identidade que não é sua. Se a frase não te dá vontade nenhuma, ela não vai segurar nada, então escolha uma pessoa que você teria orgulho de ser, e não aquela que alguém espera que você seja.
 
-**Pergunta-teste:** o que uma pessoa com essa identidade faria hoje, em 2 minutos?
+**Pergunta-chave:** o que uma pessoa com essa identidade faria hoje, em 2 minutos?
 
 ### Faça
 - Campo 1: frase de identidade no formato "Sou alguém que ___" (até 80 caracteres). Sugestões clicáveis que preenchem o campo: "cumpre o que planeja", "se mantém atualizado", "cuida da própria saúde", "chega preparado às reuniões", "termina o que começa".
@@ -221,7 +221,7 @@ O erro mais comum é escolher um gatilho que não acontece todo dia. "Depois da 
 
 O segundo erro é escolher um gatilho vago, como "de manhã" ou "quando tiver um tempo". A manhã tem umas quatro horas e o tempo livre nunca aparece sozinho, então quanto mais concreto for o gatilho, menos espaço sobra pra negociação.
 
-**Pergunta-teste:** se alguém lesse o seu plano, saberia exatamente quando e onde conferir se você fez?
+**Pergunta-chave:** se alguém lesse o seu plano, saberia exatamente quando e onde conferir se você fez?
 
 ### Faça
 - Para cada hábito ativo (os 3 da semana 2), um cartão com os campos: **horário** (seletor de hora), **lugar** (texto curto: "na mesa do escritório"), **depois de** (texto curto: "servir o primeiro café").
@@ -292,7 +292,7 @@ O erro mais comum é escolher uma âncora que não acontece todo dia ou que muda
 
 O segundo erro é pendurar coisa demais na mesma âncora. Três hábitos novos depois do café viram uma lista de tarefas, e lista de tarefas é justamente o que a gente adia, por isso comece com um elo de cada vez.
 
-**Pergunta-teste:** essa âncora acontece todo dia, no mesmo lugar em que o hábito novo pode acontecer?
+**Pergunta-chave:** essa âncora acontece todo dia, no mesmo lugar em que o hábito novo pode acontecer?
 
 ### Faça
 - Passo 1: selecione de 3 a 5 âncoras. Sugestões vêm do inventário da semana 1 (itens + e =), mais o campo livre "Outra ação que já faço todo dia".
@@ -362,7 +362,7 @@ O erro mais comum é planejar a mudança e não aplicar. Escrever "deixar o livr
 
 O segundo erro é confiar só na força de vontade pro hábito que você quer largar. Se o pacote de biscoito continua na gaveta da sua mesa, você vai ter que vencer essa batalha todo dia às quatro da tarde, enquanto tirar o pacote dali resolve de uma vez.
 
-**Pergunta-teste:** o que eu mudaria nesse ambiente se ele fosse um posto de trabalho que precisa bater meta?
+**Pergunta-chave:** o que eu mudaria nesse ambiente se ele fosse um posto de trabalho que precisa bater meta?
 
 ### Faça
 - Para cada hábito ativo, e para o hábito-foco se ele for um −, um cartão com 2 campos de ação (até 80 caracteres), com rótulos que mudam conforme o tipo:
@@ -432,7 +432,7 @@ O erro mais comum é fazer uma versão mínima que não é mínima. "Ler dez pá
 
 O segundo erro é usar o mínimo como regra em vez de reserva. A versão mínima é o estepe, não o pneu, então nos dias normais você continua fazendo a versão completa e guarda o mínimo pros dias que realmente pedem.
 
-**Pergunta-teste:** consigo fazer isso num dia de parada de linha, cansado e atrasado?
+**Pergunta-chave:** consigo fazer isso num dia de parada de linha, cansado e atrasado?
 
 ### Faça
 - Para cada hábito ativo: campo "Versão mínima (até 2 minutos)" (até 60 caracteres). Mostrar a versão completa ao lado como referência.
@@ -502,7 +502,7 @@ O erro mais comum é tratar a falha como fracasso pessoal. Uma falha é só um p
 
 O segundo erro é compensar a falha dobrando a dose no dia seguinte. Fazer duas vezes o treino pra "pagar" o dia perdido cansa, frustra e aumenta a chance de falhar de novo, por isso no dia de recuperação o objetivo é só não falhar a segunda vez, e a versão mínima já resolve.
 
-**Pergunta-teste:** se eu falhar amanhã, o que exatamente eu faço no dia seguinte?
+**Pergunta-chave:** se eu falhar amanhã, o que exatamente eu faço no dia seguinte?
 
 ### Faça
 - Para cada hábito ativo: campo "Se eu falhar, no dia seguinte eu vou:" (até 80 caracteres). Placeholder: "fazer a versão mínima logo depois do café".
@@ -577,7 +577,7 @@ O erro mais comum é tratar a revisão como prova e ter medo de remover um hábi
 
 O segundo erro é revisar só com a memória. A memória sempre lembra da última semana, seja ela boa ou ruim, enquanto o painel mostra o mês inteiro, então olhe os números antes de decidir.
 
-**Pergunta-teste:** esse hábito ainda me aproxima da pessoa que eu disse que queria ser na semana 2?
+**Pergunta-chave:** esse hábito ainda me aproxima da pessoa que eu disse que queria ser na semana 2?
 
 ### Faça
 - Parte 1, **contrato:** "Eu me comprometo a:" (texto, pré-preenchido com os hábitos ativos), "Se eu falhar 2x seguidas, eu vou:" (texto), "Testemunha (opcional):" (nome), checkbox "Assino este compromisso" e data automática.

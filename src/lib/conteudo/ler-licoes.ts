@@ -37,7 +37,7 @@ export type Licao = {
 const RE_SEMANA = /^## Semana (\d+) · (.+)$/;
 const RE_META = /^- `id`: `([^`]+)` · duração: (\d+) min · `exercicio\.tipo`: `([^`]+)`$/;
 const RE_TITULO = /^\*\*Título:\*\* (.+)$/;
-const RE_PERGUNTA = /^\*\*Pergunta-teste[^*]*:\*\* (.+)$/;
+const RE_PERGUNTA = /^\*\*Pergunta-chave[^*]*:\*\* (.+)$/;
 
 export function lerLicoes(markdown: string, moduloId: string): Licao[] {
   const blocos = markdown.replace(/\r\n/g, "\n").split(/\n(?=## Semana )/).slice(1);
@@ -105,7 +105,7 @@ function lerEntenda(linhas: string[], semana: number) {
     else if (q) pergunta = q[1];
     else corpo.push(p);
   }
-  if (!titulo || !pergunta) throw new Error(`Semana ${semana}: Entenda sem título ou pergunta-teste`);
+  if (!titulo || !pergunta) throw new Error(`Semana ${semana}: Entenda sem título ou pergunta-chave`);
   return { titulo, paragrafos: corpo, pergunta };
 }
 
