@@ -10,8 +10,8 @@ describe("lerLicoes", () => {
   it("lê as 8 semanas em ordem, com id, duração e tipo", () => {
     expect(licoes.map((l) => [l.semana, l.id, l.duracao_min, l.tipo_exercicio])).toEqual([
       [1, "habitos-s1", 10, "inventario"],
-      [2, "habitos-s2", 6, "identidade"],
-      [3, "habitos-s3", 6, "plano_gatilho"],
+      [2, "habitos-s2", 10, "identidade"],
+      [3, "habitos-s3", 10, "plano_gatilho"],
       [4, "habitos-s4", 5, "encadeamento"],
       [5, "habitos-s5", 6, "ambiente"],
       [6, "habitos-s6", 5, "versao_minima"],
@@ -65,7 +65,8 @@ describe("lerLicoes", () => {
     });
     expect(f[1]).toEqual({ texto: "Você não muda **o que não enxerga.**", autor: null, fonte: null });
     expect(f[4].fonte).toBe("Discursos, II.18");
-    expect(licoes[1].conteudo.frases).toEqual([]);
+    expect(licoes[1].conteudo.frases).toHaveLength(7);
+    expect(licoes[3].conteudo.frases).toEqual([]);
   });
 
   it("aceita quebras de linha do Windows", () => {

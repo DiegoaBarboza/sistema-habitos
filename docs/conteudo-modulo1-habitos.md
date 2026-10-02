@@ -97,16 +97,50 @@ Leitura recomendada: *Hábitos Atômicos*, de James Clear.
 
 ## Semana 2 · Identidade-alvo
 
-- `id`: `habitos-s2` · duração: 6 min · `exercicio.tipo`: `identidade`
+- `id`: `habitos-s2` · duração: 10 min · `exercicio.tipo`: `identidade`
 
 ### Entenda
 **Título:** Meta diz o que você quer. Identidade diz quem faz.
 
-Meta tem prazo e acaba. Bateu a meta, o comportamento volta ao que era. Quem trabalha com projeto conhece isso: o indicador melhora enquanto alguém cobra e piora quando a auditoria vai embora.
+#### O que é identidade-alvo
 
-Hábito que dura nasce de outra pergunta: não "o que eu quero alcançar", e sim "que tipo de profissional eu quero ser". A partir daí, cada vez que você faz a ação pequena, você junta uma evidência de que é esse profissional. Uma evidência não prova nada. Trinta evidências mudam a forma como você se enxerga.
+Identidade é a resposta pra pergunta "quem eu sou?". Alvo é pra onde você mira. Juntando as duas, identidade-alvo é a pessoa que você quer virar, escrita numa frase curta: "sou alguém que cumpre o que planeja", "sou alguém que cuida da própria saúde".
 
-Na prática: você não "quer ler mais", você é alguém que se mantém atualizado. E alguém que se mantém atualizado lê duas páginas técnicas por dia, mesmo nos dias corridos.
+Parece frase de efeito, mas tem uma razão prática por trás. E é essa razão que vai segurar os seus hábitos quando a motivação for embora.
+
+#### Por que meta sozinha não segura
+
+Meta tem prazo e acaba. Bateu a meta, o comportamento volta a ser o que era. Quem trabalha com projeto conhece bem: o indicador melhora enquanto alguém cobra e piora no mês em que a auditoria vai embora.
+
+Hábito que dura nasce de outra pergunta. Não é "o que eu quero alcançar?", é "que tipo de pessoa eu quero ser?". A meta é a linha de chegada. A identidade é o jeito que você corre, e ela não acaba quando a corrida termina.
+
+#### A gente descobre quem é olhando o que faz
+
+Nos anos 70, um psicólogo chamado Daryl Bem propôs uma ideia que parece invertida: a gente não age de acordo com quem acha que é. A gente descobre quem é observando como age. Igual a gente faz com os outros, só que olhando pra si mesmo.
+
+Na prática, isso significa que cada vez que você faz a ação pequena, você junta uma prova de que é aquela pessoa. Uma prova não convence ninguém. Trinta provas mudam a forma como você se enxerga.
+
+E trinta é pouco. Uma pesquisa da University College London acompanhou pessoas criando um hábito novo e viu que, em média, foram 66 dias até a ação ficar automática. Teve gente que levou 18 dias, teve gente que levou mais de 200. O detalhe que mais importa: falhar um dia aqui e outro ali não atrapalhou o resultado final. Guarda isso, porque vai voltar nas próximas semanas.
+
+#### O que Epicteto diria
+
+> Primeiro diga a si mesmo quem você quer ser; depois, faça o que isso exige. — Epicteto, *Discursos*, III.23
+
+Epicteto dava aula pra jovens que queriam parecer filósofos: barba comprida, discurso bonito, nenhuma prática. A bronca dele era essa ordem aí. Primeiro decida quem você quer ser. Depois, faça o que essa pessoa faria. Não o contrário, e nunca só a primeira parte.
+
+#### Na prática
+
+Você não "quer ler mais". Você é alguém que se mantém atualizado. E alguém que se mantém atualizado lê duas páginas técnicas por dia, inclusive nos dias corridos.
+
+Repara na diferença. "Quero ler mais" não diz quando, nem quanto, nem como saber se deu certo. "Sou alguém que se mantém atualizado" puxa uma ação pequena que dá pra conferir com sim ou não no fim do dia. É isso que você vai montar no exercício: uma frase de identidade e três ações pequenas que provam essa frase todo dia.
+
+A partir de hoje, essas três ações viram o seu check-in. Leva dez segundos por dia.
+
+#### O erro mais comum
+
+O erro mais comum é escolher evidências grandes demais. "Treinar uma hora" é ótimo no primeiro dia e impossível na semana do fechamento. Evidência boa cabe em dois minutos e continua possível no seu pior dia.
+
+O segundo erro é escolher uma identidade que não é sua. Se a frase não te dá vontade nenhuma, ela não vai segurar nada. Escolha uma pessoa que você teria orgulho de ser, não uma que alguém espera que você seja.
 
 **Pergunta-teste:** o que uma pessoa com essa identidade faria hoje, em 2 minutos?
 
@@ -124,20 +158,68 @@ Na prática: você não "quer ler mais", você é alguém que se mantém atualiz
 ### Para ir além
 Leitura recomendada: *Hábitos Atômicos*, de James Clear.
 
+### Frases do dia
+1. Primeiro diga a si mesmo quem você quer ser; **depois, faça o que isso exige.** — Epicteto, Discursos, III.23
+2. Cada ação pequena **é uma prova de quem você está virando.**
+3. Pare de discutir como deve ser uma pessoa boa. **Seja uma.** — Marco Aurélio, Meditações, X.16
+4. Meta acaba quando você chega. **Identidade continua no dia seguinte.**
+5. Não diga que é filósofo. **Mostre com o que você faz.** — Epicteto, Manual, 46
+6. Uma vez não prova nada. **Trinta vezes mudam quem você é.**
+7. Pequeno e todo dia **vale mais que grande e de vez em quando.**
+
+### Fontes (não aparece no app)
+- Bem (1972), *Self-perception theory*, Advances in Experimental Social Psychology.
+- Lally et al. (2009), *How are habits formed*, European Journal of Social Psychology: mediana de 66 dias até a automaticidade (de 18 a 254); falhar um dia isolado não afetou o processo.
+- Epicteto, *Discursos* III.23.1 e *Manual* 46; Marco Aurélio, *Meditações* X.16 (traduções nossas do grego).
+
 ---
 
 ## Semana 3 · Plano de gatilho
 
-- `id`: `habitos-s3` · duração: 6 min · `exercicio.tipo`: `plano_gatilho`
+- `id`: `habitos-s3` · duração: 10 min · `exercicio.tipo`: `plano_gatilho`
 
 ### Entenda
 **Título:** "Vou tentar" não é plano
 
+#### O que é um plano de gatilho
+
+Gatilho é o que dispara alguma coisa. No seu dia, gatilho é aquilo que já acontece sozinho e pode puxar o hábito novo: o primeiro café, sentar no carro, fechar o notebook. Plano de gatilho é decidir antes, por escrito, em que momento o hábito vai acontecer.
+
+Parece burocracia. É o contrário: é o que tira a burocracia da sua cabeça na hora H.
+
+#### Por que "vou tentar" não funciona
+
 Na obra ninguém escreve "vamos concretar quando der". Tem data, hora, equipe e sequência. Com hábito, a maioria das pessoas fica no "vou tentar ler mais" e depois culpa a falta de força de vontade.
 
-O que falta não é vontade, é especificação. Quando você define quando, onde e depois de quê, a decisão já está tomada antes do momento chegar. Na hora, você só executa. Sem especificação, cada dia vira uma nova negociação consigo mesmo, e a negociação costuma terminar em "amanhã".
+O que falta não é vontade, é especificação. Sem um momento definido, cada dia vira uma nova negociação com você mesmo. E essa negociação costuma terminar em "amanhã eu faço".
+
+#### O que a pesquisa diz
+
+O psicólogo alemão Peter Gollwitzer passou anos estudando um tipo de plano bem simples, no formato "quando acontecer X, eu faço Y". Uma revisão de 94 estudos mostrou que quem escreve o plano desse jeito cumpre o que se propôs bem mais do que quem só tem a intenção.
+
+Um exemplo de fora do laboratório: uma empresa americana mandou o convite da vacina da gripe pros funcionários. Parte deles recebeu só o aviso. A outra parte recebeu um espaço pra anotar o dia e o horário em que iria se vacinar. Só anotar já fez mais gente ir.
+
+O motivo é que o plano transfere a decisão pro ambiente. Quando o gatilho aparece, o cérebro já sabe o que vem depois. Você não precisa lembrar nem se convencer, só executar.
+
+#### O que Marco Aurélio diria
+
+> Ao começar o dia, diga a si mesmo o que vai encontrar pela frente. — Marco Aurélio, *Meditações*, II.1
+
+Marco Aurélio abria o dia avisando a si mesmo que ia encontrar gente difícil, ingrata e apressada. Não era pessimismo, era preparo. Quem decide antes como vai reagir não é pego de surpresa. Com hábito é igual: quem decide antes quando vai fazer não precisa decidir na hora, que é justamente quando o cansaço e a preguiça estão mais fortes.
+
+#### Na prática
 
 Uma frase resolve: "Às [hora], em [lugar], depois de [ação que já acontece], eu vou [hábito]."
+
+Fica assim: "Às 7h30, na mesa do escritório, depois de servir o primeiro café, eu vou revisar a agenda do dia." Repara que o café já acontece todo dia, sem esforço nenhum. Ele vira a ponte pro hábito novo.
+
+No exercício, você vai montar essa frase pra cada um dos seus três hábitos. O horário vai aparecer no seu check-in, e o app vai começar a medir quantas vezes você fez no horário planejado.
+
+#### O erro mais comum
+
+O erro mais comum é escolher um gatilho que não acontece todo dia. "Depois da academia" não serve se você vai à academia três vezes por semana. O gatilho bom é aquele que acontece até no domingo.
+
+O segundo erro é escolher um gatilho vago, como "de manhã" ou "quando tiver um tempo". Manhã tem quatro horas, e tempo livre não aparece sozinho. Quanto mais concreto o gatilho, menos espaço pra negociação.
 
 **Pergunta-teste:** se alguém lesse o seu plano, saberia exatamente quando e onde conferir se você fez?
 
@@ -152,6 +234,20 @@ Uma frase resolve: "Às [hora], em [lugar], depois de [ação que já acontece],
 
 ### Para ir além
 Leitura recomendada: *Hábitos Atômicos*, de James Clear.
+
+### Frases do dia
+1. Ao começar o dia, diga a si mesmo **o que vai encontrar pela frente.** — Marco Aurélio, Meditações, II.1
+2. "Vou tentar" **não é plano.**
+3. Decida antes. **Na hora, só execute.**
+4. Quando for fazer algo, **lembre antes como aquilo costuma ser.** — Epicteto, Manual, 4
+5. Hora, lugar e gatilho. **O resto é negociação.**
+6. Nenhum vento ajuda **quem não sabe pra que porto vai.** — Sêneca, Cartas a Lucílio, 71
+7. Sem plano, todo dia vira **uma nova negociação com você mesmo.**
+
+### Fontes (não aparece no app)
+- Gollwitzer e Sheeran (2006), metanálise de 94 estudos sobre intenções de implementação, Advances in Experimental Social Psychology.
+- Milkman et al. (2011), *Using implementation intentions prompts to enhance influenza vaccination rates*, PNAS.
+- Marco Aurélio, *Meditações* II.1; Epicteto, *Manual* 4; Sêneca, *Cartas a Lucílio* 71.3 (traduções nossas).
 
 ---
 
