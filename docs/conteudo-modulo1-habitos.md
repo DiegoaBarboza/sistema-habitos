@@ -17,49 +17,49 @@ Cada lição tem 3 etapas no app: **Entenda** (até 3 min de leitura) → **Faç
 
 #### O que é um inventário
 
-Inventário é a palavra que o comércio usa pra contar tudo o que tem no estoque. Antes de comprar, vender ou arrumar qualquer coisa, o dono da loja precisa saber o que já tem nas prateleiras. Por isso a contagem vem sempre primeiro.
+Inventário é a palavra que o comércio usa pra contagem de tudo o que tem no estoque. Antes de comprar, vender ou arrumar qualquer coisa, o dono da loja precisa saber o que já está nas prateleiras, e é por isso que a contagem vem sempre primeiro.
 
-Com a sua rotina acontece igual: antes de criar um hábito novo ou largar um antigo, você precisa saber o que já tá rolando no seu dia. É isso que a gente vai fazer nesta primeira semana.
+Com a sua rotina acontece igual, porque antes de criar um hábito novo ou largar um antigo você precisa saber o que já tá rolando no seu dia. É isso que a gente vai fazer nesta primeira semana.
 
 #### O piloto automático
 
-Um grupo de psicólogos americanos pediu pra voluntários anotarem, de hora em hora, o que estavam fazendo e pensando. Resultado: cerca de 40% do que a gente faz se repete todo dia, no mesmo lugar e do mesmo jeito, com a cabeça em outro planeta. Quase metade do seu dia roda no automático. E é justamente essa metade que a gente nunca para pra olhar.
+Um grupo de psicólogos americanos pediu pra voluntários anotarem, de hora em hora, o que estavam fazendo e pensando, e o resultado foi que cerca de 40% do que a gente faz se repete todo dia, no mesmo lugar e do mesmo jeito, enquanto a cabeça está em outro planeta. Quase metade do seu dia roda no automático, e é justamente essa metade que a gente nunca para pra olhar.
 
-Isso não é defeito. É economia de energia. O cérebro transforma em rotina tudo o que se repete pra liberar espaço pros perrengues novos. O problema? Ele não é crítico de conteúdo. Rolar o feed do celular ao acordar entra no pacote com a mesma facilidade que beber água. Pra ele, repetiu, virou padrão.
+Isso não é defeito, é economia de energia. O cérebro transforma em rotina tudo o que se repete pra liberar espaço pros perrengues novos, só que ele não é nenhum crítico de conteúdo: rolar o feed do celular ao acordar entra no pacote com a mesma facilidade que beber um copo de água. Pra ele, repetiu virou padrão.
 
-Tem mais: o automático não cobra só tempo, cobra atenção. Enquanto ele toca o dia, você mal percebe as pequenas escolhas que vão empurrando a sua rotina pra um lado ou pro outro. Por isso tanta gente chega no fim do dia sem saber direito pra onde as horas foram.
+E o automático não cobra só tempo, cobra atenção também. Enquanto ele toca o dia, você mal percebe as pequenas escolhas que vão empurrando a sua rotina pra um lado ou pro outro, e é por isso que tanta gente chega no fim do dia sem saber direito pra onde as horas foram.
 
-Uma revisão de 138 estudos chegou numa conclusão simples: quem monitora o próprio progresso tem mais chance de chegar aonde quer. E a chance sobe quando o registro é escrito. Observar já é o começo da mudança.
+Uma revisão de 138 estudos chegou numa conclusão simples: quem acompanha o próprio progresso tem mais chance de chegar aonde quer, e a chance aumenta quando esse acompanhamento é escrito. Observar já é o começo da mudança.
 
 #### Um pouco de estoicismo
 
-Nas próximas semanas você vai trombar com ideias de uma escola de filosofia que combina demais com hábitos: o estoicismo. Ela nasceu na Grécia, por volta do ano 300 a.C., mas ficou famosa com três romanos de vidas bem diferentes.
+Nas próximas semanas você vai trombar com ideias de uma escola de filosofia que combina demais com hábitos, o estoicismo. Ela nasceu na Grécia, por volta do ano 300 a.C., mas ficou famosa mesmo com três romanos que tiveram vidas bem diferentes.
 
-Sêneca foi escritor, riquíssimo e conselheiro do imperador Nero. Escreveu dezenas de cartas pra um amigo ensinando a viver com mais propósito. Epicteto nasceu escravo, conquistou a liberdade e virou um dos professores mais respeitados de Roma. Marco Aurélio foi imperador e, entre guerras e epidemias, escrevia à noite anotações só pra si mesmo. Hoje elas são conhecidas como *Meditações*.
+Sêneca foi escritor, homem riquíssimo e conselheiro do imperador Nero, e escreveu dezenas de cartas pra um amigo ensinando a viver com mais propósito. Epicteto nasceu escravo, conquistou a liberdade e virou um dos professores mais respeitados de Roma. Marco Aurélio foi imperador e, no meio de guerras e epidemias, escrevia à noite anotações só pra si mesmo, que hoje são conhecidas como *Meditações*.
 
-A ideia que une os três é separar o que depende de você do que não depende. Você não controla o trânsito, a opinião alheia ou se vai passar na entrevista. Mas controla como se prepara, como reage e o que faz logo depois. Pra eles, a vida melhora quando a gente coloca energia no que tá ao alcance. E isso não era teoria, era treino diário. Um dos exercícios? Rever o próprio dia antes de dormir. Por isso eles cabem tão bem num app de hábitos.
+O que une os três é a ideia de separar o que depende de você do que não depende. Você não controla o trânsito, a opinião alheia ou se vai passar na entrevista, mas controla como se prepara, como reage e o que faz logo depois. Pra eles a vida melhora quando a gente coloca energia no que está ao nosso alcance, e isso não era teoria, era treino diário, com exercícios como rever o próprio dia antes de dormir. Dá pra entender por que eles cabem tão bem num app de hábitos, né?
 
 #### O que Sêneca diria do seu inventário
 
 > Grande parte da vida nos escapa enquanto fazemos outra coisa. — Sêneca, *Cartas a Lucílio*, 1
 
-Essa frase abre a primeira carta que Sêneca escreveu pro amigo Lucílio. Ele falava do tempo que vaza sem a gente ver, e é exatamente isso que o seu inventário vai mostrar. Os vinte minutos de rede social na cama, o almoço engolido na frente do computador, o e-mail que você responde às dez da noite só pra "adiantar"… Sozinhos, parecem nada. Somados, viram meses de vida por ano.
+Essa frase abre a primeira carta que Sêneca escreveu pro amigo Lucílio, e ele estava falando do tempo que vaza sem a gente ver, que é exatamente o que o seu inventário vai mostrar. Os vinte minutos de rede social na cama, o almoço engolido na frente do computador, o e-mail que você responde às dez da noite só pra "adiantar"… Sozinhos parecem nada, mas somados viram meses de vida por ano.
 
 #### Na prática
 
-Um hábito não é bom nem ruim por si só. Ele ajuda ou atrapalha conforme o resultado que você quer. Um café às três da tarde pode ser a pausa que salva a produtividade de quem treina cedo. Pra quem tem insônia, é sabotagem. Contexto manda.
+Um hábito não é bom nem ruim por si só, ele ajuda ou atrapalha conforme o resultado que você quer. Um café às três da tarde pode ser a pausa que salva a produtividade de quem treina cedo e, ao mesmo tempo, a sabotagem de quem sofre com insônia, porque no fim é o contexto que manda.
 
-Por isso, no exercício, você não vai julgar. Vai só classificar cada hábito como algo que ajuda, que é neutro ou que atrapalha.
+Por isso, no exercício, você não vai julgar nada, vai só classificar cada hábito como algo que ajuda, que é neutro ou que atrapalha.
 
-Faça como numa auditoria: anote o que acontece de verdade, não o que deveria acontecer. Comece pelo momento em que você acorda e siga até a hora de dormir. Ajuda dividir o dia em três: manhã, horário de trabalho e noite.
+Faça como numa auditoria e anote o que acontece de verdade, não o que deveria acontecer. Comece pelo momento em que você acorda e siga até a hora de dormir, e se ajudar, divida o dia em três partes: manhã, horário de trabalho e noite.
 
-Não lembrou de tudo agora? Normal. Comece com cinco hábitos, observe o seu dia por mais três dias e volte aqui pra completar a lista. Começar pequeno aumenta a chance de você realmente fazer.
+Não lembrou de tudo agora? Normal. Comece com cinco hábitos, observe o seu dia por mais três dias e volte aqui pra completar a lista, porque começar pequeno aumenta muito a chance de você realmente fazer.
 
 #### O erro mais comum
 
-O erro mais comum é ser vago. "Comer mal" não diz nada. Mas "beliscar biscoito às quatro da tarde na frente do computador" mostra o quê, quando e onde. É com essa informação que você vai trabalhar nas próximas semanas.
+O erro mais comum é ser vago. "Comer mal" não diz nada, enquanto "beliscar biscoito às quatro da tarde na frente do computador" mostra o quê, quando e onde, e é com esse tipo de informação que você vai trabalhar nas próximas semanas.
 
-O segundo erro é anotar só o que quer mudar. Os hábitos que ajudam também entram na lista. Eles são a base que você vai usar pra construir os próximos.
+O segundo erro é anotar só o que você quer mudar. Os hábitos que ajudam também entram na lista, porque eles são a base que você vai usar pra construir os próximos.
 
 **Pergunta-teste (caixa de destaque):** isso me aproxima ou me afasta do resultado que eu quero daqui a um ano?
 
@@ -253,16 +253,44 @@ Leitura recomendada: *Hábitos Atômicos*, de James Clear.
 
 ## Semana 4 · Encadeamento
 
-- `id`: `habitos-s4` · duração: 5 min · `exercicio.tipo`: `encadeamento`
+- `id`: `habitos-s4` · duração: 10 min · `exercicio.tipo`: `encadeamento`
 
 ### Entenda
 **Título:** Pendure o novo no que já funciona
 
-Você já tem dezenas de rotinas que rodam sozinhas: ligar o notebook, estacionar o carro, fechar a última reunião do dia. Elas são âncoras confiáveis, porque acontecem todo dia sem esforço.
+#### O que é encadeamento
 
-Encadear é usar essas âncoras como gatilho: "depois de X, eu faço Y". É o mesmo princípio de uma sequência de automação. A etapa seguinte só começa quando a anterior termina, e ninguém precisa lembrar de dar a partida.
+Encadear é ligar uma coisa na outra, como os elos de uma corrente. Aqui a ideia é prender o hábito novo numa ação que você já faz todo dia sem pensar, de um jeito que uma puxe a outra naturalmente.
 
-A âncora tem que ter a mesma frequência do hábito novo e acontecer num lugar em que o hábito novo seja possível. "Depois de estacionar, eu caminho 15 minutos" funciona. "Depois de estacionar, eu leio 2 páginas" provavelmente não.
+Você já tem dezenas dessas ações rodando sozinhas, como ligar o notebook, estacionar o carro, escovar os dentes ou sair da última reunião do dia. Elas são âncoras confiáveis porque acontecem sempre, sem esforço nenhum, e é nelas que você vai pendurar o que quer construir.
+
+#### Por que funciona
+
+Na semana passada você aprendeu que um plano com gatilho definido funciona muito melhor do que a intenção solta. Encadear é escolher como gatilho algo que já é automático, e aí o hábito novo pega carona num caminho que o seu cérebro já conhece de cor.
+
+O pesquisador BJ Fogg, da Universidade Stanford, chama esses momentos de âncoras e usa a fórmula "depois que eu ___, eu vou ___" com milhares de pessoas. Um estudo britânico testou isso de um jeito bem simples: um grupo passou a usar fio dental antes de escovar os dentes e outro grupo passou a usar depois. Quem pendurou o fio dental depois da escovação, que já era um hábito firme, ficou com o novo hábito mais automático ao longo das semanas.
+
+É o mesmo princípio de uma sequência de automação, em que a etapa seguinte só começa quando a anterior termina e ninguém precisa lembrar de dar a partida.
+
+#### O que Marco Aurélio diria
+
+> Quando custar levantar de manhã, lembre: acordo pra fazer o trabalho de um ser humano. — Marco Aurélio, *Meditações*, V.1
+
+Até um imperador tinha dificuldade de sair da cama, e Marco Aurélio resolveu isso prendendo um pensamento fixo ao primeiro momento do dia. Toda manhã a mesma âncora, acordar, puxava o mesmo lembrete. Ele não esperava a motivação aparecer, ele usava um momento que acontecia de qualquer jeito.
+
+#### Na prática
+
+A âncora precisa ter a mesma frequência do hábito novo e acontecer num lugar onde esse hábito seja possível. "Depois de estacionar, eu caminho quinze minutos" funciona, porque você já está fora de casa e de tênis, enquanto "depois de estacionar, eu leio duas páginas" provavelmente não vai rolar, porque você está atrasado pra entrar.
+
+Também ajuda pensar no tamanho dos elos. Depois de uma âncora forte, coloque um hábito pequeno, e só depois que esse hábito estiver firme ele pode virar âncora pro próximo. É assim que uma corrente cresce sem arrebentar.
+
+No exercício você vai escolher algumas âncoras do seu dia, muitas delas vindas do inventário da semana 1, e montar até três correntes no formato "depois de ___, eu vou ___". A âncora passa a aparecer no cartão do check-in, e o app vai comparar a sua adesão antes e depois da corrente.
+
+#### O erro mais comum
+
+O erro mais comum é escolher uma âncora que não acontece todo dia ou que muda de horário o tempo todo. Se a âncora falha, o hábito pendurado nela cai junto, então prefira aquelas que acontecem até no fim de semana.
+
+O segundo erro é pendurar coisa demais na mesma âncora. Três hábitos novos depois do café viram uma lista de tarefas, e lista de tarefas é justamente o que a gente adia, por isso comece com um elo de cada vez.
 
 **Pergunta-teste:** essa âncora acontece todo dia, no mesmo lugar em que o hábito novo pode acontecer?
 
@@ -279,20 +307,60 @@ A âncora tem que ter a mesma frequência do hábito novo e acontecer num lugar 
 ### Para ir além
 Leitura recomendada: *Hábitos Atômicos*, de James Clear.
 
+### Frases do dia
+1. Quando custar levantar de manhã, lembre: **acordo pra fazer o trabalho de um ser humano.** — Marco Aurélio, Meditações, V.1
+2. Pendure o novo **no que já funciona.**
+3. Depois de algo que você já faz, **vem o que você quer fazer.**
+4. Não crie um horário novo. **Use um momento que já existe.**
+5. Se você quer ler bem, leia; **se quer escrever bem, escreva.** — Epicteto, Discursos, II.18
+6. Cada elo puxa o próximo **sem precisar de força de vontade.**
+7. A âncora certa acontece **todo dia, até no domingo.**
+
+### Fontes (não aparece no app)
+- BJ Fogg, *Tiny Habits* (2019), método das âncoras ("depois que eu..., eu vou...").
+- Judah, Gardner e Aunger (2013), British Journal of Health Psychology: fio dental depois da escovação gerou mais automaticidade do que antes.
+- Marco Aurélio, *Meditações* V.1; Epicteto, *Discursos* II.18.2 (traduções nossas).
+
 ---
 
 ## Semana 5 · Projeto de ambiente
 
-- `id`: `habitos-s5` · duração: 6 min · `exercicio.tipo`: `ambiente`
+- `id`: `habitos-s5` · duração: 10 min · `exercicio.tipo`: `ambiente`
 
 ### Entenda
 **Título:** O layout decide antes de você
 
-Todo engenheiro de processo sabe: se a ferramenta está a três passos, o operador improvisa. Se está na mão, ele usa. Comportamento acompanha o arranjo físico muito mais do que acompanha a intenção.
+#### O que é projetar o ambiente
 
-Em casa e no escritório vale a mesma lógica. O que está visível e próximo acontece. O que exige passos extras deixa de acontecer. Então você não briga com a força de vontade, você reorganiza o posto de trabalho.
+Projetar o ambiente é arrumar os lugares por onde você passa de um jeito que o hábito bom fique fácil e o hábito ruim fique chato de fazer. É olhar pra sua casa e pro seu escritório como um engenheiro olha pra uma linha de produção, perguntando o que está atrapalhando o fluxo.
 
-Duas alavancas para o hábito que você quer: **deixar à vista** e **tirar passos**. Duas para o que você quer largar: **esconder o gatilho** e **colocar passos**.
+#### Por que o lugar pesa tanto
+
+Todo engenheiro de processo sabe que, se a ferramenta está a três passos, o operador improvisa, e se está na mão, ele usa. O comportamento acompanha o arranjo físico muito mais do que a boa intenção, e isso vale pra fábrica, pro escritório e pra cozinha da sua casa.
+
+Um hospital de Boston testou isso na própria lanchonete. Em vez de proibir refrigerante ou fazer campanha, eles espalharam garrafas de água por mais pontos do salão, colocaram na altura dos olhos e deixaram o refrigerante um pouco menos à mão. A venda de água subiu e a de refrigerante caiu, sem ninguém precisar de força de vontade pra isso.
+
+O motivo é que cada passo a mais é uma pequena decisão, e decisão cansa. Quando o caminho do hábito bom tem menos passos que o do hábito ruim, você escolhe certo quase sem perceber.
+
+#### O que Sêneca diria
+
+> É o espírito que você precisa mudar, não o céu sobre a sua cabeça. — Sêneca, *Cartas a Lucílio*, 28
+
+Sêneca escreveu isso pra um amigo que achava que uma viagem ia resolver a sua inquietação, e o recado é que você leva os seus hábitos aonde for. Só que o próprio Sêneca, em outra carta, conta que morava em cima de uma casa de banhos barulhenta e jurava que conseguia se concentrar ali, até admitir no fim que o mais sensato era se mudar. A lição junta as duas coisas: o trabalho de dentro é seu, mas não tem por que deixar o ambiente jogar contra você.
+
+#### Na prática
+
+Pro hábito que você quer construir existem duas alavancas, deixar à vista e tirar passos. Um livro em cima do teclado ou o tênis separado na porta deixam o hábito no seu caminho, sem você precisar lembrar dele.
+
+Pro hábito que você quer largar, as alavancas são as opostas, esconder o gatilho e colocar passos. O celular carregando fora do quarto ou sair da conta do app de vídeo no celular não proíbem nada, só deixam o hábito um pouco mais trabalhoso, e muitas vezes isso já basta.
+
+No exercício você vai escrever pelo menos duas mudanças concretas e marcar quais já aplicou. As que ficarem pendentes aparecem na tela Hoje como lembrete, até você marcar que fez.
+
+#### O erro mais comum
+
+O erro mais comum é planejar a mudança e não aplicar. Escrever "deixar o livro na mesa" não muda nada enquanto o livro continua na estante, então aplique o ajuste no mesmo dia, de preferência logo depois de terminar esta lição.
+
+O segundo erro é confiar só na força de vontade pro hábito que você quer largar. Se o pacote de biscoito continua na gaveta da sua mesa, você vai ter que vencer essa batalha todo dia às quatro da tarde, enquanto tirar o pacote dali resolve de uma vez.
 
 **Pergunta-teste:** o que eu mudaria nesse ambiente se ele fosse um posto de trabalho que precisa bater meta?
 
@@ -309,6 +377,19 @@ Duas alavancas para o hábito que você quer: **deixar à vista** e **tirar pass
 
 ### Para ir além
 Leitura recomendada: *Hábitos Atômicos*, de James Clear.
+
+### Frases do dia
+1. É o espírito que você precisa mudar, **não o céu sobre a sua cabeça.** — Sêneca, Cartas a Lucílio, 28
+2. O que está à vista **acontece.**
+3. Não brigue com a força de vontade. **Mude o lugar das coisas.**
+4. Deixe o hábito bom a um passo **e o ruim a dez.**
+5. O ambiente decide **antes de você.**
+6. Esconder o gatilho **é mais fácil que resistir a ele.**
+7. Arrume o lugar hoje **pra que amanhã você não precise lutar.**
+
+### Fontes (não aparece no app)
+- Thorndike et al. (2012), American Journal of Public Health: mudança na lanchonete do Massachusetts General Hospital (água em mais pontos e na altura dos olhos) aumentou a venda de água e reduziu a de refrigerante.
+- Sêneca, *Cartas a Lucílio* 28.1 ("animum debes mutare, non caelum") e 56 (a casa de banhos); traduções nossas.
 
 ---
 
