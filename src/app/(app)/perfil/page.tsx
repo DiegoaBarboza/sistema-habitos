@@ -35,6 +35,10 @@ export default async function Perfil() {
           Conta
         </h2>
         <div className="rounded-xl border border-line bg-surface">
+          <Link href="/frases" className="flex flex-col gap-0.5 border-b border-line px-4 py-3.5">
+            <span className="text-[15px] font-semibold">Minhas frases</span>
+            <span className="text-[13px] text-text-2">As frases do dia que você já viu, para rever e compartilhar.</span>
+          </Link>
           <Link href="/como-funciona" className="flex flex-col gap-0.5 border-b border-line px-4 py-3.5">
             <span className="text-[15px] font-semibold">Como funciona</span>
             <span className="text-[13px] text-text-2">O método e um guia rápido das telas.</span>

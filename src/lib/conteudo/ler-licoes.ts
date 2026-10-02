@@ -12,11 +12,16 @@ export type TipoExercicio =
   | "recuperacao"
   | "contrato_revisao";
 
+// Frase do dia: o trecho entre ** vira destaque na imagem de compartilhar.
+export type Frase = { texto: string; autor: string | null; fonte: string | null };
+
 export type ConteudoLicao = {
+  // Parágrafos do Entenda: "#### " abre um subtítulo e "> " é uma citação ("texto — Autor, Fonte").
   entenda: { titulo: string; paragrafos: string[]; pergunta: string };
   faca: string[];
   compromisso: string[];
   para_ir_alem: string;
+  frases: Frase[];
 };
 
 export type Licao = {
@@ -32,7 +37,7 @@ export type Licao = {
 const RE_SEMANA = /^## Semana (\d+) · (.+)$/;
 const RE_META = /^- `id`: `([^`]+)` · duração: (\d+) min · `exercicio\.tipo`: `([^`]+)`$/;
 const RE_TITULO = /^\*\*Título:\*\* (.+)$/;
-const RE_PERGUNTA = /^\*\*Pergunta-teste[^*]*:\*\* (.+)$/;
+const RE_PERGUNTA = /^\*\*Pergunta-chave[^*]*:\*\* (.+)$/;
 
 export function lerLicoes(markdown: string, moduloId: string): Licao[] {
   const blocos = markdown.replace(/\r\n/g, "\n").split(/\n(?=## Semana )/).slice(1);
@@ -69,6 +74,7 @@ function lerSemana(bloco: string, moduloId: string): Licao {
       faca: itens(faca),
       compromisso: itens(compromisso),
       para_ir_alem: paragrafos(alem).join("\n\n"),
+      frases: (secoes.get("Frases do dia") ?? []).filter((l) => l.trim()).map((l) => lerFrase(l, semana)),
     },
   };
 }
@@ -99,8 +105,26 @@ function lerEntenda(linhas: string[], semana: number) {
     else if (q) pergunta = q[1];
     else corpo.push(p);
   }
-  if (!titulo || !pergunta) throw new Error(`Semana ${semana}: Entenda sem título ou pergunta-teste`);
+  if (!titulo || !pergunta) throw new Error(`Semana ${semana}: Entenda sem título ou pergunta-chave`);
   return { titulo, paragrafos: corpo, pergunta };
+}
+
+// "1. Texto com **destaque** — Autor, Fonte"; frases nossas não têm autor.
+function lerFrase(linha: string, semana: number): Frase {
+  const m = linha.match(/^\d+\. (.+)$/);
+  if (!m) throw new Error(`Semana ${semana}: frase fora de lista numerada: ${linha}`);
+  const [texto, credito] = m[1].split(" — ");
+  if (!credito) return { texto: texto.trim(), autor: null, fonte: null };
+  const virgula = credito.indexOf(", ");
+  return virgula < 0
+    ? { texto: texto.trim(), autor: credito.trim(), fonte: null }
+    : { texto: texto.trim(), autor: credito.slice(0, virgula).trim(), fonte: credito.slice(virgula + 2).trim() };
+}
+
+// Separa uma citação do Entenda ("> texto — Autor, Fonte") em texto e crédito.
+export function lerCitacao(paragrafo: string) {
+  const [texto, credito] = paragrafo.replace(/^>\s*/, "").split(" — ");
+  return { texto: texto.trim(), credito: credito?.trim() ?? null };
 }
 
 // Parágrafos separados por linha em branco.
