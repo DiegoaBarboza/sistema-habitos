@@ -55,6 +55,11 @@ O Trilho não prescreve. Ele oferece ferramentas para a pessoa se observar.
 - Impacto técnico previsto: `progresso_licao` hoje tem uma linha por lição; o ciclo precisa de um número de ciclo (ou tabela `ciclos`) para guardar as respostas de cada rodada.
 - Quando: desenhar quando os primeiros usuários estiverem perto da semana 8 (cerca de 2 meses depois do início dos testes), usando o que eles pedirem.
 
+## Preço e acesso (decidido em 02/10/2026)
+- Lote 1 · Fundador: R$ 47, pagamento único, 100 vagas reais (contadas pelas vendas aprovadas). Lote 2 · Oficial: R$ 97.
+- **Quem compra o Lote 1 ou o Lote 2 mantém o app inteiro para sempre** (lições, check-in, indicadores, revisões, frases).
+- Trilho Contínuo (R$ 19,90/mês ou R$ 147/ano) vale só para módulos novos e ofertas futuras anunciadas assim; nunca para tirar algo de quem já comprou. Campo `plano` já existe em `acessos`.
+
 ## Pendências
 - **Site institucional + landing de venda em `www.trilhoapp.com.br`** (pedido em 02/10/2026).
   - Quem abre o endereço sem estar logado vê uma página sobre o app: o que é, o que faz, módulos futuros. O app continua em `/entrar`, `/hoje` etc.
