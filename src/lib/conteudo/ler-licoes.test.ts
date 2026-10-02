@@ -14,9 +14,9 @@ describe("lerLicoes", () => {
       [3, "habitos-s3", 10, "plano_gatilho"],
       [4, "habitos-s4", 10, "encadeamento"],
       [5, "habitos-s5", 10, "ambiente"],
-      [6, "habitos-s6", 5, "versao_minima"],
-      [7, "habitos-s7", 5, "recuperacao"],
-      [8, "habitos-s8", 7, "contrato_revisao"],
+      [6, "habitos-s6", 10, "versao_minima"],
+      [7, "habitos-s7", 10, "recuperacao"],
+      [8, "habitos-s8", 12, "contrato_revisao"],
     ]);
   });
 
@@ -66,7 +66,7 @@ describe("lerLicoes", () => {
     expect(f[1]).toEqual({ texto: "Você não muda **o que não enxerga.**", autor: null, fonte: null });
     expect(f[4].fonte).toBe("Discursos, II.18");
     expect(licoes[1].conteudo.frases).toHaveLength(7);
-    expect(licoes[5].conteudo.frases).toEqual([]);
+    expect(licoes.every((l) => l.conteudo.frases.length === 7)).toBe(true);
   });
 
   it("aceita quebras de linha do Windows", () => {

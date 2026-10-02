@@ -395,14 +395,42 @@ Leitura recomendada: *Hábitos Atômicos*, de James Clear.
 
 ## Semana 6 · Versão mínima
 
-- `id`: `habitos-s6` · duração: 5 min · `exercicio.tipo`: `versao_minima`
+- `id`: `habitos-s6` · duração: 10 min · `exercicio.tipo`: `versao_minima`
 
 ### Entenda
 **Título:** Dia ruim também conta
 
-A rotina de quem trabalha com prazo não é estável. Tem dia de parada de linha, viagem para cliente, entrega atrasada. Se o seu hábito só existe na versão completa, ele morre no primeiro dia ruim.
+#### O que é a versão mínima
 
-A saída é definir, com antecedência, uma versão tão pequena que cabe em 2 minutos. Ler um parágrafo em vez de duas páginas. Calçar o tênis e dar a volta no quarteirão. Parece pouco, e é de propósito: o objetivo desse dia não é o resultado, é não quebrar a sequência. Quem mantém a sequência volta à versão completa. Quem quebra costuma recomeçar do zero, quando recomeça.
+Versão mínima é o tamanho menor do seu hábito, aquele que cabe em dois minutos e que você consegue fazer mesmo no dia mais caótico. Ler um parágrafo em vez de duas páginas, calçar o tênis e dar uma volta no quarteirão em vez de caminhar quinze minutos, revisar só a primeira reunião da agenda em vez do dia inteiro.
+
+Parece pouco, e é de propósito, porque o objetivo desse dia não é o resultado, é não deixar a sequência quebrar.
+
+#### Por que o mínimo segura o máximo
+
+A rotina de quem trabalha com prazo não é estável. Tem dia de parada de linha, viagem pra cliente, criança doente e entrega atrasada, e se o seu hábito só existe na versão completa, ele morre no primeiro dia ruim.
+
+Lembra da pesquisa dos 66 dias, lá da semana 2? O que ela mostrou foi que falhar um dia isolado não atrapalhou a formação do hábito, mas parar de vez atrapalhou. A versão mínima existe justamente pra transformar o dia em que você ia parar num dia em que você fez pouco, mas fez.
+
+O pesquisador BJ Fogg, de Stanford, defende começar tão pequeno que chega a parecer ridículo, porque o que constrói o hábito é a repetição, não o tamanho de cada vez. Quem mantém a sequência volta pra versão completa quando o dia melhora, enquanto quem quebra costuma recomeçar do zero, quando recomeça.
+
+#### O que Epicteto diria
+
+> Nada grande nasce de repente, nem a uva nem o figo. — Epicteto, *Discursos*, I.15
+
+Um homem perguntou a Epicteto como fazer o irmão parar de ficar bravo com ele, esperando uma solução rápida, e ele respondeu com essa comparação. Se você quer um figo, precisa esperar a árvore florescer, depois dar fruto e depois o fruto amadurecer, e não tem atalho pra isso. Com hábito é igual, ele cresce no ritmo dele, e a versão mínima é o que mantém a árvore viva nos dias em que nada parece crescer.
+
+#### Na prática
+
+Pra cada hábito ativo, você vai escrever a versão de dois minutos. Uma boa versão mínima tem três características: cabe em dois minutos, não depende de nenhum equipamento especial e ainda é o mesmo hábito, só que menor.
+
+Depois que você definir, o botão "mínimo" do check-in passa a mostrar o texto que você escreveu, e o app começa a contar os dias salvos pelo mínimo, que são aqueles em que você só fez a versão pequena. No fim do mês, esse número costuma surpreender.
+
+#### O erro mais comum
+
+O erro mais comum é fazer uma versão mínima que não é mínima. "Ler dez páginas em vez de vinte" ainda é muito pro dia em que você chega em casa às onze da noite, por isso teste a sua versão pensando no seu pior dia, não no dia normal.
+
+O segundo erro é usar o mínimo como regra em vez de reserva. A versão mínima é o estepe, não o pneu, então nos dias normais você continua fazendo a versão completa e guarda o mínimo pros dias que realmente pedem.
 
 **Pergunta-teste:** consigo fazer isso num dia de parada de linha, cansado e atrasado?
 
@@ -417,20 +445,62 @@ A saída é definir, com antecedência, uma versão tão pequena que cabe em 2 m
 ### Para ir além
 Leitura recomendada: *Hábitos Atômicos*, de James Clear.
 
+### Frases do dia
+1. Nada grande nasce de repente, **nem a uva nem o figo.** — Epicteto, Discursos, I.15
+2. Dia ruim **também conta.**
+3. O mínimo de hoje **segura o máximo de amanhã.**
+4. Todo dia, escolha uma ideia só **e digira bem.** — Sêneca, Cartas a Lucílio, 2
+5. Dois minutos **não quebram a sequência.**
+6. Pequeno não é fraco. **Pequeno é o que cabe no seu pior dia.**
+7. Feito pela metade **vale mais que não feito.**
+
+### Fontes (não aparece no app)
+- Lally et al. (2009): falhar um dia isolado não afetou a formação do hábito.
+- BJ Fogg, *Tiny Habits* (2019): começar pequeno.
+- Epicteto, *Discursos* I.15.7; Sêneca, *Cartas a Lucílio* 2.4 (traduções nossas).
+
 ---
 
 ## Semana 7 · Rastreador e recuperação
 
-- `id`: `habitos-s7` · duração: 5 min · `exercicio.tipo`: `recuperacao`
+- `id`: `habitos-s7` · duração: 10 min · `exercicio.tipo`: `recuperacao`
 
 ### Entenda
 **Título:** Falhar uma vez é ruído. Duas é tendência.
 
-Em controle de processo, um ponto fora da curva não muda nada. Uma sequência de pontos fora da curva é sinal de que o processo mudou. Hábito funciona igual. Perder um dia é normal e não significa nada. Perder dois seguidos é o começo de um novo padrão, o de não fazer.
+#### O que é rastrear e recuperar
 
-Por isso o indicador principal deste sistema não é "dias seguidos sem falhar", que pune qualquer imprevisto. É "sem falha 2x": você pode falhar, mas não duas vezes seguidas.
+Rastrear é seguir o rastro, e o seu check-in diário é exatamente isso, um registro simples que mostra por onde você passou. Recuperar é voltar ao normal depois de um tropeço, e esta semana é sobre decidir antes como você vai voltar quando falhar, porque você vai falhar, todo mundo falha.
 
-O plano de recuperação é decidido agora, com a cabeça fria, e não no dia seguinte à falha, quando a tentação é deixar para a próxima semana.
+#### Por que "sem falha 2x" e não "dias seguidos"
+
+Em controle de processo, um ponto fora da curva não muda nada, mas uma sequência de pontos fora da curva é sinal de que o processo mudou. Hábito funciona do mesmo jeito: perder um dia é normal e não significa nada, enquanto perder dois seguidos é o começo de um padrão novo, o de não fazer.
+
+É por isso que o indicador principal deste app não é "dias seguidos sem falhar", que pune qualquer imprevisto e faz muita gente desistir no primeiro dia de gripe. O indicador é "sem falha 2x", em que você pode falhar, mas não duas vezes seguidas.
+
+#### A armadilha do "já estraguei tudo"
+
+O psicólogo Alan Marlatt, que estudou recaídas por décadas, descreveu uma armadilha bem conhecida: depois de um deslize, a pessoa pensa "já estraguei tudo mesmo" e, em vez de voltar, desiste de vez. É quem come um pedaço de bolo na dieta e decide que então pode comer o bolo inteiro.
+
+O deslize em si quase nunca é o problema, o problema é a história que a gente conta sobre ele. Quando você já sabe o que vai fazer no dia seguinte a uma falha, essa história não tem espaço pra crescer.
+
+#### O que Marco Aurélio diria
+
+> Quando escorregar, não desanime: volte de novo. — Marco Aurélio, *Meditações*, V.9
+
+Marco Aurélio escrevia isso pra si mesmo, um imperador cobrando de si a mesma coisa que você vai praticar agora. Ele não esperava acertar sempre, esperava voltar sempre, e é essa a diferença entre quem constrói um hábito e quem vive recomeçando.
+
+#### Na prática
+
+O plano de recuperação é decidido agora, com a cabeça fria, e não no dia seguinte à falha, quando a tentação é deixar tudo pra próxima segunda-feira. Pra cada hábito ativo você vai escrever o que faz no dia seguinte a uma falha, e o mais simples costuma funcionar melhor, como "fazer a versão mínima logo depois do café".
+
+A partir daqui, quando um hábito ficar sem registro ou com "não feito" num dia, o cartão dele aparece em destaque na tela Hoje com a faixa "Hoje é dia de não falhar 2x" e com o seu plano escrito embaixo. Se você deixar o aviso ligado, o lembrete do dia também avisa.
+
+#### O erro mais comum
+
+O erro mais comum é tratar a falha como fracasso pessoal. Uma falha é só um ponto no gráfico, e o que define o gráfico é o que você faz no dia seguinte, então olhe pro dado, ajuste o plano se precisar e siga.
+
+O segundo erro é compensar a falha dobrando a dose no dia seguinte. Fazer duas vezes o treino pra "pagar" o dia perdido cansa, frustra e aumenta a chance de falhar de novo, por isso no dia de recuperação o objetivo é só não falhar a segunda vez, e a versão mínima já resolve.
 
 **Pergunta-teste:** se eu falhar amanhã, o que exatamente eu faço no dia seguinte?
 
@@ -447,22 +517,67 @@ O plano de recuperação é decidido agora, com a cabeça fria, e não no dia se
 ### Para ir além
 Leitura recomendada: *Hábitos Atômicos*, de James Clear.
 
+### Frases do dia
+1. Quando escorregar, não desanime: **volte de novo.** — Marco Aurélio, Meditações, V.9
+2. Falhar uma vez é ruído. **Duas é tendência.**
+3. Algumas coisas dependem de nós, **outras não.** — Epicteto, Manual, 1
+4. Não existe "já estraguei tudo". **Existe o dia de amanhã.**
+5. Decida o plano de volta **com a cabeça fria.**
+6. Hoje é dia de **não falhar 2x.**
+7. O que importa não é nunca cair, **é o tempo que você leva pra voltar.**
+
+### Fontes (não aparece no app)
+- Marlatt e Gordon (1985), *Relapse Prevention*: efeito de violação da abstinência ("já estraguei tudo").
+- Marco Aurélio, *Meditações* V.9; Epicteto, *Manual* 1 (traduções nossas).
+
 ---
 
 ## Semana 8 · Compromisso e revisão
 
-- `id`: `habitos-s8` · duração: 7 min · `exercicio.tipo`: `contrato_revisao`
+- `id`: `habitos-s8` · duração: 12 min · `exercicio.tipo`: `contrato_revisao`
 
 ### Entenda
 **Título:** Todo processo tem ciclo de revisão
 
-Nenhum processo fica bom na primeira versão. Ele passa por medição, análise e ajuste, e depois de novo. Com hábitos, a revisão evita dois erros comuns: carregar para sempre um hábito que já não serve e abandonar um hábito que só precisava de ajuste.
+#### O que é compromisso e revisão
 
-A partir de agora, uma vez por mês, você revisa cada hábito com três opções: **manter**, **ajustar** ou **remover**. Os números do seu painel ajudam, mas a decisão é sua.
+Compromisso é a promessa que você faz pra si mesmo, escrita e assinada, sobre os hábitos que decidiu manter. Revisão é o momento, uma vez por mês, em que você olha os números com calma e decide o que fica, o que muda e o que sai.
 
-O contrato é o último elemento. Um compromisso escrito, com consequência definida e, se quiser, uma testemunha, pesa mais que uma intenção. Ninguém gosta de descumprir o que assinou.
+As duas coisas juntas fecham o ciclo das oito semanas e abrem o próximo, porque hábito não é algo que você termina, é algo que você vai ajustando.
 
-**Pergunta-teste:** esse hábito ainda me aproxima do profissional que eu disse que queria ser na semana 2?
+#### Por que revisar
+
+Nenhum processo fica bom na primeira versão. Quem trabalha com qualidade conhece o ciclo de planejar, fazer, checar e agir, que roda de novo e de novo até o processo ficar estável, e com hábito vale a mesma lógica.
+
+A revisão evita dois erros que aparecem com o tempo. O primeiro é carregar pra sempre um hábito que já não faz sentido, só porque ele está na lista, e o segundo é abandonar um hábito que só precisava de um ajuste no horário ou no tamanho.
+
+#### Por que o compromisso escrito pesa
+
+Economistas testaram isso com fumantes nas Filipinas. Parte deles recebeu a oferta de uma conta de poupança em que depositava o dinheiro que gastaria com cigarro, e se não passasse no teste de nicotina depois de seis meses, perdia o valor. Quem recebeu essa oferta teve mais sucesso em parar do que quem não recebeu.
+
+Você não vai precisar apostar dinheiro, mas o princípio é o mesmo. Um compromisso escrito, com uma consequência definida e, se você quiser, uma testemunha, pesa mais do que uma intenção que mora só na sua cabeça.
+
+#### O que Sêneca diria
+
+> Examino o meu dia inteiro e repasso o que fiz e o que disse. — Sêneca, *Sobre a ira*, III.36
+
+Sêneca contava que, toda noite, quando a casa ficava em silêncio, ele revisava o próprio dia sem esconder nada de si mesmo, nem o que tinha feito de bom, nem o que tinha feito de errado. Não era pra se punir, era pra acordar no dia seguinte um pouco melhor, e a sua revisão mensal é exatamente esse exercício, só que com números pra ajudar.
+
+#### Na prática
+
+O exercício tem duas partes. Na primeira você escreve o seu contrato, com o que você se compromete a fazer, o que vai fazer se falhar duas vezes seguidas e, se quiser, o nome de uma testemunha, e depois assina.
+
+Na segunda parte você faz a primeira revisão. Pra cada hábito, o app mostra a adesão e o "sem falha 2x" dos últimos 30 dias, e você escolhe entre manter, ajustar ou remover. Os números ajudam, mas a decisão é sua, e não existe resposta errada desde que ela seja honesta.
+
+Daqui a 30 dias a próxima revisão libera sozinha, e a tela Progresso mostra quanto falta.
+
+#### O erro mais comum
+
+O erro mais comum é tratar a revisão como prova e ter medo de remover um hábito. Remover um hábito que não serve mais é uma decisão boa, porque libera energia pra outro que serve, e manter na lista só pra não "perder" é carregar peso à toa.
+
+O segundo erro é revisar só com a memória. A memória sempre lembra da última semana, seja ela boa ou ruim, enquanto o painel mostra o mês inteiro, então olhe os números antes de decidir.
+
+**Pergunta-teste:** esse hábito ainda me aproxima da pessoa que eu disse que queria ser na semana 2?
 
 ### Faça
 - Parte 1, **contrato:** "Eu me comprometo a:" (texto, pré-preenchido com os hábitos ativos), "Se eu falhar 2x seguidas, eu vou:" (texto), "Testemunha (opcional):" (nome), checkbox "Assino este compromisso" e data automática.
@@ -477,3 +592,16 @@ O contrato é o último elemento. Um compromisso escrito, com consequência defi
 
 ### Para ir além
 Leitura recomendada: *Hábitos Atômicos*, de James Clear.
+
+### Frases do dia
+1. Examino o meu dia inteiro **e repasso o que fiz e o que disse.** — Sêneca, Sobre a ira, III.36
+2. Todo processo **tem ciclo de revisão.**
+3. Manter, ajustar ou remover. **A decisão é sua.**
+4. O que você assina **pesa mais do que o que você só pensa.**
+5. Não é o fim do módulo. **É o começo do seu jeito.**
+6. Olhe pra trás **só pra ajustar o próximo passo.**
+7. Primeiro diga quem você quer ser. **Depois, confira se está sendo.**
+
+### Fontes (não aparece no app)
+- Giné, Karlan e Zinman (2010), *Put your money where your butt is*, American Economic Journal: Applied Economics (programa CARES, Filipinas).
+- Sêneca, *Sobre a ira* III.36 (tradução nossa).
