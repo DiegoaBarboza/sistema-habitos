@@ -11,7 +11,7 @@ Siga na ordem. Cada etapa depende da anterior.
 - E-mail de suporte: `suporte@trilhoapp.com.br`
 - Página de obrigado: `https://www.trilhoapp.com.br/obrigado`
 - Link de acesso (se pedir): `https://www.trilhoapp.com.br/entrar`
-- Imagem do produto: `docs/kiwify/kiwify-capa-produto.png`
+- Imagem do produto: `docs/kiwify/kiwify-produto-600x500.png` (a Kiwify pede 300x250; esta tem a mesma proporção, em dobro pra ficar nítida)
 - Banner do checkout (se houver o campo): `docs/kiwify/kiwify-banner-checkout.png`
 - Não ativar cronômetro nem "últimas vagas" falsos no checkout.
 - Descrição:
