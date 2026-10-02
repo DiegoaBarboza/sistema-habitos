@@ -108,7 +108,8 @@ export function SiteTrilho({ oferta }: { oferta: OfertaAtual }) {
               {oferta.checkoutUrl ? <span className="font-semibold text-text">{selo}</span> : "Funciona no celular, sem baixar nada da loja."}
             </p>
           </div>
-          <div className="flex justify-center gap-4">
+          {/* Fundo bege fixo atrás dos celulares: o print do app é escuro e precisa de contraste nos dois temas. */}
+          <div className="flex justify-center gap-4 rounded-3xl bg-[#F4EEE2] px-6 py-10 md:px-8">
             <Celular src="/site/app-hoje.jpg" alt="Tela Hoje do Trilho, com a frase do dia, indicadores e check-in" />
             <Celular src="/site/app-progresso.jpg" alt="Tela Progresso do Trilho, com adesão e sequência" className="mt-16 hidden sm:block" />
           </div>
@@ -305,7 +306,7 @@ function Cartao({ titulo, texto }: { titulo: string; texto: string }) {
 
 function Celular({ src, alt, className = "" }: { src: string; alt: string; className?: string }) {
   return (
-    <div className={`w-[230px] shrink-0 overflow-hidden rounded-[36px] border-[7px] border-[#0b0f0e] bg-[#0b0f0e] shadow-2xl md:w-[250px] ${className}`}>
+    <div className={`w-[230px] shrink-0 overflow-hidden rounded-[36px] border-[7px] border-[#0b0f0e] bg-[#0b0f0e] shadow-[0_24px_60px_rgba(27,33,32,0.35)] md:w-[250px] ${className}`}>
       {/* eslint-disable-next-line @next/next/no-img-element -- print estático do app */}
       <img src={src} alt={alt} width={780} height={1688} className="block h-auto w-full rounded-[29px]" />
     </div>
