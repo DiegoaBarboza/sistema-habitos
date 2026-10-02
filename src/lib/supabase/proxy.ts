@@ -2,7 +2,7 @@ import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
 // /api/cron se protege com o CRON_SECRET, não com sessão.
-const ROTAS_PUBLICAS = ["/entrar", "/auth", "/api/cron"];
+const ROTAS_PUBLICAS = ["/entrar", "/auth", "/api/cron", "/privacidade", "/termos"];
 
 export async function atualizarSessao(request: NextRequest) {
   let resposta = NextResponse.next({ request });

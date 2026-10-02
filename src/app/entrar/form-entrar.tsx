@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useSyncExternalStore } from "react";
 import { entrarComSenha } from "@/app/acoes";
@@ -153,6 +154,14 @@ export function FormEntrar({ linkInvalido }: { linkInvalido: boolean }) {
         {modo === "senha"
           ? "Sem senha ainda? Entre pelo link e crie uma no Perfil."
           : "Primeiro acesso é pelo link no e-mail. Comprou pela Kiwify? Use o mesmo e-mail da compra para liberar seu módulo."}
+      </p>
+      <p className="flex justify-center gap-4 text-[13px] text-text-2">
+        <Link href="/privacidade" className="underline">
+          Privacidade
+        </Link>
+        <Link href="/termos" className="underline">
+          Termos de uso
+        </Link>
       </p>
     </form>
   );
