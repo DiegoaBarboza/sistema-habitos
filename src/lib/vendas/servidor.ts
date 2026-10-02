@@ -80,7 +80,7 @@ export async function aplicarPedido(p: Pedido): Promise<string> {
       { onConflict: "email,modulo_id" },
     );
     if (error) throw new Error(`acesso: ${error.message}`);
-    return `liberado ${modulo} para ${p.email}${oferta ? ` (${oferta.codigo})` : " (produto sem oferta cadastrada)"}`;
+    return `liberado ${modulo} para ${p.email}${oferta ? ` (${oferta.codigo})` : ` (produto sem oferta cadastrada: ${p.productId ?? "sem id"})`}`;
   }
 
   // Reembolso, chargeback ou cancelamento: bloqueia só o acesso que veio deste pedido.
