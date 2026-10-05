@@ -25,7 +25,9 @@ Antes de entregar, confira cada frase contra o briefing.
 
 **Assinatura:** Hábito é processo. Processo se mede.
 
-**Por que "Trilho" (proposta, confirmar antes de usar):** trilho é o caminho que guia o trem sem ele precisar pensar na direção a cada metro. Hábito é isso: um caminho que, depois de construído, leva você sozinho. O app ajuda a assentar esse trilho, uma peça por semana.
+**Por que "Trilho":** o nome vem de "colocar a vida nos trilhos". Trilho é o caminho que guia o trem sem ele precisar pensar na direção a cada metro, e hábito é isso: um caminho que, depois de construído, leva você sozinho. O app ajuda a assentar esse trilho uma peça por semana, e quando você sair dele (todo mundo sai), ajuda a voltar.
+
+**Visão (contexto pra IA, não anunciar):** Hábitos é o primeiro módulo de uma plataforma de qualidade de vida. A ideia é criar outros módulos no futuro (sono, alimentação, atividade física, meditação/respiração e outros), sem data e sem ordem garantida. As peças vendem **Hábitos**. Os outros cinco podem aparecer só como "em breve" (como no site), nunca com data, preço, funcionalidade detalhada ou promessa de resultado. Alimentação e atividade física: sem dieta, sem calorias, sem promessa de emagrecer.
 
 **Como funciona (o ciclo de cada semana):**
 
@@ -103,7 +105,7 @@ Antes de entregar, confira cada frase contra o briefing.
 | Acesso | vitalício ao módulo Hábitos |
 | Garantia | 7 dias para pedir reembolso (Código de Defesa do Consumidor) |
 | Onde comprar | www.trilhoapp.com.br (checkout Kiwify) |
-| Próximos módulos | Procrastinação e Sono (em breve, sem data prometida) |
+| Próximos módulos | "em breve", sem data: Procrastinação, Sono, Atividade física, Meditação e Alimentação (site e app mostram esses cinco) |
 
 **Regras de escassez:** só falar de vagas com o número real do site. Proibido cronômetro, "últimas vagas" inventado, "só hoje", "preço sobe à meia-noite" sem ser verdade.
 

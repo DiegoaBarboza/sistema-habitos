@@ -13,6 +13,8 @@ O Trilho não prescreve. Ele oferece ferramentas para a pessoa se observar.
 - Diego não é nutricionista nem clínico. Os textos de cada módulo deixam isso claro.
 
 ## Ordem dos módulos (de menor para maior risco)
+
+> 05/10/2026: site e app mostram como "em breve" Procrastinação, Sono, Atividade física, Meditação e Alimentação (migração 10). "Meditação" é o nome público do que a tabela abaixo chama de Respiração. Mostrar "em breve" não muda a regra 1 de escopo: um módulo por vez.
 | # | Módulo | O que o usuário faz no app | Blocos |
 |---|---|---|---|
 | 1 | Hábitos | 8 semanas: inventário, gatilho, ambiente, versão mínima, regra dos 2 dias | check-in, lembrete, indicadores (em construção) |

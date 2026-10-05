@@ -208,10 +208,13 @@ export function SiteTrilho({ oferta }: { oferta: OfertaAtual }) {
           titulo="Hábitos é só o começo"
           texto="O Trilho vai ganhar novos módulos com o mesmo jeito de trabalhar: medir, mostrar padrões e lembrar."
         >
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
               { titulo: "Procrastinação", texto: "Entender o que você faz no lugar da tarefa adiada e destravar o primeiro passo." },
               { titulo: "Sono", texto: "Acompanhar horários, qualidade e a rotina da noite que prepara o dia seguinte." },
+              { titulo: "Atividade física", texto: "Registrar os treinos, com uma versão mínima de 5 minutos pros dias corridos." },
+              { titulo: "Meditação", texto: "Pausas curtas nos horários que você escolher, anotando como estava antes e depois." },
+              { titulo: "Alimentação", texto: "Marcar se cada refeição seguiu o que você planejou, sem dieta pronta e sem contar calorias." },
             ].map((m) => (
               <div key={m.titulo} className="flex flex-col gap-2 rounded-2xl border border-dashed border-line p-6">
                 <span className="font-mono text-[11px] tracking-[0.08em] text-text-2">EM BREVE</span>
