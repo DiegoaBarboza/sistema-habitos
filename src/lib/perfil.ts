@@ -2,6 +2,7 @@ import "server-only";
 import { cache } from "react";
 import { redirect } from "next/navigation";
 import { criarClienteServidor } from "@/lib/supabase/server";
+import { ehAdmin } from "@/lib/admin";
 import { MODULO_ATUAL } from "@/lib/modulo";
 import type { Tema } from "@/lib/tema";
 
@@ -34,11 +35,16 @@ export const obterSessao = cache(async () => {
   if (error) throw new Error(`Não foi possível carregar o perfil: ${error.message}`);
   if (erroAcessos) throw new Error(`Não foi possível carregar os acessos: ${erroAcessos.message}`);
 
+  const email = (claims.email as string | undefined) ?? "";
+  const liberados = acessos.map((a) => a.modulo_id as string);
+  const admin = ehAdmin(email);
   return {
-    email: (claims.email as string | undefined) ?? "",
+    email,
+    admin,
     temSenha: claims.user_metadata?.tem_senha === true,
     perfil,
-    modulosLiberados: acessos.map((a) => a.modulo_id as string),
+    // Admin entra em tudo o que está ativo, com ou sem compra.
+    modulosLiberados: admin && !liberados.includes(MODULO_ATUAL) ? [...liberados, MODULO_ATUAL] : liberados,
   };
 });
 
